@@ -21,31 +21,31 @@
 
 G_BEGIN_DECLS
 
-typedef struct _MousepadApplicationClass MousepadApplicationClass;
-typedef struct _MousepadApplication      MousepadApplication;
+typedef struct _WikipadApplicationClass WikipadApplicationClass;
+typedef struct _WikipadApplication      WikipadApplication;
 
 #define WIKIPAD_TYPE_APPLICATION            (wikipad_application_get_type ())
-#define WIKIPAD_APPLICATION(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_APPLICATION, MousepadApplication))
-#define WIKIPAD_APPLICATION_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_APPLICATION, MousepadApplicationClass))
+#define WIKIPAD_APPLICATION(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_APPLICATION, WikipadApplication))
+#define WIKIPAD_APPLICATION_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_APPLICATION, WikipadApplicationClass))
 #define WIKIPAD_IS_APPLICATION(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_APPLICATION))
 #define WIKIPAD_IS_APPLICATION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), WIKIPAD_TYPE_APPLICATION))
-#define WIKIPAD_APPLICATION_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_APPLICATION, MousepadApplicationClass))
+#define WIKIPAD_APPLICATION_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_APPLICATION, WikipadApplicationClass))
 
 GType                wikipad_application_get_type               (void) G_GNUC_CONST;
 
-MousepadApplication *wikipad_application_get                    (void);
+WikipadApplication *wikipad_application_get                    (void);
 
-gboolean             wikipad_application_has_windows            (MousepadApplication  *application);
+gboolean             wikipad_application_has_windows            (WikipadApplication  *application);
 
-void                 wikipad_application_take_window            (MousepadApplication  *application,
+void                 wikipad_application_take_window            (WikipadApplication  *application,
                                                                   GtkWindow            *window);
 
-void                 wikipad_application_new_window_with_files  (MousepadApplication  *application,
+void                 wikipad_application_new_window_with_files  (WikipadApplication  *application,
                                                                   GdkScreen            *screen,
                                                                   const gchar          *working_directory,
                                                                   gchar               **filenames);
 
-void                 wikipad_application_show_preferences       (MousepadApplication  *application,
+void                 wikipad_application_show_preferences       (WikipadApplication  *application,
                                                                   GtkWindow            *transient_for);
 
 G_END_DECLS

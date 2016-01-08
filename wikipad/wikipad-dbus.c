@@ -151,7 +151,7 @@ wikipad_dbus_service_launch_files (MousepadDBusService  *dbus_service,
                                     gchar               **filenames,
                                     GError              **error)
 {
-  MousepadApplication *application;
+  WikipadApplication *application;
 
   g_return_val_if_fail (g_path_is_absolute (working_directory), FALSE);
   g_return_val_if_fail (error == NULL || *error == NULL, FALSE);

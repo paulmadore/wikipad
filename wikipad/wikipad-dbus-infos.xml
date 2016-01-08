@@ -16,16 +16,16 @@
   Place, Suite 330, Boston, MA  02111-1307  USA
 -->
 
-<node name="/org/xfce/Mousepad">
+<node name="/org/xfce/Wikipad">
 
   <!--
-    org.xfce.Mousepad
+    org.xfce.Wikipad
 
-    The Mousepad specific interface, which provides Mousepad specific methods.
+    The Wikipad specific interface, which provides Wikipad specific methods.
 
-    This inferface is internally used by Mousepad and should not be used externally.
+    This inferface is internally used by Wikipad and should not be used externally.
   -->
-  <interface name="org.xfce.Mousepad">
+  <interface name="org.xfce.Wikipad">
     <annotation name="org.freedesktop.DBus.GLib.CSymbol" value="wikipad_dbus_service" />
 
     <!--
@@ -45,7 +45,7 @@
     <!--
       Terminate () : VOID
 
-      Tells a running Mousepad instance to terminate immediately.
+      Tells a running Wikipad instance to terminate immediately.
     -->
     <method name="Terminate">
     </method>

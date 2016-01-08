@@ -52,7 +52,7 @@ static const GOptionEntry option_entries[] =
 gint
 main (gint argc, gchar **argv)
 {
-  MousepadApplication *application;
+  WikipadApplication *application;
   GError              *error = NULL;
   gchar               *working_directory;
 #ifdef HAVE_DBUS

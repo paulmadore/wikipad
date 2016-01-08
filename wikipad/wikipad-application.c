@@ -26,24 +26,24 @@
 
 static void        wikipad_application_finalize                  (GObject                   *object);
 static void        wikipad_application_window_destroyed          (GtkWidget                 *window,
-                                                                   MousepadApplication        *application);
-static GtkWidget  *wikipad_application_create_window             (MousepadApplication        *application);
+                                                                   WikipadApplication        *application);
+static GtkWidget  *wikipad_application_create_window             (WikipadApplication        *application);
 static void        wikipad_application_new_window_with_document  (WikipadWindow             *existing,
                                                                    WikipadDocument           *document,
                                                                    gint                        x,
                                                                    gint                        y,
-                                                                   MousepadApplication        *application);
+                                                                   WikipadApplication        *application);
 static void        wikipad_application_new_window                (WikipadWindow             *existing,
-                                                                   MousepadApplication        *application);
+                                                                   WikipadApplication        *application);
 
 
 
-struct _MousepadApplicationClass
+struct _WikipadApplicationClass
 {
   GObjectClass __parent__;
 };
 
-struct _MousepadApplication
+struct _WikipadApplication
 {
   GObject    __parent__;
 
@@ -56,12 +56,12 @@ struct _MousepadApplication
 
 
 
-G_DEFINE_TYPE (MousepadApplication, wikipad_application, G_TYPE_OBJECT)
+G_DEFINE_TYPE (WikipadApplication, wikipad_application, G_TYPE_OBJECT)
 
 
 
 static void
-wikipad_application_class_init (MousepadApplicationClass *klass)
+wikipad_application_class_init (WikipadApplicationClass *klass)
 {
   GObjectClass *gobject_class;
 
@@ -72,7 +72,7 @@ wikipad_application_class_init (MousepadApplicationClass *klass)
 
 
 static void
-wikipad_application_init (MousepadApplication *application)
+wikipad_application_init (WikipadApplication *application)
 {
   gchar *filename;
 
@@ -96,7 +96,7 @@ wikipad_application_init (MousepadApplication *application)
 static void
 wikipad_application_finalize (GObject *object)
 {
-  MousepadApplication *application = WIKIPAD_APPLICATION (object);
+  WikipadApplication *application = WIKIPAD_APPLICATION (object);
   GSList              *li;
   gchar               *filename;
 
@@ -136,10 +136,10 @@ wikipad_application_finalize (GObject *object)
 
 
 
-MousepadApplication*
+WikipadApplication*
 wikipad_application_get (void)
 {
-  static MousepadApplication *application = NULL;
+  static WikipadApplication *application = NULL;
 
   if (G_UNLIKELY (application == NULL))
     {
@@ -157,7 +157,7 @@ wikipad_application_get (void)
 
 
 gboolean
-wikipad_application_has_windows (MousepadApplication *application)
+wikipad_application_has_windows (WikipadApplication *application)
 {
   g_return_val_if_fail (WIKIPAD_IS_APPLICATION (application), FALSE);
 
@@ -168,7 +168,7 @@ wikipad_application_has_windows (MousepadApplication *application)
 
 static void
 wikipad_application_window_destroyed (GtkWidget           *window,
-                                       MousepadApplication *application)
+                                       WikipadApplication *application)
 {
   g_return_if_fail (GTK_IS_WINDOW (window));
   g_return_if_fail (WIKIPAD_IS_APPLICATION (application));
@@ -185,7 +185,7 @@ wikipad_application_window_destroyed (GtkWidget           *window,
 
 
 void
-wikipad_application_take_window (MousepadApplication *application,
+wikipad_application_take_window (WikipadApplication *application,
                                   GtkWindow           *window)
 {
   g_return_if_fail (WIKIPAD_IS_WINDOW (window));
@@ -202,7 +202,7 @@ wikipad_application_take_window (MousepadApplication *application,
 
 
 static GtkWidget *
-wikipad_application_create_window (MousepadApplication *application)
+wikipad_application_create_window (WikipadApplication *application)
 {
   GtkWidget *window;
 
@@ -226,7 +226,7 @@ wikipad_application_new_window_with_document (WikipadWindow      *existing,
                                                WikipadDocument    *document,
                                                gint                 x,
                                                gint                 y,
-                                               MousepadApplication *application)
+                                               WikipadApplication *application)
 {
   GtkWidget *window;
   GdkScreen *screen;
@@ -262,7 +262,7 @@ wikipad_application_new_window_with_document (WikipadWindow      *existing,
 
 static void
 wikipad_application_new_window (WikipadWindow      *existing,
-                                 MousepadApplication *application)
+                                 WikipadApplication *application)
 {
   /* trigger new document function */
   wikipad_application_new_window_with_document (existing, NULL, -1, -1, application);
@@ -271,7 +271,7 @@ wikipad_application_new_window (WikipadWindow      *existing,
 
 
 void
-wikipad_application_new_window_with_files (MousepadApplication  *application,
+wikipad_application_new_window_with_files (WikipadApplication  *application,
                                             GdkScreen            *screen,
                                             const gchar          *working_directory,
                                             gchar               **filenames)
@@ -310,7 +310,7 @@ wikipad_application_new_window_with_files (MousepadApplication  *application,
 
 
 static void
-wikipad_application_prefs_dialog_response (MousepadApplication *application,
+wikipad_application_prefs_dialog_response (WikipadApplication *application,
                                             gint                 response_id,
                                             WikipadPrefsDialog *dialog)
 {
@@ -321,7 +321,7 @@ wikipad_application_prefs_dialog_response (MousepadApplication *application,
 
 
 void
-wikipad_application_show_preferences (MousepadApplication  *application,
+wikipad_application_show_preferences (WikipadApplication  *application,
                                        GtkWindow            *transient_for)
 {
   /* if the dialog isn't already shown, create one */

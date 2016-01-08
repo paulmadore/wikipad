@@ -1,7 +1,7 @@
 ACLOCAL_AMFLAGS = -I m4
 
 SUBDIRS =									\
-	mousepad                                                        	\
+	wikipad                                                        	\
 	po
 
 distclean-local:
@@ -9,7 +9,7 @@ distclean-local:
 
 desktopdir = $(datadir)/applications
 desktop_in_in_files = 								\
-	mousepad.desktop.in.in
+	wikipad.desktop.in.in
 desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
 %.desktop.in: %.desktop.in.in
 	sed -e "s,\@libexecdir\@,$(libexecdir),g" < $< > $@

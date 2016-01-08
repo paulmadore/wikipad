@@ -5291,7 +5291,7 @@ wikipad_window_action_about (GtkAction      *action,
 void
 wikipad_window_show_preferences (WikipadWindow  *window)
 {
-  MousepadApplication *application;
+  WikipadApplication *application;
   g_return_if_fail (WIKIPAD_IS_WINDOW (window));
   application = wikipad_application_get ();
   wikipad_application_show_preferences (application, GTK_WINDOW (window));
