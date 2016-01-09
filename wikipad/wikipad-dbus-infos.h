@@ -156,13 +156,13 @@ G_END_DECLS
 #include <dbus/dbus-glib.h>
 static const DBusGMethodInfo dbus_glib_wikipad_dbus_service_methods[] = {
   { (GCallback) wikipad_dbus_service_launch_files, dbus_glib_marshal_wikipad_dbus_service_BOOLEAN__STRING_BOXED_POINTER, 0 },
-  { (GCallback) wikipad_dbus_service_terminate, dbus_glib_marshal_wikipad_dbus_service_BOOLEAN__POINTER, 69 },
+  { (GCallback) wikipad_dbus_service_terminate, dbus_glib_marshal_wikipad_dbus_service_BOOLEAN__POINTER, 68 },
 };
 
 const DBusGObjectInfo dbus_glib_wikipad_dbus_service_object_info = {  1,
   dbus_glib_wikipad_dbus_service_methods,
   2,
-"org.xfce.Wikipad\0LaunchFiles\0S\0working-directory\0I\0s\0filenames\0I\0as\0\0org.xfce.Wikipad\0Terminate\0S\0\0\0",
+"org.phm.Wikipad\0LaunchFiles\0S\0working-directory\0I\0s\0filenames\0I\0as\0\0org.phm.Wikipad\0Terminate\0S\0\0\0",
 "\0",
 "\0"
 };

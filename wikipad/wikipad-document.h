@@ -50,7 +50,7 @@ struct _WikipadDocument
   GtkTextBuffer           *buffer;
 
   /* text view */
-  MousepadView            *textview;
+  WikipadView            *textview;
 
   /* the highlight tag */
   GtkTextTag              *tag;

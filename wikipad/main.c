@@ -56,7 +56,7 @@ main (gint argc, gchar **argv)
   GError              *error = NULL;
   gchar               *working_directory;
 #ifdef HAVE_DBUS
-  MousepadDBusService *dbus_service;
+  WikipadDBusService *dbus_service;
 #endif
 
   /* bind the text domain to the locale directory */
@@ -67,7 +67,7 @@ main (gint argc, gchar **argv)
   textdomain (GETTEXT_PACKAGE);
 
   /* default application name */
-  g_set_application_name (_("Mousepad"));
+  g_set_application_name (_("Wikipad"));
 
 #ifdef G_ENABLE_DEBUG
   /* crash when something went wrong */
@@ -103,8 +103,8 @@ main (gint argc, gchar **argv)
   if (G_UNLIKELY (opt_version))
     {
       g_print ("%s %s\n\n", PACKAGE_NAME, PACKAGE_VERSION);
-      g_print ("%s\n", "Copyright (c) 2007");
-      g_print ("\t%s\n\n", _("The Xfce development team. All rights reserved."));
+      g_print ("%s\n", "Copyright (c) 2016");
+      g_print ("\t%s\n\n", _("phm. Some rights reserved."));
       g_print (_("Please report bugs to <%s>."), PACKAGE_BUGREPORT);
       g_print ("\n");
 
@@ -146,7 +146,7 @@ main (gint argc, gchar **argv)
           /* print errors, if needed */
           if (G_UNLIKELY (error))
             {
-              g_error ("Mousepad: %s\n", error->message);
+              g_error ("Wikipad: %s\n", error->message);
               g_error_free (error);
 
               return EXIT_FAILURE;

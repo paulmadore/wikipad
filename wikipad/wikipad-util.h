@@ -54,7 +54,7 @@ typedef enum
   WIKIPAD_SEARCH_FLAGS_ACTION_SELECT     = 1 << 16, /* select the match */
   WIKIPAD_SEARCH_FLAGS_ACTION_REPLACE    = 1 << 17, /* replace the match */
 }
-MousepadSearchFlags;
+WikipadSearchFlags;
 
 gboolean   wikipad_util_iter_starts_word                 (const GtkTextIter   *iter);
 
@@ -108,12 +108,12 @@ GType      wikipad_util_search_flags_get_type            (void) G_GNUC_CONST;
 gint       wikipad_util_highlight                        (GtkTextBuffer       *buffer,
                                                            GtkTextTag          *tag,
                                                            const gchar         *string,
-                                                           MousepadSearchFlags  flags);
+                                                           WikipadSearchFlags  flags);
 
 gint       wikipad_util_search                           (GtkTextBuffer       *buffer,
                                                            const gchar         *string,
                                                            const gchar         *replace,
-                                                           MousepadSearchFlags  flags);
+                                                           WikipadSearchFlags  flags);
 
 GtkAction *wikipad_util_find_related_action              (GtkWidget           *widget);
 

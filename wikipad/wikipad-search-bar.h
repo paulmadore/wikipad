@@ -22,28 +22,28 @@
 G_BEGIN_DECLS
 
 #define WIKIPAD_TYPE_SEARCH_BAR            (wikipad_search_bar_get_type ())
-#define WIKIPAD_SEARCH_BAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_SEARCH_BAR, MousepadSearchBar))
-#define WIKIPAD_SEARCH_BAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_SEARCH_BAR, MousepadSearchBarClass))
+#define WIKIPAD_SEARCH_BAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_SEARCH_BAR, WikipadSearchBar))
+#define WIKIPAD_SEARCH_BAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_SEARCH_BAR, WikipadSearchBarClass))
 #define WIKIPAD_IS_SEARCH_BAR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_SEARCH_BAR))
 #define WIKIPAD_IS_SEARCH_BAR_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), MOUSEPADL_TYPE_SEARCH_BAR))
-#define WIKIPAD_SEARCH_BAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_SEARCH_BAR, MousepadSearchBarClass))
+#define WIKIPAD_SEARCH_BAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_SEARCH_BAR, WikipadSearchBarClass))
 
-typedef struct _MousepadSearchBarClass MousepadSearchBarClass;
-typedef struct _MousepadSearchBar      MousepadSearchBar;
+typedef struct _WikipadSearchBarClass WikipadSearchBarClass;
+typedef struct _WikipadSearchBar      WikipadSearchBar;
 
 GType           wikipad_search_bar_get_type        (void) G_GNUC_CONST;
 
 GtkWidget      *wikipad_search_bar_new             (void);
 
-GtkEditable    *wikipad_search_bar_entry           (MousepadSearchBar *bar);
+GtkEditable    *wikipad_search_bar_entry           (WikipadSearchBar *bar);
 
-void            wikipad_search_bar_focus           (MousepadSearchBar *bar);
+void            wikipad_search_bar_focus           (WikipadSearchBar *bar);
 
-void            wikipad_search_bar_find_next       (MousepadSearchBar *bar);
+void            wikipad_search_bar_find_next       (WikipadSearchBar *bar);
 
-void            wikipad_search_bar_find_previous   (MousepadSearchBar *bar);
+void            wikipad_search_bar_find_previous   (WikipadSearchBar *bar);
 
-void            wikipad_search_bar_set_text        (MousepadSearchBar *bar, gchar *text);
+void            wikipad_search_bar_set_text        (WikipadSearchBar *bar, gchar *text);
 
 G_END_DECLS
 

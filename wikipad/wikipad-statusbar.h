@@ -23,34 +23,34 @@
 G_BEGIN_DECLS
 
 #define WIKIPAD_TYPE_STATUSBAR            (wikipad_statusbar_get_type ())
-#define WIKIPAD_STATUSBAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_STATUSBAR, MousepadStatusbar))
-#define WIKIPAD_STATUSBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_STATUSBAR, MousepadStatusbarClass))
+#define WIKIPAD_STATUSBAR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_STATUSBAR, WikipadStatusbar))
+#define WIKIPAD_STATUSBAR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_STATUSBAR, WikipadStatusbarClass))
 #define WIKIPAD_IS_STATUSBAR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_STATUSBAR))
 #define WIKIPAD_IS_STATUSBAR_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_STATUSBAR))
-#define WIKIPAD_STATUSBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_STATUSBAR, MousepadStatusbarClass))
+#define WIKIPAD_STATUSBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_STATUSBAR, WikipadStatusbarClass))
 
-typedef struct _MousepadStatusbarClass MousepadStatusbarClass;
-typedef struct _MousepadStatusbar      MousepadStatusbar;
+typedef struct _WikipadStatusbarClass WikipadStatusbarClass;
+typedef struct _WikipadStatusbar      WikipadStatusbar;
 
 GType       wikipad_statusbar_get_type             (void) G_GNUC_CONST;
 
 GtkWidget  *wikipad_statusbar_new                  (void);
 
-void        wikipad_statusbar_set_cursor_position  (MousepadStatusbar *statusbar,
+void        wikipad_statusbar_set_cursor_position  (WikipadStatusbar *statusbar,
                                                      gint               line,
                                                      gint               column,
                                                      gint               selection);
 
-void        wikipad_statusbar_set_overwrite        (MousepadStatusbar *statusbar,
+void        wikipad_statusbar_set_overwrite        (WikipadStatusbar *statusbar,
                                                      gboolean           overwrite);
 
-void        wikipad_statusbar_set_language         (MousepadStatusbar *statusbar,
+void        wikipad_statusbar_set_language         (WikipadStatusbar *statusbar,
                                                      GtkSourceLanguage *language);
 
-gboolean    wikipad_statusbar_push_tooltip         (MousepadStatusbar *statusbar,
+gboolean    wikipad_statusbar_push_tooltip         (WikipadStatusbar *statusbar,
                                                      GtkWidget         *widget);
 
-void        wikipad_statusbar_pop_tooltip          (MousepadStatusbar *statusbar,
+void        wikipad_statusbar_pop_tooltip          (WikipadStatusbar *statusbar,
                                                      GtkWidget         *widget);
 
 G_END_DECLS

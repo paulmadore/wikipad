@@ -22,14 +22,14 @@
 G_BEGIN_DECLS
 
 #define WIKIPAD_TYPE_REPLACE_DIALOG            (wikipad_replace_dialog_get_type ())
-#define WIKIPAD_REPLACE_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_REPLACE_DIALOG, MousepadReplaceDialog))
-#define WIKIPAD_REPLACE_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_REPLACE_DIALOG, MousepadReplaceDialogClass))
+#define WIKIPAD_REPLACE_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_REPLACE_DIALOG, WikipadReplaceDialog))
+#define WIKIPAD_REPLACE_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_REPLACE_DIALOG, WikipadReplaceDialogClass))
 #define WIKIPAD_IS_REPLACE_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_REPLACE_DIALOG))
 #define WIKIPAD_IS_REPLACE_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), MOUSEPADL_TYPE_REPLACE_DIALOG))
-#define WIKIPAD_REPLACE_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_REPLACE_DIALOG, MousepadReplaceDialogClass))
+#define WIKIPAD_REPLACE_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_REPLACE_DIALOG, WikipadReplaceDialogClass))
 
-typedef struct _MousepadReplaceDialogClass MousepadReplaceDialogClass;
-typedef struct _MousepadReplaceDialog      MousepadReplaceDialog;
+typedef struct _WikipadReplaceDialogClass WikipadReplaceDialogClass;
+typedef struct _WikipadReplaceDialog      WikipadReplaceDialog;
 
 GType           wikipad_replace_dialog_get_type       (void) G_GNUC_CONST;
 
@@ -37,9 +37,9 @@ GtkWidget      *wikipad_replace_dialog_new            (void);
 
 void            wikipad_replace_dialog_history_clean  (void);
 
-void            wikipad_replace_dialog_page_switched  (MousepadReplaceDialog *dialog);
+void            wikipad_replace_dialog_page_switched  (WikipadReplaceDialog *dialog);
 
-void            wikipad_replace_dialog_set_text       (MousepadReplaceDialog *dialog, gchar *text);
+void            wikipad_replace_dialog_set_text       (WikipadReplaceDialog *dialog, gchar *text);
 
 G_END_DECLS
 

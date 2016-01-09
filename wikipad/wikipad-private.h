@@ -59,8 +59,8 @@ enum
 };
 
 /* config file locations */
-#define WIKIPAD_RC_RELPATH     ("Mousepad" G_DIR_SEPARATOR_S "wikipadrc")
-#define WIKIPAD_ACCELS_RELPATH ("Mousepad" G_DIR_SEPARATOR_S "accels.scm")
+#define WIKIPAD_RC_RELPATH     ("Wikipad" G_DIR_SEPARATOR_S "wikipadrc")
+#define WIKIPAD_ACCELS_RELPATH ("Wikipad" G_DIR_SEPARATOR_S "accels.scm")
 
 /* handling flags */
 #define WIKIPAD_SET_FLAG(flags,flag)   G_STMT_START{ ((flags) |= (flag)); }G_STMT_END

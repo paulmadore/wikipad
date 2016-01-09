@@ -21,21 +21,21 @@
 
 G_BEGIN_DECLS
 
-typedef struct _MousepadPrintClass MousepadPrintClass;
-typedef struct _MousepadPrint      MousepadPrint;
+typedef struct _WikipadPrintClass WikipadPrintClass;
+typedef struct _WikipadPrint      WikipadPrint;
 
 #define WIKIPAD_TYPE_PRINT            (wikipad_print_get_type ())
-#define WIKIPAD_PRINT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_PRINT, MousepadPrint))
-#define WIKIPAD_PRINT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_PRINT, MousepadPrintClass))
+#define WIKIPAD_PRINT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_PRINT, WikipadPrint))
+#define WIKIPAD_PRINT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_PRINT, WikipadPrintClass))
 #define WIKIPAD_IS_PRINT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_PRINT))
 #define WIKIPAD_IS_PRINT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), WIKIPAD_TYPE_PRINT))
-#define WIKIPAD_PRINT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_PRINT, MousepadPrintClass))
+#define WIKIPAD_PRINT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_PRINT, WikipadPrintClass))
 
 GType          wikipad_print_get_type             (void) G_GNUC_CONST;
 
-MousepadPrint *wikipad_print_new                  (void);
+WikipadPrint *wikipad_print_new                  (void);
 
-gboolean       wikipad_print_document_interactive (MousepadPrint     *print,
+gboolean       wikipad_print_document_interactive (WikipadPrint     *print,
                                                     WikipadDocument  *document,
                                                     GtkWindow         *parent,
                                                     GError           **error);

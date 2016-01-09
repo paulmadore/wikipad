@@ -48,7 +48,7 @@
 #define PADDING                   (2)
 #define PASTE_HISTORY_MENU_LENGTH (30)
 
-static const gchar *NOTEBOOK_GROUP = "Mousepad";
+static const gchar *NOTEBOOK_GROUP = "Wikipad";
 
 
 
@@ -99,7 +99,7 @@ static gboolean          wikipad_window_close_document               (WikipadWin
                                                                        WikipadDocument       *document);
 static void              wikipad_window_set_title                    (WikipadWindow         *window);
 static GtkWidget        *wikipad_window_provide_languages_menu       (WikipadWindow         *window,
-                                                                       MousepadStatusbar      *statusbar);
+                                                                       WikipadStatusbar      *statusbar);
 static void              wikipad_window_create_statusbar             (WikipadWindow         *window);
 static gboolean          wikipad_window_get_in_fullscreen            (WikipadWindow         *window);
 static void              wikipad_window_update_main_widgets          (WikipadWindow         *window);
@@ -427,15 +427,6 @@ static const GtkActionEntry action_entries[] =
     { "delete", GTK_STOCK_DELETE, NULL, NULL, N_("Delete the current selection"), G_CALLBACK (wikipad_window_action_delete), },
     { "select-all", GTK_STOCK_SELECT_ALL, NULL, NULL, N_("Select the text in the entire document"), G_CALLBACK (wikipad_window_action_select_all), },
     { "change-selection", NULL, N_("Change the selection"), NULL, N_("Change a normal selection into a column selection and vice versa"), G_CALLBACK (wikipad_window_action_change_selection), },
-    { "convert-menu", NULL, N_("Conve_rt"), NULL, NULL, NULL, },
-      { "uppercase", NULL, N_("To _Uppercase"), NULL, N_("Change the case of the selection to uppercase"), G_CALLBACK (wikipad_window_action_uppercase), },
-      { "lowercase", NULL, N_("To _Lowercase"), NULL, N_("Change the case of the selection to lowercase"), G_CALLBACK (wikipad_window_action_lowercase), },
-      { "titlecase", NULL, N_("To _Title Case"), NULL, N_("Change the case of the selection to title case"), G_CALLBACK (wikipad_window_action_titlecase), },
-      { "opposite-case", NULL, N_("To _Opposite Case"), NULL, N_("Change the case of the selection opposite case"), G_CALLBACK (wikipad_window_action_opposite_case), },
-      { "tabs-to-spaces", NULL, N_("_Tabs to Spaces"), NULL, N_("Convert all tabs to spaces in the selection or document"), G_CALLBACK (wikipad_window_action_tabs_to_spaces), },
-      { "spaces-to-tabs", NULL, N_("_Spaces to Tabs"), NULL, N_("Convert all the leading spaces to tabs in the selected line(s) or document"), G_CALLBACK (wikipad_window_action_spaces_to_tabs), },
-      { "strip-trailing", NULL, N_("St_rip Trailing Spaces"), NULL, N_("Remove all the trailing spaces from the selected line(s) or document"), G_CALLBACK (wikipad_window_action_strip_trailing_spaces), },
-      { "transpose", NULL, N_("_Transpose"), "<control>T", N_("Reverse the order of something"), G_CALLBACK (wikipad_window_action_transpose), },
     { "move-menu", NULL, N_("_Move Selection"), NULL, NULL, NULL, },
       { "line-up", NULL, N_("Line _Up"), NULL, N_("Move the selection one line up"), G_CALLBACK (wikipad_window_action_move_line_up), },
       { "line-down", NULL, N_("Line _Down"), NULL, N_("Move the selection one line down"), G_CALLBACK (wikipad_window_action_move_line_down), },
@@ -670,7 +661,7 @@ wikipad_window_restore (WikipadWindow *window)
 static void
 wikipad_window_action_group_language_changed (WikipadWindow      *window,
                                                GParamSpec          *pspec,
-                                               MousepadActionGroup *group)
+                                               WikipadActionGroup *group)
 {
   GtkSourceLanguage *language;
 
@@ -690,7 +681,7 @@ static void
 wikipad_window_create_languages_menu (WikipadWindow *window)
 {
   GtkWidget           *menu, *item;
-  MousepadActionGroup *group;
+  WikipadActionGroup *group;
   static const gchar  *menu_path = "/main-menu/document-menu/language-menu";
 
   /* create the languages menu and add it to the placeholder */
@@ -714,7 +705,7 @@ wikipad_window_create_languages_menu (WikipadWindow *window)
 static void
 wikipad_window_action_group_style_scheme_changed (WikipadWindow      *window,
                                                    GParamSpec          *pspec,
-                                                   MousepadActionGroup *group)
+                                                   WikipadActionGroup *group)
 {
   GtkSourceStyleScheme *scheme;
   const gchar          *scheme_id = NULL;
@@ -742,7 +733,7 @@ static void
 wikipad_window_create_style_schemes_menu (WikipadWindow *window)
 {
   GtkWidget           *menu, *item;
-  MousepadActionGroup *group;
+  WikipadActionGroup *group;
   static const gchar  *menu_path = "/main-menu/view-menu/color-scheme-menu";
   
   /* create the color schemes menu and add it to the placeholder */
@@ -999,7 +990,7 @@ wikipad_window_create_statusbar (WikipadWindow *window)
 static void
 wikipad_window_user_set_language (WikipadWindow      *window,
                                    GtkSourceLanguage   *language,
-                                   MousepadActionGroup *group)
+                                   WikipadActionGroup *group)
 {
   /* mark the file as having its language chosen explicitly by the user
    * so we don't clobber their choice by guessing ourselves */
@@ -1760,9 +1751,9 @@ wikipad_window_set_title (WikipadWindow *window)
 /* give the statusbar a languages menu created from our action group */
 static GtkWidget *
 wikipad_window_provide_languages_menu (WikipadWindow    *window,
-                                        MousepadStatusbar *statusbar)
+                                        WikipadStatusbar *statusbar)
 {
-  MousepadActionGroup *group;
+  WikipadActionGroup *group;
   
   group = WIKIPAD_ACTION_GROUP (window->action_group);
   return wikipad_action_group_create_language_menu (group);
@@ -2230,7 +2221,7 @@ wikipad_window_buffer_language_changed (WikipadDocument  *document,
                                          GtkSourceLanguage *language,
                                          WikipadWindow    *window)
 {
-  MousepadActionGroup *group;
+  WikipadActionGroup *group;
 
   /* activate the action for the new buffer language */
   group = WIKIPAD_ACTION_GROUP (window->action_group);
@@ -2658,7 +2649,7 @@ wikipad_window_update_actions (WikipadWindow *window)
   gint                n_pages;
   gint                page_num;
   gboolean            active, sensitive;
-  MousepadLineEnding  line_ending;
+  WikipadLineEnding  line_ending;
   const gchar        *action_name;
   GtkSourceLanguage  *language;
 
@@ -2667,7 +2658,7 @@ wikipad_window_update_actions (WikipadWindow *window)
   /* update the actions for the active document */
   if (G_LIKELY (document))
     {
-      MousepadActionGroup *group;
+      WikipadActionGroup *group;
 
       /* avoid menu actions */
       lock_menu_updates++;
@@ -3281,7 +3272,7 @@ wikipad_window_drag_data_received (GtkWidget        *widget,
  **/
 static gint
 wikipad_window_search (WikipadWindow      *window,
-                        MousepadSearchFlags  flags,
+                        WikipadSearchFlags  flags,
                         const gchar         *string,
                         const gchar         *replacement)
 {
@@ -3337,7 +3328,7 @@ wikipad_window_search (WikipadWindow      *window,
 static void
 wikipad_window_hide_search_bar (WikipadWindow *window)
 {
-  MousepadSearchFlags flags;
+  WikipadSearchFlags flags;
 
   g_return_if_fail (WIKIPAD_IS_WINDOW (window));
   g_return_if_fail (WIKIPAD_IS_DOCUMENT (window->active));
@@ -4230,7 +4221,7 @@ static void
 wikipad_window_action_print (GtkAction      *action,
                               WikipadWindow *window)
 {
-  MousepadPrint    *print;
+  WikipadPrint    *print;
   GError           *error = NULL;
   gboolean          succeed;
 
@@ -5074,7 +5065,7 @@ wikipad_window_action_line_ending (GtkRadioAction *action,
                                     GtkRadioAction *current,
                                     WikipadWindow *window)
 {
-  MousepadLineEnding eol;
+  WikipadLineEnding eol;
 
   g_return_if_fail (WIKIPAD_IS_WINDOW (window));
   g_return_if_fail (WIKIPAD_IS_DOCUMENT (window->active));

@@ -31,17 +31,17 @@
 
 
 
-#define WIKIPAD_DBUS_PATH      "/org/xfce/Mousepad"
-#define WIKIPAD_DBUS_INTERFACE "org.xfce.Mousepad"
+#define WIKIPAD_DBUS_PATH      "/org/phm/Wikipad"
+#define WIKIPAD_DBUS_INTERFACE "org.phm.Wikipad"
 
 
 
 static void      wikipad_dbus_service_finalize      (GObject              *object);
-static gboolean  wikipad_dbus_service_launch_files  (MousepadDBusService  *dbus_service,
+static gboolean  wikipad_dbus_service_launch_files  (WikipadDBusService  *dbus_service,
                                                       const gchar          *working_directory,
                                                       gchar               **filenames,
                                                       GError              **error);
-static gboolean  wikipad_dbus_service_terminate     (MousepadDBusService  *dbus_service,
+static gboolean  wikipad_dbus_service_terminate     (WikipadDBusService  *dbus_service,
                                                       GError              **error);
 
 
@@ -51,12 +51,12 @@ static gboolean  wikipad_dbus_service_terminate     (MousepadDBusService  *dbus_
 
 
 
-struct _MousepadDBusServiceClass
+struct _WikipadDBusServiceClass
 {
   GObjectClass __parent__;
 };
 
-struct _MousepadDBusService
+struct _WikipadDBusService
 {
   GObject __parent__;
 
@@ -65,12 +65,12 @@ struct _MousepadDBusService
 
 
 
-G_DEFINE_TYPE (MousepadDBusService, wikipad_dbus_service, G_TYPE_OBJECT)
+G_DEFINE_TYPE (WikipadDBusService, wikipad_dbus_service, G_TYPE_OBJECT)
 
 
 
 static void
-wikipad_dbus_service_class_init (MousepadDBusServiceClass *klass)
+wikipad_dbus_service_class_init (WikipadDBusServiceClass *klass)
 {
   GObjectClass *gobject_class;
 
@@ -84,7 +84,7 @@ wikipad_dbus_service_class_init (MousepadDBusServiceClass *klass)
 
 
 static void
-wikipad_dbus_service_init (MousepadDBusService *dbus_service)
+wikipad_dbus_service_init (WikipadDBusService *dbus_service)
 {
   GError *error = NULL;
 
@@ -120,7 +120,7 @@ wikipad_dbus_service_init (MousepadDBusService *dbus_service)
 static void
 wikipad_dbus_service_finalize (GObject *object)
 {
-  MousepadDBusService *dbus_service = WIKIPAD_DBUS_SERVICE (object);
+  WikipadDBusService *dbus_service = WIKIPAD_DBUS_SERVICE (object);
 
   /* release the D-BUS connection object */
   if (G_LIKELY (dbus_service->connection != NULL))
@@ -133,7 +133,7 @@ wikipad_dbus_service_finalize (GObject *object)
 
 /**
  * wikipad_dbus_service_launch_files:
- * @dbus_service      : A #MousepadDBusService.
+ * @dbus_service      : A #WikipadDBusService.
  * @working_directory : The default working directory for this window.
  * @filenames         : A list of filenames we try to open in tabs. The file names
  *                      can either be absolute paths, supported URIs or relative file
@@ -146,7 +146,7 @@ wikipad_dbus_service_finalize (GObject *object)
  * Return value: %TRUE on success, %FALSE if @error is set.
  **/
 static gboolean
-wikipad_dbus_service_launch_files (MousepadDBusService  *dbus_service,
+wikipad_dbus_service_launch_files (WikipadDBusService  *dbus_service,
                                     const gchar          *working_directory,
                                     gchar               **filenames,
                                     GError              **error)
@@ -168,7 +168,7 @@ wikipad_dbus_service_launch_files (MousepadDBusService  *dbus_service,
 
 /**
  * wikipad_dbus_service_terminate:
- * @dbus_service : A #MousepadDBusService.
+ * @dbus_service : A #WikipadDBusService.
  * @error        : Return location for errors, not used atm.
  *
  * This function quits this instance of Mousepad.
@@ -176,7 +176,7 @@ wikipad_dbus_service_launch_files (MousepadDBusService  *dbus_service,
  * Return value: %TRUE on success.
  **/
 static gboolean
-wikipad_dbus_service_terminate (MousepadDBusService  *dbus_service,
+wikipad_dbus_service_terminate (WikipadDBusService  *dbus_service,
                                  GError              **error)
 {
   /* leave the Gtk main loop as soon as possible */

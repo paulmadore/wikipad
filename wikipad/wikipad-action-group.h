@@ -24,32 +24,32 @@
 G_BEGIN_DECLS
 
 #define WIKIPAD_TYPE_ACTION_GROUP            (wikipad_action_group_get_type ())
-#define WIKIPAD_ACTION_GROUP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_ACTION_GROUP, MousepadActionGroup))
-#define WIKIPAD_ACTION_GROUP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_ACTION_GROUP, MousepadActionGroupClass))
+#define WIKIPAD_ACTION_GROUP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_ACTION_GROUP, WikipadActionGroup))
+#define WIKIPAD_ACTION_GROUP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_ACTION_GROUP, WikipadActionGroupClass))
 #define WIKIPAD_IS_ACTION_GROUP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_ACTION_GROUP))
 #define WIKIPAD_IS_ACTION_GROUP_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), WIKIPAD_TYPE_ACTION_GROUP))
-#define WIKIPAD_ACTION_GROUP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_ACTION_GROUP, MousepadActionGroupClass))
+#define WIKIPAD_ACTION_GROUP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_ACTION_GROUP, WikipadActionGroupClass))
 
-typedef struct MousepadActionGroup_      MousepadActionGroup;
-typedef struct MousepadActionGroupClass_ MousepadActionGroupClass;
+typedef struct WikipadActionGroup_      WikipadActionGroup;
+typedef struct WikipadActionGroupClass_ WikipadActionGroupClass;
 
 GType                 wikipad_action_group_get_type                 (void);
 
 GtkActionGroup       *wikipad_action_group_new                      (void);
 
-void                  wikipad_action_group_set_active_language      (MousepadActionGroup *group,
+void                  wikipad_action_group_set_active_language      (WikipadActionGroup *group,
                                                                       GtkSourceLanguage   *language);
 
-GtkSourceLanguage    *wikipad_action_group_get_active_language      (MousepadActionGroup *group);
+GtkSourceLanguage    *wikipad_action_group_get_active_language      (WikipadActionGroup *group);
 
-GtkWidget            *wikipad_action_group_create_language_menu     (MousepadActionGroup *group);
+GtkWidget            *wikipad_action_group_create_language_menu     (WikipadActionGroup *group);
 
-void                  wikipad_action_group_set_active_style_scheme  (MousepadActionGroup  *group,
+void                  wikipad_action_group_set_active_style_scheme  (WikipadActionGroup  *group,
                                                                       GtkSourceStyleScheme *scheme);
 
-GtkSourceStyleScheme *wikipad_action_group_get_active_style_scheme  (MousepadActionGroup *group);
+GtkSourceStyleScheme *wikipad_action_group_get_active_style_scheme  (WikipadActionGroup *group);
 
-GtkWidget            *wikipad_action_group_create_style_scheme_menu (MousepadActionGroup *group);
+GtkWidget            *wikipad_action_group_create_style_scheme_menu (WikipadActionGroup *group);
 
 G_END_DECLS
 

@@ -618,7 +618,7 @@ wikipad_util_search_flags_get_type (void)
       };
 
       /* register the type */
-      type = g_flags_register_static (I_("MousepadSearchFlags"), values);
+      type = g_flags_register_static (I_("WikipadSearchFlags"), values);
       }
 
   return type;
@@ -629,7 +629,7 @@ wikipad_util_search_flags_get_type (void)
 static gboolean
 wikipad_util_search_iter (const GtkTextIter   *start,
                            const gchar         *string,
-                           MousepadSearchFlags  flags,
+                           WikipadSearchFlags  flags,
                            GtkTextIter         *match_start,
                            GtkTextIter         *match_end,
                            const GtkTextIter   *limit)
@@ -755,7 +755,7 @@ wikipad_util_search_iter (const GtkTextIter   *start,
 
 static void
 wikipad_util_search_get_iters (GtkTextBuffer       *buffer,
-                                MousepadSearchFlags  flags,
+                                WikipadSearchFlags  flags,
                                 GtkTextIter         *start,
                                 GtkTextIter         *end,
                                 GtkTextIter         *iter)
@@ -817,7 +817,7 @@ gint
 wikipad_util_highlight (GtkTextBuffer       *buffer,
                          GtkTextTag          *tag,
                          const gchar         *string,
-                         MousepadSearchFlags  flags)
+                         WikipadSearchFlags  flags)
 {
   GtkTextIter start, iter, end;
   GtkTextIter match_start, match_end;
@@ -901,7 +901,7 @@ gint
 wikipad_util_search (GtkTextBuffer       *buffer,
                       const gchar         *string,
                       const gchar         *replace,
-                      MousepadSearchFlags  flags)
+                      WikipadSearchFlags  flags)
 {
   gchar       *reversed = NULL;
   gint         counter = 0;

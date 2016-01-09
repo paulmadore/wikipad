@@ -27,7 +27,7 @@
 
 
 
-struct MousepadSettingsStore_
+struct WikipadSettingsStore_
 {
   GObject     parent;
   GSettings  *root;
@@ -36,7 +36,7 @@ struct MousepadSettingsStore_
 
 
 
-struct MousepadSettingsStoreClass_
+struct WikipadSettingsStoreClass_
 {
   GObjectClass parent_class;
 };
@@ -48,7 +48,7 @@ typedef struct
   const gchar *name;
   GSettings   *settings;
 }
-MousepadSettingKey;
+WikipadSettingKey;
 
 
 
@@ -56,17 +56,17 @@ static void wikipad_settings_store_finalize (GObject *object);
 
 
 
-G_DEFINE_TYPE (MousepadSettingsStore, wikipad_settings_store, G_TYPE_OBJECT)
+G_DEFINE_TYPE (WikipadSettingsStore, wikipad_settings_store, G_TYPE_OBJECT)
 
 
 
-static MousepadSettingKey *
+static WikipadSettingKey *
 wikipad_setting_key_new (const gchar *key_name,
                           GSettings   *settings)
 {
-  MousepadSettingKey *key;
+  WikipadSettingKey *key;
 
-  key = g_slice_new0 (MousepadSettingKey);
+  key = g_slice_new0 (WikipadSettingKey);
   key->name = g_intern_string (key_name);
   key->settings = g_object_ref (settings);
 
@@ -76,12 +76,12 @@ wikipad_setting_key_new (const gchar *key_name,
 
 
 static void
-wikipad_setting_key_free (MousepadSettingKey *key)
+wikipad_setting_key_free (WikipadSettingKey *key)
 {
   if (G_LIKELY (key != NULL))
     {
       g_object_unref (key->settings);
-      g_slice_free (MousepadSettingKey, key);
+      g_slice_free (WikipadSettingKey, key);
     }
 }
 
@@ -122,7 +122,7 @@ wikipad_settings_store_update_env (void)
 
 
 static void
-wikipad_settings_store_class_init (MousepadSettingsStoreClass *klass)
+wikipad_settings_store_class_init (WikipadSettingsStoreClass *klass)
 {
   GObjectClass *g_object_class;
 
@@ -138,7 +138,7 @@ wikipad_settings_store_class_init (MousepadSettingsStoreClass *klass)
 static void
 wikipad_settings_store_finalize (GObject *object)
 {
-  MousepadSettingsStore *self;
+  WikipadSettingsStore *self;
 
   g_return_if_fail (WIKIPAD_IS_SETTINGS_STORE (object));
 
@@ -154,12 +154,12 @@ wikipad_settings_store_finalize (GObject *object)
 
 
 static void
-wikipad_settings_store_add_key (MousepadSettingsStore *self,
+wikipad_settings_store_add_key (WikipadSettingsStore *self,
                                  const gchar           *path,
                                  const gchar           *key_name,
                                  GSettings             *settings)
 {
-  MousepadSettingKey *key;
+  WikipadSettingKey *key;
 
   key = wikipad_setting_key_new (key_name, settings);
 
@@ -169,7 +169,7 @@ wikipad_settings_store_add_key (MousepadSettingsStore *self,
 
 
 static void
-wikipad_settings_store_add_settings(MousepadSettingsStore *self,
+wikipad_settings_store_add_settings(WikipadSettingsStore *self,
                                      const gchar           *path,
                                      GSettings             *settings)
 {
@@ -204,21 +204,21 @@ wikipad_settings_store_add_settings(MousepadSettingsStore *self,
 
 
 static void
-wikipad_settings_store_init (MousepadSettingsStore *self)
+wikipad_settings_store_init (WikipadSettingsStore *self)
 {
 #ifdef WIKIPAD_SETTINGS_KEYFILE_BACKEND
   GSettingsBackend *backend;
   gchar            *conf_file;
   conf_file = g_build_filename (g_get_user_config_dir (),
-                                "Mousepad",
+                                "Wikipad",
                                 "settings.conf",
                                 NULL);
   backend = g_keyfile_settings_backend_new (conf_file, "/", NULL);
   g_free (conf_file);
-  self->root = g_settings_new_with_backend ("org.xfce.wikipad", backend);
+  self->root = g_settings_new_with_backend ("org.phm.wikipad", backend);
   g_object_unref (backend);
 #else
-  self->root = g_settings_new ("org.xfce.wikipad");
+  self->root = g_settings_new ("org.phm.wikipad");
 #endif
 
   self->keys = g_hash_table_new_full (g_str_hash,
@@ -231,7 +231,7 @@ wikipad_settings_store_init (MousepadSettingsStore *self)
 
 
 
-MousepadSettingsStore *
+WikipadSettingsStore *
 wikipad_settings_store_new (void)
 {
   return g_object_new (WIKIPAD_TYPE_SETTINGS_STORE, NULL);
@@ -240,7 +240,7 @@ wikipad_settings_store_new (void)
 
 
 const gchar *
-wikipad_settings_store_lookup_key_name (MousepadSettingsStore *self,
+wikipad_settings_store_lookup_key_name (WikipadSettingsStore *self,
                                          const gchar           *path)
 {
   const gchar *key_name = NULL;
@@ -254,7 +254,7 @@ wikipad_settings_store_lookup_key_name (MousepadSettingsStore *self,
 
 
 GSettings *
-wikipad_settings_store_lookup_settings (MousepadSettingsStore *self,
+wikipad_settings_store_lookup_settings (WikipadSettingsStore *self,
                                          const gchar           *path)
 {
   GSettings *settings = NULL;
@@ -268,12 +268,12 @@ wikipad_settings_store_lookup_settings (MousepadSettingsStore *self,
 
 
 gboolean
-wikipad_settings_store_lookup (MousepadSettingsStore *self,
+wikipad_settings_store_lookup (WikipadSettingsStore *self,
                                 const gchar           *path,
                                 const gchar          **key_name,
                                 GSettings            **settings)
 {
-  MousepadSettingKey *key;
+  WikipadSettingKey *key;
 
   g_return_val_if_fail (WIKIPAD_IS_SETTINGS_STORE (self), NULL);
   g_return_val_if_fail (path != NULL, NULL);

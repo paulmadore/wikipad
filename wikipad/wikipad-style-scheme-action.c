@@ -32,7 +32,7 @@ enum
 
 
 
-struct MousepadStyleSchemeAction_
+struct WikipadStyleSchemeAction_
 {
   GtkRadioAction        parent;
   GtkSourceStyleScheme *scheme;
@@ -40,7 +40,7 @@ struct MousepadStyleSchemeAction_
 
 
 
-struct MousepadStyleSchemeActionClass_
+struct WikipadStyleSchemeActionClass_
 {
   GtkRadioActionClass parent_class;
 };
@@ -56,17 +56,17 @@ static void wikipad_style_scheme_action_get_property     (GObject      *object,
                                                            guint         prop_id,
                                                            GValue       *value,
                                                            GParamSpec   *pspec);
-static void wikipad_style_scheme_action_set_style_scheme (MousepadStyleSchemeAction *action,
+static void wikipad_style_scheme_action_set_style_scheme (WikipadStyleSchemeAction *action,
                                                            GtkSourceStyleScheme      *scheme);
 
 
 
-G_DEFINE_TYPE (MousepadStyleSchemeAction, wikipad_style_scheme_action, GTK_TYPE_RADIO_ACTION)
+G_DEFINE_TYPE (WikipadStyleSchemeAction, wikipad_style_scheme_action, GTK_TYPE_RADIO_ACTION)
 
 
 
 static void
-wikipad_style_scheme_action_class_init (MousepadStyleSchemeActionClass *klass)
+wikipad_style_scheme_action_class_init (WikipadStyleSchemeActionClass *klass)
 {
   GObjectClass *g_object_class;
 
@@ -91,7 +91,7 @@ wikipad_style_scheme_action_class_init (MousepadStyleSchemeActionClass *klass)
 static void
 wikipad_style_scheme_action_finalize (GObject *object)
 {
-  MousepadStyleSchemeAction *self;
+  WikipadStyleSchemeAction *self;
 
   g_return_if_fail (WIKIPAD_IS_STYLE_SCHEME_ACTION (object));
 
@@ -111,7 +111,7 @@ wikipad_style_scheme_action_set_property (GObject      *object,
                                            const GValue *value,
                                            GParamSpec   *pspec)
 {
-  MousepadStyleSchemeAction *self = WIKIPAD_STYLE_SCHEME_ACTION (object);
+  WikipadStyleSchemeAction *self = WIKIPAD_STYLE_SCHEME_ACTION (object);
 
   switch (prop_id)
     {
@@ -132,7 +132,7 @@ wikipad_style_scheme_action_get_property (GObject    *object,
                                            GValue     *value,
                                            GParamSpec *pspec)
 {
-  MousepadStyleSchemeAction *self = WIKIPAD_STYLE_SCHEME_ACTION (object);
+  WikipadStyleSchemeAction *self = WIKIPAD_STYLE_SCHEME_ACTION (object);
 
   switch (prop_id)
     {
@@ -148,7 +148,7 @@ wikipad_style_scheme_action_get_property (GObject    *object,
 
 
 static void
-wikipad_style_scheme_action_init (MousepadStyleSchemeAction *self)
+wikipad_style_scheme_action_init (WikipadStyleSchemeAction *self)
 {
   self->scheme = NULL;
 }
@@ -179,7 +179,7 @@ wikipad_style_scheme_action_new (GtkSourceStyleScheme *scheme)
 
 
 static void
-wikipad_style_scheme_action_set_style_scheme (MousepadStyleSchemeAction *self,
+wikipad_style_scheme_action_set_style_scheme (WikipadStyleSchemeAction *self,
                                                GtkSourceStyleScheme      *scheme)
 {
   GQuark value_quark;
@@ -228,7 +228,7 @@ wikipad_style_scheme_action_set_style_scheme (MousepadStyleSchemeAction *self,
 
 
 GtkSourceStyleScheme *
-wikipad_style_scheme_action_get_style_scheme (MousepadStyleSchemeAction *self)
+wikipad_style_scheme_action_get_style_scheme (WikipadStyleSchemeAction *self)
 {
   g_return_val_if_fail (WIKIPAD_IS_STYLE_SCHEME_ACTION (self), NULL);
 

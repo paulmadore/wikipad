@@ -39,7 +39,7 @@ typedef enum
   WIKIPAD_EOL_MAC,
   WIKIPAD_EOL_DOS
 }
-MousepadLineEnding;
+WikipadLineEnding;
 
 GType               wikipad_file_get_type                 (void) G_GNUC_CONST;
 
@@ -66,9 +66,9 @@ gboolean            wikipad_file_get_write_bom            (WikipadFile        *f
                                                             gboolean            *sensitive);
 
 void                wikipad_file_set_line_ending          (WikipadFile        *file,
-                                                            MousepadLineEnding   line_ending);
+                                                            WikipadLineEnding   line_ending);
 
-MousepadLineEnding  wikipad_file_get_line_ending          (WikipadFile        *file);
+WikipadLineEnding  wikipad_file_get_line_ending          (WikipadFile        *file);
 
 void                wikipad_file_set_language             (WikipadFile        *file,
                                                             GtkSourceLanguage   *language);

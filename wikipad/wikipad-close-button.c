@@ -2,12 +2,12 @@
 
 
 
-struct MousepadCloseButton_
+struct WikipadCloseButton_
 {
   GtkButton parent;
 };
 
-struct MousepadCloseButtonClass_
+struct WikipadCloseButtonClass_
 {
   GtkButtonClass  parent_class;
 #if GTK_CHECK_VERSION(3, 0, 0)
@@ -17,7 +17,7 @@ struct MousepadCloseButtonClass_
 
 
 
-G_DEFINE_TYPE (MousepadCloseButton, wikipad_close_button, GTK_TYPE_BUTTON)
+G_DEFINE_TYPE (WikipadCloseButton, wikipad_close_button, GTK_TYPE_BUTTON)
 
 
 
@@ -38,7 +38,7 @@ wikipad_close_button_style_set (GtkWidget *widget,
 
 
 static void
-wikipad_close_button_class_init (MousepadCloseButtonClass *klass)
+wikipad_close_button_class_init (WikipadCloseButtonClass *klass)
 {
 #if GTK_CHECK_VERSION(3, 0, 0)
   static const gchar *button_style =
@@ -73,7 +73,7 @@ wikipad_close_button_class_init (MousepadCloseButtonClass *klass)
 
 
 static void
-wikipad_close_button_init (MousepadCloseButton *button)
+wikipad_close_button_init (WikipadCloseButton *button)
 {
   GtkWidget *image;
 

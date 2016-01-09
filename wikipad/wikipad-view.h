@@ -20,14 +20,14 @@
 G_BEGIN_DECLS
 
 #define WIKIPAD_TYPE_VIEW            (wikipad_view_get_type ())
-#define WIKIPAD_VIEW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_VIEW, MousepadView))
-#define WIKIPAD_VIEW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_VIEW, MousepadViewClass))
+#define WIKIPAD_VIEW(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_VIEW, WikipadView))
+#define WIKIPAD_VIEW_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_VIEW, WikipadViewClass))
 #define WIKIPAD_IS_VIEW(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_VIEW))
 #define WIKIPAD_IS_VIEW_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), MOUSEPADL_TYPE_VIEW))
-#define WIKIPAD_VIEW_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_VIEW, MousepadViewClass))
+#define WIKIPAD_VIEW_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_VIEW, WikipadViewClass))
 
-typedef struct _MousepadViewClass MousepadViewClass;
-typedef struct _MousepadView      MousepadView;
+typedef struct _WikipadViewClass WikipadViewClass;
+typedef struct _WikipadView      WikipadView;
 
 enum
 {
@@ -57,72 +57,72 @@ enum
 
 GType           wikipad_view_get_type                  (void) G_GNUC_CONST;
 
-void            wikipad_view_scroll_to_cursor          (MousepadView      *view);
+void            wikipad_view_scroll_to_cursor          (WikipadView      *view);
 
-void            wikipad_view_transpose                 (MousepadView      *view);
+void            wikipad_view_transpose                 (WikipadView      *view);
 
-void            wikipad_view_clipboard_cut             (MousepadView      *view);
+void            wikipad_view_clipboard_cut             (WikipadView      *view);
 
-void            wikipad_view_clipboard_copy            (MousepadView      *view);
+void            wikipad_view_clipboard_copy            (WikipadView      *view);
 
-void            wikipad_view_clipboard_paste           (MousepadView      *view,
+void            wikipad_view_clipboard_paste           (WikipadView      *view,
                                                          const gchar       *string,
                                                          gboolean           paste_as_column);
 
-void            wikipad_view_delete_selection          (MousepadView      *view);
+void            wikipad_view_delete_selection          (WikipadView      *view);
 
-void            wikipad_view_select_all                (MousepadView      *view);
+void            wikipad_view_select_all                (WikipadView      *view);
 
-void            wikipad_view_change_selection          (MousepadView      *view);
+void            wikipad_view_change_selection          (WikipadView      *view);
 
-void            wikipad_view_convert_selection_case    (MousepadView      *view,
+void            wikipad_view_convert_selection_case    (WikipadView      *view,
                                                          gint               type);
 
-void            wikipad_view_convert_spaces_and_tabs   (MousepadView      *view,
+void            wikipad_view_convert_spaces_and_tabs   (WikipadView      *view,
                                                          gint               type);
 
-void            wikipad_view_strip_trailing_spaces     (MousepadView      *view);
+void            wikipad_view_strip_trailing_spaces     (WikipadView      *view);
 
-void            wikipad_view_move_selection            (MousepadView      *view,
+void            wikipad_view_move_selection            (WikipadView      *view,
                                                          gint               type);
 
-void            wikipad_view_duplicate                 (MousepadView      *view);
+void            wikipad_view_duplicate                 (WikipadView      *view);
 
-void            wikipad_view_indent                    (MousepadView      *view,
+void            wikipad_view_indent                    (WikipadView      *view,
                                                          gint               type);
 
-gint            wikipad_view_get_selection_length      (MousepadView      *view,
+gint            wikipad_view_get_selection_length      (WikipadView      *view,
                                                          gboolean          *is_column_selection);
 
-void            wikipad_view_set_font_name             (MousepadView      *view,
+void            wikipad_view_set_font_name             (WikipadView      *view,
                                                          const gchar       *font_name);
 
-const gchar    *wikipad_view_get_font_name             (MousepadView      *view);
+const gchar    *wikipad_view_get_font_name             (WikipadView      *view);
 
-void            wikipad_view_set_show_whitespace       (MousepadView      *view,
+void            wikipad_view_set_show_whitespace       (WikipadView      *view,
                                                          gboolean           show);
 
-gboolean        wikipad_view_get_show_whitespace       (MousepadView      *view);
+gboolean        wikipad_view_get_show_whitespace       (WikipadView      *view);
 
-void            wikipad_view_set_show_line_endings     (MousepadView      *view,
+void            wikipad_view_set_show_line_endings     (WikipadView      *view,
                                                          gboolean           show);
 
-gboolean        wikipad_view_get_show_line_endings     (MousepadView      *view);
+gboolean        wikipad_view_get_show_line_endings     (WikipadView      *view);
 
-void            wikipad_view_set_color_scheme          (MousepadView      *view,
+void            wikipad_view_set_color_scheme          (WikipadView      *view,
                                                          const gchar       *color_scheme);
 
-const gchar    *wikipad_view_get_color_scheme          (MousepadView      *view);
+const gchar    *wikipad_view_get_color_scheme          (WikipadView      *view);
 
-void            wikipad_view_set_word_wrap             (MousepadView      *view,
+void            wikipad_view_set_word_wrap             (WikipadView      *view,
                                                          gboolean           enabled);
 
-gboolean        wikipad_view_get_word_wrap             (MousepadView      *view);
+gboolean        wikipad_view_get_word_wrap             (WikipadView      *view);
 
-void            wikipad_view_set_match_braces          (MousepadView      *view,
+void            wikipad_view_set_match_braces          (WikipadView      *view,
                                                          gboolean           enabled);
 
-gboolean        wikipad_view_get_match_braces          (MousepadView      *view);
+gboolean        wikipad_view_get_match_braces          (WikipadView      *view);
 
 G_END_DECLS
 

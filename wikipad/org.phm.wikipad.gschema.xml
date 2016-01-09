@@ -2,21 +2,21 @@
 
   <!-- Enums and flags -->
 
-  <enum id="org.xfce.wikipad.SmartHomeEnd">
+  <enum id="org.phm.wikipad.SmartHomeEnd">
     <value nick="disabled" value="0"/>
     <value nick="before" value="1"/>
     <value nick="after" value="2"/>
     <value nick="always" value="3"/>
   </enum>
 
-  <enum id="org.xfce.wikipad.ToolbarStyle">
+  <enum id="org.phm.wikipad.ToolbarStyle">
     <value nick="icons" value="0"/>
     <value nick="text" value="1"/>
     <value nick="both" value="2"/>
     <value nick="both-horiz" value="3"/>
   </enum>
 
-  <enum id="org.xfce.wikipad.IconSize">
+  <enum id="org.phm.wikipad.IconSize">
     <value nick="menu" value="1"/>
     <value nick="small-toolbar" value="2"/>
     <value nick="large-toolbar" value="3"/>
@@ -25,29 +25,29 @@
     <value nick="dialog" value="6"/>
   </enum>
 
-  <enum id="org.xfce.wikipad.ShowInFullscreen">
+  <enum id="org.phm.wikipad.ShowInFullscreen">
     <value nick="auto" value="0"/>
     <value nick="no" value="1"/>
     <value nick="yes" value="2"/>
   </enum>
 
-  <schema id="org.xfce.wikipad" path="/org/xfce/wikipad/" gettext-domain="wikipad">
-    <child name="preferences" schema="org.xfce.wikipad.preferences"/>
-    <child name="state" schema="org.xfce.wikipad.state"/>
+  <schema id="org.phm.wikipad" path="/org/xfce/wikipad/" gettext-domain="wikipad">
+    <child name="preferences" schema="org.phm.wikipad.preferences"/>
+    <child name="state" schema="org.phm.wikipad.state"/>
   </schema>
 
-  <schema id="org.xfce.wikipad.preferences" path="/org/xfce/wikipad/preferences/" gettext-domain="wikipad">
-    <child name="view" schema="org.xfce.wikipad.preferences.view"/>
-    <child name="window" schema="org.xfce.wikipad.preferences.window"/>
+  <schema id="org.phm.wikipad.preferences" path="/org/xfce/wikipad/preferences/" gettext-domain="wikipad">
+    <child name="view" schema="org.phm.wikipad.preferences.view"/>
+    <child name="window" schema="org.phm.wikipad.preferences.window"/>
   </schema>
 
-  <schema id="org.xfce.wikipad.state" path="/org/xfce/wikipad/state/" gettext-domain="wikipad">
-    <child name="search" schema="org.xfce.wikipad.state.search"/>
-    <child name="window" schema="org.xfce.wikipad.state.window"/>
+  <schema id="org.phm.wikipad.state" path="/org/xfce/wikipad/state/" gettext-domain="wikipad">
+    <child name="search" schema="org.phm.wikipad.state.search"/>
+    <child name="window" schema="org.phm.wikipad.state.window"/>
   </schema>
 
   <!-- Textview preferences -->
-  <schema id="org.xfce.wikipad.preferences.view" path="/org/xfce/wikipad/preferences/view/" gettext-domain="wikipad">
+  <schema id="org.phm.wikipad.preferences.view" path="/org/xfce/wikipad/preferences/view/" gettext-domain="wikipad">
     <key name="auto-indent" type="b">
       <default>false</default>
       <summary>Auto-indentation</summary>
@@ -150,7 +150,7 @@
         'view-right-margin-position', when false it is not drawn.
       </description>
     </key>
-    <key name="smart-home-end" enum="org.xfce.wikipad.SmartHomeEnd">
+    <key name="smart-home-end" enum="org.phm.wikipad.SmartHomeEnd">
       <default>'disabled'</default>
       <summary>Smart home end type</summary>
       <description>Sets the behaviour of the HOME and END keys.</description>
@@ -190,8 +190,8 @@
   </schema>
 
   <!-- window preferences -->
-  <schema id="org.xfce.wikipad.preferences.window" path="/org/xfce/wikipad/preferences/window/" gettext-domain="wikipad">
-    <key name="toolbar-style" enum="org.xfce.wikipad.ToolbarStyle">
+  <schema id="org.phm.wikipad.preferences.window" path="/org/xfce/wikipad/preferences/window/" gettext-domain="wikipad">
+    <key name="toolbar-style" enum="org.phm.wikipad.ToolbarStyle">
       <default>'icons'</default>
       <summary>Toolbar style</summary>
       <description>
@@ -199,7 +199,7 @@
         labels and icons (if visible).
       </description>
     </key>
-    <key name="toolbar-icon-size" enum="org.xfce.wikipad.IconSize">
+    <key name="toolbar-icon-size" enum="org.phm.wikipad.IconSize">
       <default>'small-toolbar'</default>
       <summary>Toolbar icon size</summary>
       <description>
@@ -295,7 +295,7 @@
         When true the statusbar is visible, when false it is not visible.
       </description>
     </key>
-    <key name="menubar-visible-in-fullscreen" enum="org.xfce.wikipad.ShowInFullscreen">
+    <key name="menubar-visible-in-fullscreen" enum="org.phm.wikipad.ShowInFullscreen">
       <default>'auto'</default>
       <summary>Menubar visible in fullscreen mode</summary>
       <description>
@@ -304,7 +304,7 @@
         it is always visible in fullscreen.
       </description>
     </key>
-    <key name="toolbar-visible-in-fullscreen" enum="org.xfce.wikipad.ShowInFullscreen">
+    <key name="toolbar-visible-in-fullscreen" enum="org.phm.wikipad.ShowInFullscreen">
       <default>'auto'</default>
       <summary>Toolbar visible in fullscreen mode</summary>
       <description>
@@ -313,7 +313,7 @@
         it is always visible in fullscreen.
       </description>
     </key>
-    <key name="statusbar-visible-in-fullscreen" enum="org.xfce.wikipad.ShowInFullscreen">
+    <key name="statusbar-visible-in-fullscreen" enum="org.phm.wikipad.ShowInFullscreen">
       <default>'auto'</default>
       <summary>Statusbar visible in fullscreen mode</summary>
       <description>
@@ -325,7 +325,7 @@
   </schema>
 
   <!-- search state -->
-  <schema id="org.xfce.wikipad.state.search" path="/org/xfce/wikipad/state/search/" gettext-domain="wikipad">
+  <schema id="org.phm.wikipad.state.search" path="/org/xfce/wikipad/state/search/" gettext-domain="wikipad">
     <key name="direction" type="i">
       <range min="0" max="2"/>
       <default>1</default>
@@ -373,7 +373,7 @@
   </schema>
 
   <!-- window state -->
-  <schema id="org.xfce.wikipad.state.window" path="/org/xfce/wikipad/state/window/" gettext-domain="wikipad">
+  <schema id="org.phm.wikipad.state.window" path="/org/xfce/wikipad/state/window/" gettext-domain="wikipad">
     <key name="height" type="i">
       <default>480</default>
       <summary>window height</summary>

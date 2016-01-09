@@ -41,9 +41,9 @@ static void           wikipad_print_draw_page             (GtkPrintOperation    
 static void           wikipad_print_page_setup_dialog     (GtkWidget               *button,
                                                             GtkPrintOperation       *operation);
 static void           wikipad_print_button_toggled        (GtkWidget               *button,
-                                                            MousepadPrint           *print);
+                                                            WikipadPrint           *print);
 static void           wikipad_print_button_font_set       (GtkFontButton           *button,
-                                                            MousepadPrint           *print);
+                                                            WikipadPrint           *print);
 static PangoAttrList *wikipad_print_attr_list_bold        (void);
 static GtkWidget     *wikipad_print_create_custom_widget  (GtkPrintOperation       *operation);
 static void           wikipad_print_status_changed        (GtkPrintOperation       *operation);
@@ -52,12 +52,12 @@ static void           wikipad_print_done                  (GtkPrintOperation    
 
 
 
-struct _MousepadPrintClass
+struct _WikipadPrintClass
 {
   GtkPrintOperationClass __parent__;
 };
 
-struct _MousepadPrint
+struct _WikipadPrint
 {
   GtkPrintOperation __parent__;
 
@@ -86,12 +86,12 @@ struct _MousepadPrint
 
 
 
-G_DEFINE_TYPE (MousepadPrint, wikipad_print, GTK_TYPE_PRINT_OPERATION)
+G_DEFINE_TYPE (WikipadPrint, wikipad_print, GTK_TYPE_PRINT_OPERATION)
 
 
 
 static void
-wikipad_print_class_init (MousepadPrintClass *klass)
+wikipad_print_class_init (WikipadPrintClass *klass)
 {
   GObjectClass           *gobject_class;
   GtkPrintOperationClass *gtkprintoperation_class;
@@ -110,7 +110,7 @@ wikipad_print_class_init (MousepadPrintClass *klass)
 
 
 static void
-wikipad_print_init (MousepadPrint *print)
+wikipad_print_init (WikipadPrint *print)
 {
   /* init */
   print->print_line_numbers = FALSE;
@@ -126,7 +126,7 @@ wikipad_print_init (MousepadPrint *print)
 static void
 wikipad_print_finalize (GObject *object)
 {
-  MousepadPrint *print = WIKIPAD_PRINT (object);
+  WikipadPrint *print = WIKIPAD_PRINT (object);
 
   /* cleanup */
   g_object_unref (print->compositor);
@@ -139,7 +139,7 @@ wikipad_print_finalize (GObject *object)
 static void
 wikipad_print_settings_load (GtkPrintOperation *operation)
 {
-  MousepadPrint         *print = WIKIPAD_PRINT (operation);
+  WikipadPrint         *print = WIKIPAD_PRINT (operation);
   GKeyFile              *keyfile;
   gchar                 *filename;
   GtkPrintSettings      *settings = NULL;
@@ -318,7 +318,7 @@ wikipad_print_settings_save_foreach (const gchar *key,
 static void
 wikipad_print_settings_save (GtkPrintOperation *operation)
 {
-  MousepadPrint    *print = WIKIPAD_PRINT (operation);
+  WikipadPrint    *print = WIKIPAD_PRINT (operation);
   GKeyFile         *keyfile;
   gchar            *filename;
   GtkPrintSettings *settings;
@@ -417,7 +417,7 @@ static void
 wikipad_print_begin_print (GtkPrintOperation *operation,
                             GtkPrintContext   *context)
 {
-  MousepadPrint    *print = WIKIPAD_PRINT (operation);
+  WikipadPrint    *print = WIKIPAD_PRINT (operation);
   WikipadDocument *document = print->document;
   gint              n_pages = 1;
   const gchar      *file_name;
@@ -454,7 +454,7 @@ wikipad_print_draw_page (GtkPrintOperation *operation,
                           GtkPrintContext   *context,
                           gint               page_nr)
 {
-  MousepadPrint *print = WIKIPAD_PRINT (operation);
+  WikipadPrint *print = WIKIPAD_PRINT (operation);
 
   gtk_source_print_compositor_draw_page (print->compositor, context, page_nr);
 }
@@ -493,7 +493,7 @@ wikipad_print_page_setup_dialog (GtkWidget         *button,
 
 static void
 wikipad_print_button_toggled (GtkWidget     *button,
-                               MousepadPrint *print)
+                               WikipadPrint *print)
 {
   gboolean active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (button));
 
@@ -519,7 +519,7 @@ wikipad_print_button_toggled (GtkWidget     *button,
 
 static void
 wikipad_print_button_font_set (GtkFontButton *button,
-                                MousepadPrint *print)
+                                WikipadPrint *print)
 {
   const gchar *font;
   GtkWidget   *widget = GTK_WIDGET (button);
@@ -538,7 +538,7 @@ wikipad_print_button_font_set (GtkFontButton *button,
 
 static void
 wikipad_print_spin_value_changed (GtkSpinButton *button,
-                                   MousepadPrint *print)
+                                   WikipadPrint *print)
 {
   print->line_number_increment = gtk_spin_button_get_value_as_int (button);
 
@@ -576,7 +576,7 @@ wikipad_print_attr_list_bold (void)
 static GtkWidget *
 wikipad_print_create_custom_widget (GtkPrintOperation *operation)
 {
-  MousepadPrint *print = WIKIPAD_PRINT (operation);
+  WikipadPrint *print = WIKIPAD_PRINT (operation);
   GtkWidget     *button;
   GtkWidget     *vbox, *vbox2;
   GtkWidget     *frame;
@@ -773,7 +773,7 @@ wikipad_print_done (GtkPrintOperation       *operation,
 
 
 
-MousepadPrint *
+WikipadPrint *
 wikipad_print_new (void)
 {
   return g_object_new (WIKIPAD_TYPE_PRINT, NULL);
@@ -782,7 +782,7 @@ wikipad_print_new (void)
 
 
 gboolean
-wikipad_print_document_interactive (MousepadPrint     *print,
+wikipad_print_document_interactive (WikipadPrint     *print,
                                      WikipadDocument  *document,
                                      GtkWindow         *parent,
                                      GError           **error)

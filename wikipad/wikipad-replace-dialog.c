@@ -29,8 +29,8 @@ static void                 wikipad_replace_dialog_unrealize           (GtkWidge
 static void                 wikipad_replace_dialog_finalize            (GObject               *object);
 static void                 wikipad_replace_dialog_response            (GtkWidget             *widget,
                                                                          gint                   response_id);
-static void                 wikipad_replace_dialog_changed             (MousepadReplaceDialog *dialog);
-static void                 wikipad_replace_dialog_settings_changed    (MousepadReplaceDialog *dialog,
+static void                 wikipad_replace_dialog_changed             (WikipadReplaceDialog *dialog);
+static void                 wikipad_replace_dialog_settings_changed    (WikipadReplaceDialog *dialog,
                                                                          gchar                 *key,
                                                                          GSettings             *settings);
 static void                 wikipad_replace_dialog_history_combo_box   (GtkComboBoxText       *combo_box);
@@ -38,12 +38,12 @@ static void                 wikipad_replace_dialog_history_insert_text (const gc
 
 
 
-struct _MousepadReplaceDialogClass
+struct _WikipadReplaceDialogClass
 {
   GtkDialogClass __parent__;
 };
 
-struct _MousepadReplaceDialog
+struct _WikipadReplaceDialog
 {
   GtkDialog __parent__;
 
@@ -83,11 +83,11 @@ static guint   dialog_signals[LAST_SIGNAL];
 
 
 
-G_DEFINE_TYPE (MousepadReplaceDialog, wikipad_replace_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (WikipadReplaceDialog, wikipad_replace_dialog, GTK_TYPE_DIALOG)
 
 
 static void
-wikipad_replace_dialog_class_init (MousepadReplaceDialogClass *klass)
+wikipad_replace_dialog_class_init (WikipadReplaceDialogClass *klass)
 {
   GObjectClass   *gobject_class;
   GtkWidgetClass *gtkwidget_class;
@@ -112,7 +112,7 @@ wikipad_replace_dialog_class_init (MousepadReplaceDialogClass *klass)
 
 
 static void
-wikipad_replace_dialog_bind_setting (MousepadReplaceDialog *dialog,
+wikipad_replace_dialog_bind_setting (WikipadReplaceDialog *dialog,
                                       const gchar           *path,
                                       gpointer               object,
                                       const gchar           *property)
@@ -128,7 +128,7 @@ wikipad_replace_dialog_bind_setting (MousepadReplaceDialog *dialog,
 
 
 static void
-wikipad_replace_dialog_init (MousepadReplaceDialog *dialog)
+wikipad_replace_dialog_init (WikipadReplaceDialog *dialog)
 {
   GtkWidget    *vbox, *hbox, *combo, *label, *check;
   GtkSizeGroup *size_group;
@@ -267,7 +267,7 @@ wikipad_replace_dialog_init (MousepadReplaceDialog *dialog)
 static void
 wikipad_replace_dialog_unrealize (GtkWidget *widget)
 {
-  MousepadReplaceDialog *dialog = WIKIPAD_REPLACE_DIALOG (widget);
+  WikipadReplaceDialog *dialog = WIKIPAD_REPLACE_DIALOG (widget);
   const gchar           *text;
 
   g_return_if_fail (GTK_IS_ENTRY (dialog->replace_entry));
@@ -287,7 +287,7 @@ wikipad_replace_dialog_unrealize (GtkWidget *widget)
 static void
 wikipad_replace_dialog_finalize (GObject *object)
 {
-  /*MousepadReplaceDialog *dialog = WIKIPAD_REPLACE_DIALOG (object);*/
+  /*WikipadReplaceDialog *dialog = WIKIPAD_REPLACE_DIALOG (object);*/
 
   (*G_OBJECT_CLASS (wikipad_replace_dialog_parent_class)->finalize) (object);
 }
@@ -298,8 +298,8 @@ static void
 wikipad_replace_dialog_response (GtkWidget *widget,
                                   gint       response_id)
 {
-  MousepadSearchFlags    flags;
-  MousepadReplaceDialog *dialog = WIKIPAD_REPLACE_DIALOG (widget);
+  WikipadSearchFlags    flags;
+  WikipadReplaceDialog *dialog = WIKIPAD_REPLACE_DIALOG (widget);
   gint                   matches;
   const gchar           *search_str, *replace_str;
   gchar                 *message;
@@ -427,7 +427,7 @@ wikipad_replace_dialog_response (GtkWidget *widget,
 
 
 static void
-wikipad_replace_dialog_changed (MousepadReplaceDialog *dialog)
+wikipad_replace_dialog_changed (WikipadReplaceDialog *dialog)
 {
   const gchar *text;
   gboolean     sensitive;
@@ -473,7 +473,7 @@ wikipad_replace_dialog_changed (MousepadReplaceDialog *dialog)
 
 
 static void
-wikipad_replace_dialog_settings_changed (MousepadReplaceDialog *dialog,
+wikipad_replace_dialog_settings_changed (WikipadReplaceDialog *dialog,
                                           gchar                 *key,
                                           GSettings             *settings)
 {
@@ -555,7 +555,7 @@ wikipad_replace_dialog_history_clean (void)
 
 
 void
-wikipad_replace_dialog_page_switched (MousepadReplaceDialog *dialog)
+wikipad_replace_dialog_page_switched (WikipadReplaceDialog *dialog)
 {
   wikipad_replace_dialog_changed (dialog);
 }
@@ -563,7 +563,7 @@ wikipad_replace_dialog_page_switched (MousepadReplaceDialog *dialog)
 
 
 void
-wikipad_replace_dialog_set_text (MousepadReplaceDialog *dialog, gchar *text)
+wikipad_replace_dialog_set_text (WikipadReplaceDialog *dialog, gchar *text)
 {
   gtk_entry_set_text (GTK_ENTRY (dialog->search_entry), text);
 }

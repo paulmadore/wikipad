@@ -23,28 +23,28 @@ G_BEGIN_DECLS
 
 
 #define WIKIPAD_TYPE_SETTINGS_STORE            (wikipad_settings_store_get_type ())
-#define WIKIPAD_SETTINGS_STORE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_SETTINGS_STORE, MousepadSettingsStore))
-#define WIKIPAD_SETTINGS_STORE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_SETTINGS_STORE, MousepadSettingsStoreClass))
+#define WIKIPAD_SETTINGS_STORE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_SETTINGS_STORE, WikipadSettingsStore))
+#define WIKIPAD_SETTINGS_STORE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_SETTINGS_STORE, WikipadSettingsStoreClass))
 #define WIKIPAD_IS_SETTINGS_STORE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_SETTINGS_STORE))
 #define WIKIPAD_IS_SETTINGS_STORE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), WIKIPAD_TYPE_SETTINGS_STORE))
-#define WIKIPAD_SETTINGS_STORE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_SETTINGS_STORE, MousepadSettingsStoreClass))
+#define WIKIPAD_SETTINGS_STORE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_SETTINGS_STORE, WikipadSettingsStoreClass))
 
 
-typedef struct MousepadSettingsStore_      MousepadSettingsStore;
-typedef struct MousepadSettingsStoreClass_ MousepadSettingsStoreClass;
+typedef struct WikipadSettingsStore_      WikipadSettingsStore;
+typedef struct WikipadSettingsStoreClass_ WikipadSettingsStoreClass;
 
 
 GType                  wikipad_settings_store_get_type        (void);
 
-MousepadSettingsStore *wikipad_settings_store_new             (void);
+WikipadSettingsStore *wikipad_settings_store_new             (void);
 
-const gchar           *wikipad_settings_store_lookup_key_name (MousepadSettingsStore *store,
+const gchar           *wikipad_settings_store_lookup_key_name (WikipadSettingsStore *store,
                                                                 const gchar           *path);
 
-GSettings             *wikipad_settings_store_lookup_settings (MousepadSettingsStore *store,
+GSettings             *wikipad_settings_store_lookup_settings (WikipadSettingsStore *store,
                                                                 const gchar           *path);
 
-gboolean               wikipad_settings_store_lookup          (MousepadSettingsStore *store,
+gboolean               wikipad_settings_store_lookup          (WikipadSettingsStore *store,
                                                                 const gchar           *path,
                                                                 const gchar          **key_name,
                                                                 GSettings            **settings);

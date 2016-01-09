@@ -36,7 +36,7 @@ enum
 
 
 
-struct MousepadActionGroup_
+struct WikipadActionGroup_
 {
   GtkActionGroup        parent;
   GtkSourceLanguage    *active_language;
@@ -46,7 +46,7 @@ struct MousepadActionGroup_
 
 
 
-struct MousepadActionGroupClass_
+struct WikipadActionGroupClass_
 {
   GtkActionGroupClass parent_class;
 };
@@ -62,36 +62,36 @@ static void       wikipad_action_group_get_property                     (GObject
                                                                           guint                   prop_id,
                                                                           GValue                 *value,
                                                                           GParamSpec             *pspec);
-static GtkWidget *wikipad_action_group_create_language_submenu          (MousepadActionGroup    *self,
+static GtkWidget *wikipad_action_group_create_language_submenu          (WikipadActionGroup    *self,
                                                                           const gchar            *section);
-static void       wikipad_action_group_language_action_activate         (MousepadActionGroup    *self,
+static void       wikipad_action_group_language_action_activate         (WikipadActionGroup    *self,
                                                                           WikipadLanguageAction *action);
-static void       wikipad_action_group_add_language_actions             (MousepadActionGroup    *self);
-static GtkAction *wikipad_action_group_get_language_action              (MousepadActionGroup    *group,
+static void       wikipad_action_group_add_language_actions             (WikipadActionGroup    *self);
+static GtkAction *wikipad_action_group_get_language_action              (WikipadActionGroup    *group,
                                                                           GtkSourceLanguage      *language);
 static gint       wikipad_action_group_languages_name_compare           (gconstpointer           a,
                                                                           gconstpointer           b);
 static GSList    *wikipad_action_group_get_sorted_languages_for_section (const gchar            *section);
 static GSList    *wikipad_action_group_get_sorted_section_names         (void);
-static void       wikipad_action_group_add_style_scheme_actions         (MousepadActionGroup    *self);
-static GtkAction *wikipad_action_group_get_style_scheme_action          (MousepadActionGroup    *self,
+static void       wikipad_action_group_add_style_scheme_actions         (WikipadActionGroup    *self);
+static GtkAction *wikipad_action_group_get_style_scheme_action          (WikipadActionGroup    *self,
                                                                           GtkSourceStyleScheme   *scheme);
 static gint       wikipad_action_group_style_schemes_name_compare       (gconstpointer           a,
                                                                           gconstpointer           b);
 static GSList    *wikipad_action_group_get_style_schemes                (void);
 static GSList    *wikipad_action_group_style_schemes_get_sorted         (void);
-static void       wikipad_action_group_color_scheme_setting_changed     (MousepadActionGroup    *self,
+static void       wikipad_action_group_color_scheme_setting_changed     (WikipadActionGroup    *self,
                                                                           gchar                  *key,
                                                                           GSettings              *settings);
 
 
 
-G_DEFINE_TYPE (MousepadActionGroup, wikipad_action_group, GTK_TYPE_ACTION_GROUP)
+G_DEFINE_TYPE (WikipadActionGroup, wikipad_action_group, GTK_TYPE_ACTION_GROUP)
 
 
 
 static void
-wikipad_action_group_class_init (MousepadActionGroupClass *klass)
+wikipad_action_group_class_init (WikipadActionGroupClass *klass)
 {
   GObjectClass *g_object_class;
 
@@ -133,7 +133,7 @@ wikipad_action_group_class_init (MousepadActionGroupClass *klass)
 static void
 wikipad_action_group_finalize (GObject *object)
 {
-  MousepadActionGroup *self;
+  WikipadActionGroup *self;
 
   g_return_if_fail (WIKIPAD_IS_ACTION_GROUP (object));
 
@@ -156,7 +156,7 @@ wikipad_action_group_set_property (GObject      *object,
                                     const GValue *value,
                                     GParamSpec   *pspec)
 {
-  MousepadActionGroup *self = WIKIPAD_ACTION_GROUP (object);
+  WikipadActionGroup *self = WIKIPAD_ACTION_GROUP (object);
 
   switch (prop_id)
     {
@@ -180,7 +180,7 @@ wikipad_action_group_get_property (GObject    *object,
                                     GValue     *value,
                                     GParamSpec *pspec)
 {
-  MousepadActionGroup *self = WIKIPAD_ACTION_GROUP (object);
+  WikipadActionGroup *self = WIKIPAD_ACTION_GROUP (object);
 
   switch (prop_id)
     {
@@ -199,7 +199,7 @@ wikipad_action_group_get_property (GObject    *object,
 
 
 static void
-wikipad_action_group_init (MousepadActionGroup *self)
+wikipad_action_group_init (WikipadActionGroup *self)
 {
   gchar                *scheme_id;
   GtkSourceStyleScheme *scheme;
@@ -242,7 +242,7 @@ wikipad_action_group_new (void)
 
 
 void
-wikipad_action_group_set_active_language (MousepadActionGroup *self,
+wikipad_action_group_set_active_language (WikipadActionGroup *self,
                                            GtkSourceLanguage   *language)
 {
   GtkAction *action;
@@ -270,7 +270,7 @@ wikipad_action_group_set_active_language (MousepadActionGroup *self,
 
 
 GtkSourceLanguage *
-wikipad_action_group_get_active_language (MousepadActionGroup *self)
+wikipad_action_group_get_active_language (WikipadActionGroup *self)
 {
   g_return_val_if_fail (WIKIPAD_IS_ACTION_GROUP (self), NULL);
 
@@ -280,7 +280,7 @@ wikipad_action_group_get_active_language (MousepadActionGroup *self)
 
 
 void
-wikipad_action_group_set_active_style_scheme (MousepadActionGroup  *self,
+wikipad_action_group_set_active_style_scheme (WikipadActionGroup  *self,
                                                GtkSourceStyleScheme *scheme)
 {
   GtkAction   *action;
@@ -317,7 +317,7 @@ wikipad_action_group_set_active_style_scheme (MousepadActionGroup  *self,
 
 
 GtkSourceStyleScheme *
-wikipad_action_group_get_active_style_scheme (MousepadActionGroup *self)
+wikipad_action_group_get_active_style_scheme (WikipadActionGroup *self)
 {
   g_return_val_if_fail (WIKIPAD_IS_ACTION_GROUP (self), NULL);
 
@@ -333,7 +333,7 @@ wikipad_action_group_get_active_style_scheme (MousepadActionGroup *self)
 
 
 static GtkWidget *
-wikipad_action_group_create_language_submenu (MousepadActionGroup *self,
+wikipad_action_group_create_language_submenu (WikipadActionGroup *self,
                                                const gchar         *section)
 {
   GtkWidget *menu, *item;
@@ -363,7 +363,7 @@ wikipad_action_group_create_language_submenu (MousepadActionGroup *self,
 
 
 GtkWidget *
-wikipad_action_group_create_language_menu (MousepadActionGroup *self)
+wikipad_action_group_create_language_menu (WikipadActionGroup *self)
 {
   GtkWidget *menu;
   GtkWidget *item;
@@ -409,7 +409,7 @@ wikipad_action_group_create_language_menu (MousepadActionGroup *self)
 
 
 GtkWidget *
-wikipad_action_group_create_style_scheme_menu (MousepadActionGroup *self)
+wikipad_action_group_create_style_scheme_menu (WikipadActionGroup *self)
 {
   GtkWidget *menu;
   GtkWidget *item;
@@ -453,7 +453,7 @@ wikipad_action_group_create_style_scheme_menu (MousepadActionGroup *self)
 
 
 static void
-wikipad_action_group_language_action_activate (MousepadActionGroup    *self,
+wikipad_action_group_language_action_activate (WikipadActionGroup    *self,
                                                 WikipadLanguageAction *action)
 {
   /* only update the active action if we're not already in the process of
@@ -474,8 +474,8 @@ wikipad_action_group_language_action_activate (MousepadActionGroup    *self,
 
 
 static void
-wikipad_action_group_style_scheme_action_activate (MousepadActionGroup       *self,
-                                                    MousepadStyleSchemeAction *action)
+wikipad_action_group_style_scheme_action_activate (WikipadActionGroup       *self,
+                                                    WikipadStyleSchemeAction *action)
 {
   /* only update the active action if we're not already in the process of
    * setting it and the sender action is actually active */
@@ -492,7 +492,7 @@ wikipad_action_group_style_scheme_action_activate (MousepadActionGroup       *se
 
 
 static void
-wikipad_action_group_color_scheme_setting_changed (MousepadActionGroup *self,
+wikipad_action_group_color_scheme_setting_changed (WikipadActionGroup *self,
                                                     gchar               *key,
                                                     GSettings           *settings)
 {
@@ -521,7 +521,7 @@ wikipad_action_group_color_scheme_setting_changed (MousepadActionGroup *self,
 
 
 static void
-wikipad_action_group_add_language_actions (MousepadActionGroup *self)
+wikipad_action_group_add_language_actions (WikipadActionGroup *self)
 {
   GtkSourceLanguageManager *manager;
   const gchar       *const *lang_ids;
@@ -563,7 +563,7 @@ wikipad_action_group_add_language_actions (MousepadActionGroup *self)
 
 
 GtkAction *
-wikipad_action_group_get_language_action (MousepadActionGroup *self,
+wikipad_action_group_get_language_action (WikipadActionGroup *self,
                                            GtkSourceLanguage   *language)
 {
   const gchar *language_id;
@@ -682,7 +682,7 @@ wikipad_action_group_get_sorted_languages_for_section (const gchar *section)
 
 
 static void
-wikipad_action_group_add_style_scheme_actions (MousepadActionGroup *self)
+wikipad_action_group_add_style_scheme_actions (WikipadActionGroup *self)
 {
   GSList        *schemes, *iter;
   GSList        *group = NULL;
@@ -721,7 +721,7 @@ wikipad_action_group_add_style_scheme_actions (MousepadActionGroup *self)
 
 
 static GtkAction *
-wikipad_action_group_get_style_scheme_action (MousepadActionGroup  *self,
+wikipad_action_group_get_style_scheme_action (WikipadActionGroup  *self,
                                                GtkSourceStyleScheme *scheme)
 {
   gchar       *name;

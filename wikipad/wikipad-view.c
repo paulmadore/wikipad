@@ -65,31 +65,31 @@ static gboolean  wikipad_view_button_release_event          (GtkWidget          
 static gboolean  wikipad_view_selection_word_range          (const GtkTextIter  *iter,
                                                               GtkTextIter        *range_start,
                                                               GtkTextIter        *range_end);
-static void      wikipad_view_selection_key_press_event     (MousepadView       *view,
+static void      wikipad_view_selection_key_press_event     (WikipadView       *view,
                                                               const gchar        *text,
                                                               guint               keyval,
                                                               guint               modifiers);
 static void      wikipad_view_commit_handler                (GtkIMContext       *context,
                                                               const gchar        *str,
-                                                              MousepadView       *view);
-static void      wikipad_view_selection_delete_content      (MousepadView       *view);
-static void      wikipad_view_selection_destroy             (MousepadView       *view);
-static void      wikipad_view_selection_draw                (MousepadView       *view,
+                                                              WikipadView       *view);
+static void      wikipad_view_selection_delete_content      (WikipadView       *view);
+static void      wikipad_view_selection_destroy             (WikipadView       *view);
+static void      wikipad_view_selection_draw                (WikipadView       *view,
                                                               gboolean            append);
 static gboolean  wikipad_view_selection_timeout             (gpointer            user_data);
 static void      wikipad_view_selection_timeout_destroy     (gpointer            user_data);
-static gchar    *wikipad_view_selection_string              (MousepadView       *view);
+static gchar    *wikipad_view_selection_string              (WikipadView       *view);
 #endif
-static void      wikipad_view_indent_increase               (MousepadView       *view,
+static void      wikipad_view_indent_increase               (WikipadView       *view,
                                                               GtkTextIter        *iter);
-static void      wikipad_view_indent_decrease               (MousepadView       *view,
+static void      wikipad_view_indent_decrease               (WikipadView       *view,
                                                               GtkTextIter        *iter);
-static void      wikipad_view_indent_selection              (MousepadView       *view,
+static void      wikipad_view_indent_selection              (WikipadView       *view,
                                                               gboolean            increase,
                                                               gboolean            force);
 #ifdef HAVE_MULTISELECT
 static void      wikipad_view_transpose_multi_selection     (GtkTextBuffer       *buffer,
-                                                              MousepadView        *view);
+                                                              WikipadView        *view);
 #endif
 static void      wikipad_view_transpose_range               (GtkTextBuffer       *buffer,
                                                               GtkTextIter         *start_iter,
@@ -99,16 +99,16 @@ static void      wikipad_view_transpose_lines               (GtkTextBuffer      
                                                               GtkTextIter         *end_iter);
 static void      wikipad_view_transpose_words               (GtkTextBuffer       *buffer,
                                                               GtkTextIter         *iter);
-static void      wikipad_view_update_font                   (MousepadView        *view);
+static void      wikipad_view_update_font                   (WikipadView        *view);
 
 
 
-struct _MousepadViewClass
+struct _WikipadViewClass
 {
   GtkSourceViewClass __parent__;
 };
 
-struct _MousepadView
+struct _WikipadView
 {
   GtkSourceView         __parent__;
 
@@ -162,12 +162,12 @@ enum
 
 
 
-G_DEFINE_TYPE (MousepadView, wikipad_view, GTK_SOURCE_TYPE_VIEW)
+G_DEFINE_TYPE (WikipadView, wikipad_view, GTK_SOURCE_TYPE_VIEW)
 
 
 
 static void
-wikipad_view_class_init (MousepadViewClass *klass)
+wikipad_view_class_init (WikipadViewClass *klass)
 {
   GObjectClass   *gobject_class;
   GtkWidgetClass *widget_class;
@@ -244,7 +244,7 @@ wikipad_view_class_init (MousepadViewClass *klass)
 
 
 static void
-wikipad_view_buffer_changed (MousepadView *view,
+wikipad_view_buffer_changed (WikipadView *view,
                               GParamSpec   *pspec,
                               gpointer      user_data)
 {
@@ -268,7 +268,7 @@ wikipad_view_buffer_changed (MousepadView *view,
 
 
 static void
-wikipad_view_use_default_font_setting_changed (MousepadView *view,
+wikipad_view_use_default_font_setting_changed (WikipadView *view,
                                                 gchar        *key,
                                                 GSettings    *settings)
 {
@@ -278,7 +278,7 @@ wikipad_view_use_default_font_setting_changed (MousepadView *view,
 
 
 static void
-wikipad_view_init (MousepadView *view)
+wikipad_view_init (WikipadView *view)
 {
   /* initialize selection variables */
   view->selection_timeout_id = 0;
@@ -348,7 +348,7 @@ wikipad_view_init (MousepadView *view)
 static void
 wikipad_view_finalize (GObject *object)
 {
-  MousepadView *view = WIKIPAD_VIEW (object);
+  WikipadView *view = WIKIPAD_VIEW (object);
 
   /* stop a running selection timeout */
   if (G_UNLIKELY (view->selection_timeout_id != 0))
@@ -372,7 +372,7 @@ wikipad_view_set_property (GObject      *object,
                             const GValue *value,
                             GParamSpec   *pspec)
 {
-  MousepadView *view = WIKIPAD_VIEW (object);
+  WikipadView *view = WIKIPAD_VIEW (object);
 
   switch (prop_id)
     {
@@ -408,7 +408,7 @@ wikipad_view_get_property (GObject    *object,
                             GValue     *value,
                             GParamSpec *pspec)
 {
-  MousepadView *view = WIKIPAD_VIEW (object);
+  WikipadView *view = WIKIPAD_VIEW (object);
 
   switch (prop_id)
     {
@@ -444,7 +444,7 @@ wikipad_view_expose (GtkWidget      *widget,
                       GdkEventExpose *event)
 {
   GtkTextView  *textview = GTK_TEXT_VIEW (widget);
-  MousepadView *view = WIKIPAD_VIEW (widget);
+  WikipadView *view = WIKIPAD_VIEW (widget);
 
   if (G_UNLIKELY (view->selection_length == -1
       && (view->selection_marks != NULL || view->selection_end_x != -1)
@@ -466,7 +466,7 @@ wikipad_view_style_set (GtkWidget *widget,
 {
   GtkStyle      *style;
   GtkTextIter    start, end;
-  MousepadView  *view = WIKIPAD_VIEW (widget);
+  WikipadView  *view = WIKIPAD_VIEW (widget);
   GtkTextBuffer *buffer;
 
   /* run widget handler */
@@ -507,7 +507,7 @@ static gboolean
 wikipad_view_key_press_event (GtkWidget   *widget,
                                GdkEventKey *event)
 {
-  MousepadView  *view = WIKIPAD_VIEW (widget);
+  WikipadView  *view = WIKIPAD_VIEW (widget);
   GtkTextBuffer *buffer;
   GtkTextIter    iter;
   GtkTextMark   *cursor;
@@ -643,7 +643,7 @@ wikipad_view_key_press_event (GtkWidget   *widget,
 static void
 wikipad_view_commit_handler (GtkIMContext *context,
                               const gchar  *str,
-                              MousepadView *view)
+                              WikipadView *view)
 {
   g_return_if_fail (WIKIPAD_IS_VIEW (view));
   g_return_if_fail (GTK_IS_IM_CONTEXT (context));
@@ -665,7 +665,7 @@ static gboolean
 wikipad_view_button_press_event (GtkWidget      *widget,
                                   GdkEventButton *event)
 {
-  MousepadView  *view = WIKIPAD_VIEW (widget);
+  WikipadView  *view = WIKIPAD_VIEW (widget);
   GtkTextView   *textview = GTK_TEXT_VIEW (widget);
   GtkTextIter    iter, start_iter, end_iter;
   GtkTextBuffer *buffer;
@@ -722,7 +722,7 @@ static gboolean
 wikipad_view_button_release_event (GtkWidget      *widget,
                                     GdkEventButton *event)
 {
-  MousepadView  *view = WIKIPAD_VIEW (widget);
+  WikipadView  *view = WIKIPAD_VIEW (widget);
 
   /* end of a vertical selection */
   if (G_UNLIKELY (view->selection_timeout_id != 0))
@@ -789,7 +789,7 @@ wikipad_view_selection_word_range (const GtkTextIter *iter,
 
 
 static void
-wikipad_view_selection_key_press_event (MousepadView *view,
+wikipad_view_selection_key_press_event (WikipadView *view,
                                          const gchar  *text,
                                          guint         keyval,
                                          guint         modifiers)
@@ -857,7 +857,7 @@ wikipad_view_selection_key_press_event (MousepadView *view,
 
 
 static void
-wikipad_view_selection_delete_content (MousepadView *view)
+wikipad_view_selection_delete_content (WikipadView *view)
 {
   GtkTextBuffer *buffer;
   GtkTextIter    start_iter, end_iter;
@@ -899,7 +899,7 @@ wikipad_view_selection_delete_content (MousepadView *view)
 
 
 static void
-wikipad_view_selection_destroy (MousepadView *view)
+wikipad_view_selection_destroy (WikipadView *view)
 {
   GtkTextBuffer *buffer;
   GSList        *li;
@@ -950,7 +950,7 @@ wikipad_view_selection_destroy (MousepadView *view)
 
 
 static void
-wikipad_view_selection_draw (MousepadView *view,
+wikipad_view_selection_draw (WikipadView *view,
                               gboolean      append)
 {
   GtkTextBuffer *buffer;
@@ -1128,7 +1128,7 @@ wikipad_view_selection_draw (MousepadView *view,
 static gboolean
 wikipad_view_selection_timeout (gpointer user_data)
 {
-  MousepadView  *view = WIKIPAD_VIEW (user_data);
+  WikipadView  *view = WIKIPAD_VIEW (user_data);
   GtkTextView   *textview = GTK_TEXT_VIEW (view);
   gint           pointer_x, pointer_y;
   GtkTextBuffer *buffer;
@@ -1191,7 +1191,7 @@ wikipad_view_selection_timeout_destroy (gpointer user_data)
 
 
 static gchar *
-wikipad_view_selection_string (MousepadView *view)
+wikipad_view_selection_string (WikipadView *view)
 {
   GString       *string;
   GtkTextBuffer *buffer;
@@ -1246,7 +1246,7 @@ wikipad_view_selection_string (MousepadView *view)
  * Indentation Functions
  **/
 static void
-wikipad_view_indent_increase (MousepadView *view,
+wikipad_view_indent_increase (WikipadView *view,
                                GtkTextIter  *iter)
 {
   gchar         *string;
@@ -1289,7 +1289,7 @@ wikipad_view_indent_increase (MousepadView *view,
 
 
 static void
-wikipad_view_indent_decrease (MousepadView *view,
+wikipad_view_indent_decrease (WikipadView *view,
                                GtkTextIter  *iter)
 {
   GtkTextBuffer *buffer;
@@ -1334,7 +1334,7 @@ wikipad_view_indent_decrease (MousepadView *view,
 
 
 static void
-wikipad_view_indent_selection (MousepadView *view,
+wikipad_view_indent_selection (WikipadView *view,
                                 gboolean      increase,
                                 gboolean      force)
 {
@@ -1387,7 +1387,7 @@ wikipad_view_indent_selection (MousepadView *view,
 
 
 void
-wikipad_view_scroll_to_cursor (MousepadView *view)
+wikipad_view_scroll_to_cursor (WikipadView *view)
 {
   GtkTextBuffer *buffer;
 
@@ -1407,7 +1407,7 @@ wikipad_view_scroll_to_cursor (MousepadView *view)
 #ifdef HAVE_MULTISELECT
 static void
 wikipad_view_transpose_multi_selection (GtkTextBuffer *buffer,
-                                         MousepadView  *view)
+                                         WikipadView  *view)
 {
   GSList      *li, *ls;
   GSList      *strings = NULL;
@@ -1637,7 +1637,7 @@ wikipad_view_transpose_words (GtkTextBuffer *buffer,
 
 
 void
-wikipad_view_transpose (MousepadView *view)
+wikipad_view_transpose (WikipadView *view)
 {
   GtkTextBuffer *buffer;
   GtkTextIter    sel_start, sel_end;
@@ -1715,7 +1715,7 @@ wikipad_view_transpose (MousepadView *view)
 
 
 void
-wikipad_view_clipboard_cut (MousepadView *view)
+wikipad_view_clipboard_cut (WikipadView *view)
 {
   GtkClipboard  *clipboard;
   GtkTextBuffer *buffer;
@@ -1763,7 +1763,7 @@ wikipad_view_clipboard_cut (MousepadView *view)
 
 
 void
-wikipad_view_clipboard_copy (MousepadView *view)
+wikipad_view_clipboard_copy (WikipadView *view)
 {
   GtkClipboard  *clipboard;
   GtkTextBuffer *buffer;
@@ -1805,7 +1805,7 @@ wikipad_view_clipboard_copy (MousepadView *view)
 
 
 void
-wikipad_view_clipboard_paste (MousepadView *view,
+wikipad_view_clipboard_paste (WikipadView *view,
                                const gchar  *string,
                                gboolean      paste_as_column)
 {
@@ -1912,7 +1912,7 @@ wikipad_view_clipboard_paste (MousepadView *view,
 
 
 void
-wikipad_view_delete_selection (MousepadView *view)
+wikipad_view_delete_selection (WikipadView *view)
 {
   GtkTextBuffer *buffer;
 
@@ -1945,7 +1945,7 @@ wikipad_view_delete_selection (MousepadView *view)
 
 
 void
-wikipad_view_select_all (MousepadView *view)
+wikipad_view_select_all (WikipadView *view)
 {
   GtkTextIter    start, end;
   GtkTextBuffer *buffer;
@@ -1971,7 +1971,7 @@ wikipad_view_select_all (MousepadView *view)
 
 
 void
-wikipad_view_change_selection (MousepadView *view)
+wikipad_view_change_selection (WikipadView *view)
 {
 #ifdef HAVE_MULTISELECT
   GtkTextBuffer *buffer;
@@ -2034,7 +2034,7 @@ wikipad_view_change_selection (MousepadView *view)
 
 
 void
-wikipad_view_convert_selection_case (MousepadView *view,
+wikipad_view_convert_selection_case (WikipadView *view,
                                       gint          type)
 {
   gchar         *text;
@@ -2150,7 +2150,7 @@ wikipad_view_convert_selection_case (MousepadView *view,
 
 
 void
-wikipad_view_convert_spaces_and_tabs (MousepadView *view,
+wikipad_view_convert_spaces_and_tabs (WikipadView *view,
                                        gint          type)
 {
   GtkTextBuffer *buffer;
@@ -2324,7 +2324,7 @@ wikipad_view_convert_spaces_and_tabs (MousepadView *view,
 
 
 void
-wikipad_view_strip_trailing_spaces (MousepadView *view)
+wikipad_view_strip_trailing_spaces (WikipadView *view)
 {
   GtkTextBuffer *buffer;
   GtkTextIter    start_iter, end_iter, needle;
@@ -2394,7 +2394,7 @@ wikipad_view_strip_trailing_spaces (MousepadView *view)
 
 
 void
-wikipad_view_move_selection (MousepadView *view,
+wikipad_view_move_selection (WikipadView *view,
                               gint          type)
 {
   GtkTextBuffer *buffer;
@@ -2519,7 +2519,7 @@ wikipad_view_move_selection (MousepadView *view,
 
 
 void
-wikipad_view_duplicate (MousepadView *view)
+wikipad_view_duplicate (WikipadView *view)
 {
   GtkTextBuffer *buffer;
   GtkTextIter    start_iter, end_iter;
@@ -2562,7 +2562,7 @@ wikipad_view_duplicate (MousepadView *view)
 
 
 void
-wikipad_view_indent (MousepadView *view,
+wikipad_view_indent (WikipadView *view,
                       gint          type)
 {
   g_return_if_fail (WIKIPAD_IS_VIEW (view));
@@ -2574,7 +2574,7 @@ wikipad_view_indent (MousepadView *view,
 
 
 gboolean
-wikipad_view_get_selection_length (MousepadView *view,
+wikipad_view_get_selection_length (WikipadView *view,
                                     gboolean     *is_column_selection)
 {
   GtkTextBuffer *buffer;
@@ -2613,7 +2613,7 @@ wikipad_view_get_selection_length (MousepadView *view,
 
 
 void
-wikipad_view_set_font_name (MousepadView *view,
+wikipad_view_set_font_name (WikipadView *view,
                              const gchar  *font_name)
 {
   PangoFontDescription *font_desc;
@@ -2648,7 +2648,7 @@ wikipad_view_set_font_name (MousepadView *view,
 
 
 static void
-wikipad_view_update_draw_spaces (MousepadView *view)
+wikipad_view_update_draw_spaces (WikipadView *view)
 {
   GtkSourceDrawSpacesFlags flags = 0;
 
@@ -2671,7 +2671,7 @@ wikipad_view_update_draw_spaces (MousepadView *view)
 
 
 static void
-wikipad_view_override_font (MousepadView         *view,
+wikipad_view_override_font (WikipadView         *view,
                              PangoFontDescription *font_desc)
 {
 #if GTK_CHECK_VERSION (3, 0, 0)
@@ -2684,7 +2684,7 @@ wikipad_view_override_font (MousepadView         *view,
 
 
 static void
-wikipad_view_update_font (MousepadView *view)
+wikipad_view_update_font (WikipadView *view)
 {
   gboolean use_default;
 
@@ -2704,7 +2704,7 @@ wikipad_view_update_font (MousepadView *view)
 
 
 const gchar *
-wikipad_view_get_font_name (MousepadView *view)
+wikipad_view_get_font_name (WikipadView *view)
 {
   g_return_val_if_fail (WIKIPAD_IS_VIEW (view), NULL);
 
@@ -2714,7 +2714,7 @@ wikipad_view_get_font_name (MousepadView *view)
 
 
 void
-wikipad_view_set_show_whitespace (MousepadView *view,
+wikipad_view_set_show_whitespace (WikipadView *view,
                                    gboolean      show)
 {
   g_return_if_fail (WIKIPAD_IS_VIEW (view));
@@ -2727,7 +2727,7 @@ wikipad_view_set_show_whitespace (MousepadView *view,
 
 
 gboolean
-wikipad_view_get_show_whitespace (MousepadView *view)
+wikipad_view_get_show_whitespace (WikipadView *view)
 {
   g_return_val_if_fail (WIKIPAD_IS_VIEW (view), FALSE);
 
@@ -2737,7 +2737,7 @@ wikipad_view_get_show_whitespace (MousepadView *view)
 
 
 void
-wikipad_view_set_show_line_endings (MousepadView *view,
+wikipad_view_set_show_line_endings (WikipadView *view,
                                      gboolean      show)
 {
   g_return_if_fail (WIKIPAD_IS_VIEW (view));
@@ -2750,7 +2750,7 @@ wikipad_view_set_show_line_endings (MousepadView *view,
 
 
 gboolean
-wikipad_view_get_show_line_endings (MousepadView *view)
+wikipad_view_get_show_line_endings (WikipadView *view)
 {
   g_return_val_if_fail (WIKIPAD_IS_VIEW (view), FALSE);
 
@@ -2760,7 +2760,7 @@ wikipad_view_get_show_line_endings (MousepadView *view)
 
 
 void
-wikipad_view_set_color_scheme (MousepadView *view,
+wikipad_view_set_color_scheme (WikipadView *view,
                                 const gchar  *color_scheme)
 {
   g_return_if_fail (WIKIPAD_IS_VIEW (view));
@@ -2780,7 +2780,7 @@ wikipad_view_set_color_scheme (MousepadView *view,
 
 
 const gchar *
-wikipad_view_get_color_scheme (MousepadView *view)
+wikipad_view_get_color_scheme (WikipadView *view)
 {
   g_return_val_if_fail (WIKIPAD_IS_VIEW (view), NULL);
 
@@ -2790,7 +2790,7 @@ wikipad_view_get_color_scheme (MousepadView *view)
 
 
 void
-wikipad_view_set_word_wrap (MousepadView *view,
+wikipad_view_set_word_wrap (WikipadView *view,
                              gboolean      enabled)
 {
   g_return_if_fail (WIKIPAD_IS_VIEW (view));
@@ -2803,7 +2803,7 @@ wikipad_view_set_word_wrap (MousepadView *view,
 
 
 gboolean
-wikipad_view_get_word_wrap (MousepadView *view)
+wikipad_view_get_word_wrap (WikipadView *view)
 {
   GtkWrapMode mode;
 
@@ -2817,7 +2817,7 @@ wikipad_view_get_word_wrap (MousepadView *view)
 
 
 void
-wikipad_view_set_match_braces (MousepadView *view,
+wikipad_view_set_match_braces (WikipadView *view,
                                 gboolean      enabled)
 {
   g_return_if_fail (WIKIPAD_IS_VIEW (view));
@@ -2832,7 +2832,7 @@ wikipad_view_set_match_braces (MousepadView *view,
 
 
 gboolean
-wikipad_view_get_match_braces (MousepadView *view)
+wikipad_view_get_match_braces (WikipadView *view)
 {
   g_return_val_if_fail (WIKIPAD_IS_VIEW (view), FALSE);
 

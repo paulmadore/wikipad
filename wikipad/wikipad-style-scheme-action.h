@@ -23,20 +23,20 @@
 G_BEGIN_DECLS
 
 #define WIKIPAD_TYPE_STYLE_SCHEME_ACTION            (wikipad_style_scheme_action_get_type ())
-#define WIKIPAD_STYLE_SCHEME_ACTION(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_STYLE_SCHEME_ACTION, MousepadStyleSchemeAction))
-#define WIKIPAD_STYLE_SCHEME_ACTION_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_STYLE_SCHEME_ACTION, MousepadStyleSchemeActionClass))
+#define WIKIPAD_STYLE_SCHEME_ACTION(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_STYLE_SCHEME_ACTION, WikipadStyleSchemeAction))
+#define WIKIPAD_STYLE_SCHEME_ACTION_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_STYLE_SCHEME_ACTION, WikipadStyleSchemeActionClass))
 #define WIKIPAD_IS_STYLE_SCHEME_ACTION(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_STYLE_SCHEME_ACTION))
 #define WIKIPAD_IS_STYLE_SCHEME_ACTION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), WIKIPAD_TYPE_STYLE_SCHEME_ACTION))
-#define WIKIPAD_STYLE_SCHEME_ACTION_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_STYLE_SCHEME_ACTION, MousepadStyleSchemeActionClass))
+#define WIKIPAD_STYLE_SCHEME_ACTION_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_STYLE_SCHEME_ACTION, WikipadStyleSchemeActionClass))
 
-typedef struct MousepadStyleSchemeAction_      MousepadStyleSchemeAction;
-typedef struct MousepadStyleSchemeActionClass_ MousepadStyleSchemeActionClass;
+typedef struct WikipadStyleSchemeAction_      WikipadStyleSchemeAction;
+typedef struct WikipadStyleSchemeActionClass_ WikipadStyleSchemeActionClass;
 
 GType                 wikipad_style_scheme_action_get_type         (void);
 
 GtkAction            *wikipad_style_scheme_action_new              (GtkSourceStyleScheme      *scheme);
 
-GtkSourceStyleScheme *wikipad_style_scheme_action_get_style_scheme (MousepadStyleSchemeAction *action);
+GtkSourceStyleScheme *wikipad_style_scheme_action_get_style_scheme (WikipadStyleSchemeAction *action);
 
 G_END_DECLS
 

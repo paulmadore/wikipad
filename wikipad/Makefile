@@ -418,7 +418,7 @@ INCLUDES = \
 	-DBINDIR=\"$(bindir)\" \
 	-DDATADIR=\"$(datadir)\" \
 	-DLIBDIR=\"$(libdir)\" \
-	-DG_LOG_DOMAIN=\"Mousepad\" \
+	-DG_LOG_DOMAIN=\"Wikipad\" \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
 	-DGDK_PIXBUF_DISABLE_SINGLE_INCLUDES \
 	-DGTK_DISABLE_SINGLE_INCLUDES \
@@ -504,9 +504,9 @@ EXTRA_DIST = \
 	wikipad-marshal.list \
 	wikipad-window-ui.xml \
 	wikipad-prefs-dialog.glade \
-	org.xfce.wikipad.gschema.xml
+	org.phm.wikipad.gschema.xml
 
-gsettings_SCHEMAS = org.xfce.wikipad.gschema.xml
+gsettings_SCHEMAS = org.phm.wikipad.gschema.xml
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 

@@ -22,7 +22,7 @@
 
 
 
-static MousepadSettingsStore *settings_store = NULL;
+static WikipadSettingsStore *settings_store = NULL;
 static gint settings_init_count = 0;
 
 

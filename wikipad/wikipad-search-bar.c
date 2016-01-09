@@ -33,20 +33,20 @@
 
 
 static void      wikipad_search_bar_finalize                   (GObject                 *object);
-static void      wikipad_search_bar_find_string                (MousepadSearchBar       *bar,
-                                                                 MousepadSearchFlags   flags);
-static void      wikipad_search_bar_hide_clicked               (MousepadSearchBar       *bar);
+static void      wikipad_search_bar_find_string                (WikipadSearchBar       *bar,
+                                                                 WikipadSearchFlags   flags);
+static void      wikipad_search_bar_hide_clicked               (WikipadSearchBar       *bar);
 static void      wikipad_search_bar_entry_activate             (GtkWidget               *entry,
-                                                                 MousepadSearchBar       *bar);
+                                                                 WikipadSearchBar       *bar);
 static void      wikipad_search_bar_entry_activate_backward    (GtkWidget               *entry,
-                                                                 MousepadSearchBar       *bar);
+                                                                 WikipadSearchBar       *bar);
 static void      wikipad_search_bar_entry_changed              (GtkWidget               *entry,
-                                                                 MousepadSearchBar       *bar);
+                                                                 WikipadSearchBar       *bar);
 static void      wikipad_search_bar_highlight_toggled          (GtkWidget               *button,
-                                                                 MousepadSearchBar       *bar);
+                                                                 WikipadSearchBar       *bar);
 static void      wikipad_search_bar_match_case_toggled         (GtkWidget               *button,
-                                                                 MousepadSearchBar       *bar);
-static void      wikipad_search_bar_highlight_schedule         (MousepadSearchBar       *bar);
+                                                                 WikipadSearchBar       *bar);
+static void      wikipad_search_bar_highlight_schedule         (WikipadSearchBar       *bar);
 static gboolean  wikipad_search_bar_highlight_timeout          (gpointer                 user_data);
 static void      wikipad_search_bar_highlight_timeout_destroy  (gpointer                 user_data);
 
@@ -59,12 +59,12 @@ enum
   LAST_SIGNAL
 };
 
-struct _MousepadSearchBarClass
+struct _WikipadSearchBarClass
 {
   GtkToolbarClass __parent__;
 };
 
-struct _MousepadSearchBar
+struct _WikipadSearchBar
 {
   GtkToolbar           __parent__;
 
@@ -99,12 +99,12 @@ wikipad_search_bar_new (void)
 
 
 
-G_DEFINE_TYPE (MousepadSearchBar, wikipad_search_bar, GTK_TYPE_TOOLBAR)
+G_DEFINE_TYPE (WikipadSearchBar, wikipad_search_bar, GTK_TYPE_TOOLBAR)
 
 
 
 static void
-wikipad_search_bar_class_init (MousepadSearchBarClass *klass)
+wikipad_search_bar_class_init (WikipadSearchBarClass *klass)
 {
   GObjectClass  *gobject_class;
   GObjectClass  *entry_class;
@@ -147,7 +147,7 @@ wikipad_search_bar_class_init (MousepadSearchBarClass *klass)
                          "{\n"
                            "GtkToolbar::shadow-type = GTK_SHADOW_NONE\n"
                          "}\n"
-                       "class \"MousepadSearchBar\" style \"wikipad-search-bar-style\"\n"
+                       "class \"WikipadSearchBar\" style \"wikipad-search-bar-style\"\n"
 
                        /* add 2px space between the toolbar buttons */
                        "style \"wikipad-button-style\"\n"
@@ -181,7 +181,7 @@ wikipad_search_bar_class_init (MousepadSearchBarClass *klass)
 
 
 static void
-wikipad_search_bar_init (MousepadSearchBar *bar)
+wikipad_search_bar_init (WikipadSearchBar *bar)
 {
   GtkWidget   *label, *image, *check, *menuitem;
   GtkToolItem *item;
@@ -286,7 +286,7 @@ wikipad_search_bar_init (MousepadSearchBar *bar)
 static void
 wikipad_search_bar_finalize (GObject *object)
 {
-  MousepadSearchBar *bar = WIKIPAD_SEARCH_BAR (object);
+  WikipadSearchBar *bar = WIKIPAD_SEARCH_BAR (object);
 
   /* stop a running highlight timeout */
   if (bar->highlight_id != 0)
@@ -298,8 +298,8 @@ wikipad_search_bar_finalize (GObject *object)
 
 
 static void
-wikipad_search_bar_find_string (MousepadSearchBar   *bar,
-                                 MousepadSearchFlags  flags)
+wikipad_search_bar_find_string (WikipadSearchBar   *bar,
+                                 WikipadSearchFlags  flags)
 {
   const gchar *string;
   gint         nmatches;
@@ -337,7 +337,7 @@ wikipad_search_bar_find_string (MousepadSearchBar   *bar,
 
 
 static void
-wikipad_search_bar_hide_clicked (MousepadSearchBar *bar)
+wikipad_search_bar_hide_clicked (WikipadSearchBar *bar)
 {
   g_return_if_fail (WIKIPAD_IS_SEARCH_BAR (bar));
 
@@ -349,7 +349,7 @@ wikipad_search_bar_hide_clicked (MousepadSearchBar *bar)
 
 static void
 wikipad_search_bar_entry_activate (GtkWidget         *entry,
-                                    MousepadSearchBar *bar)
+                                    WikipadSearchBar *bar)
 {
   wikipad_search_bar_find_next (bar);
 }
@@ -358,7 +358,7 @@ wikipad_search_bar_entry_activate (GtkWidget         *entry,
 
 static void
 wikipad_search_bar_entry_activate_backward (GtkWidget         *entry,
-                                             MousepadSearchBar *bar)
+                                             WikipadSearchBar *bar)
 {
   wikipad_search_bar_find_previous (bar);
 }
@@ -367,9 +367,9 @@ wikipad_search_bar_entry_activate_backward (GtkWidget         *entry,
 
 static void
 wikipad_search_bar_entry_changed (GtkWidget         *entry,
-                                   MousepadSearchBar *bar)
+                                   WikipadSearchBar *bar)
 {
-  MousepadSearchFlags flags;
+  WikipadSearchFlags flags;
 
   /* set the search flags */
   flags = WIKIPAD_SEARCH_FLAGS_ITER_SEL_START
@@ -386,9 +386,9 @@ wikipad_search_bar_entry_changed (GtkWidget         *entry,
 
 static void
 wikipad_search_bar_highlight_toggled (GtkWidget         *button,
-                                       MousepadSearchBar *bar)
+                                       WikipadSearchBar *bar)
 {
-  MousepadSearchFlags flags;
+  WikipadSearchFlags flags;
 
   g_return_if_fail (WIKIPAD_IS_SEARCH_BAR (bar));
 
@@ -419,7 +419,7 @@ wikipad_search_bar_highlight_toggled (GtkWidget         *button,
 
 static void
 wikipad_search_bar_match_case_toggled (GtkWidget         *button,
-                                        MousepadSearchBar *bar)
+                                        WikipadSearchBar *bar)
 {
   gboolean active;
 
@@ -441,7 +441,7 @@ wikipad_search_bar_match_case_toggled (GtkWidget         *button,
 
 
 static void
-wikipad_search_bar_highlight_schedule (MousepadSearchBar *bar)
+wikipad_search_bar_highlight_schedule (WikipadSearchBar *bar)
 {
   g_return_if_fail (WIKIPAD_IS_SEARCH_BAR (bar));
 
@@ -470,8 +470,8 @@ wikipad_search_bar_highlight_timeout_destroy (gpointer user_data)
 static gboolean
 wikipad_search_bar_highlight_timeout (gpointer user_data)
 {
-  MousepadSearchBar   *bar = WIKIPAD_SEARCH_BAR (user_data);
-  MousepadSearchFlags  flags;
+  WikipadSearchBar   *bar = WIKIPAD_SEARCH_BAR (user_data);
+  WikipadSearchFlags  flags;
 
   /* set search flags */
   flags = WIKIPAD_SEARCH_FLAGS_DIR_FORWARD
@@ -488,7 +488,7 @@ wikipad_search_bar_highlight_timeout (gpointer user_data)
 
 
 GtkEditable *
-wikipad_search_bar_entry (MousepadSearchBar *bar)
+wikipad_search_bar_entry (WikipadSearchBar *bar)
 {
   if (bar && gtk_widget_has_focus (bar->entry))
     return GTK_EDITABLE (bar->entry);
@@ -499,7 +499,7 @@ wikipad_search_bar_entry (MousepadSearchBar *bar)
 
 
 void
-wikipad_search_bar_focus (MousepadSearchBar *bar)
+wikipad_search_bar_focus (WikipadSearchBar *bar)
 {
   g_return_if_fail (WIKIPAD_IS_SEARCH_BAR (bar));
 
@@ -519,9 +519,9 @@ wikipad_search_bar_focus (MousepadSearchBar *bar)
 
 
 void
-wikipad_search_bar_find_next (MousepadSearchBar *bar)
+wikipad_search_bar_find_next (WikipadSearchBar *bar)
 {
-  MousepadSearchFlags flags;
+  WikipadSearchFlags flags;
 
   g_return_if_fail (WIKIPAD_IS_SEARCH_BAR (bar));
 
@@ -536,9 +536,9 @@ wikipad_search_bar_find_next (MousepadSearchBar *bar)
 
 
 void
-wikipad_search_bar_find_previous (MousepadSearchBar *bar)
+wikipad_search_bar_find_previous (WikipadSearchBar *bar)
 {
-  MousepadSearchFlags flags;
+  WikipadSearchFlags flags;
 
   g_return_if_fail (WIKIPAD_IS_SEARCH_BAR (bar));
 
@@ -553,7 +553,7 @@ wikipad_search_bar_find_previous (MousepadSearchBar *bar)
 
 
 void
-wikipad_search_bar_set_text (MousepadSearchBar *bar, gchar *text)
+wikipad_search_bar_set_text (WikipadSearchBar *bar, gchar *text)
 {
   g_return_if_fail (WIKIPAD_IS_SEARCH_BAR (bar));
 

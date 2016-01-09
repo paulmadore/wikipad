@@ -66,7 +66,7 @@ struct _WikipadFile
   WikipadEncoding    encoding;
 
   /* line ending of the file */
-  MousepadLineEnding  line_ending;
+  WikipadLineEnding  line_ending;
 
   /* our last modification time */
   gint                mtime;
@@ -374,7 +374,7 @@ wikipad_file_get_write_bom (WikipadFile *file,
 
 void
 wikipad_file_set_line_ending (WikipadFile       *file,
-                               MousepadLineEnding  line_ending)
+                               WikipadLineEnding  line_ending)
 {
   g_return_if_fail (WIKIPAD_IS_FILE (file));
 
@@ -383,7 +383,7 @@ wikipad_file_set_line_ending (WikipadFile       *file,
 
 
 
-MousepadLineEnding
+WikipadLineEnding
 wikipad_file_get_line_ending (WikipadFile *file)
 {
   return file->line_ending;

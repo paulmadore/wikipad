@@ -17,15 +17,15 @@
 #ifndef __WIKIPAD_DBUS_H__
 #define __WIKIPAD_DBUS_H__
 
-typedef struct _MousepadDBusServiceClass MousepadDBusServiceClass;
-typedef struct _MousepadDBusService      MousepadDBusService;
+typedef struct _WikipadDBusServiceClass WikipadDBusServiceClass;
+typedef struct _WikipadDBusService      WikipadDBusService;
 
 #define WIKIPAD_TYPE_DBUS_SERVICE            (wikipad_dbus_service_get_type ())
-#define WIKIPAD_DBUS_SERVICE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_DBUS_SERVICE, MousepadDBusService))
-#define WIKIPAD_DBUS_SERVICE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_DBUS_SERVICE, MousepadDBusServiceClass))
+#define WIKIPAD_DBUS_SERVICE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), WIKIPAD_TYPE_DBUS_SERVICE, WikipadDBusService))
+#define WIKIPAD_DBUS_SERVICE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), WIKIPAD_TYPE_DBUS_SERVICE, WikipadDBusServiceClass))
 #define WIKIPAD_IS_DBUS_SERVICE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), WIKIPAD_TYPE_DBUS_SERVICE))
 #define WIKIPAD_IS_DBUS_SERVICE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), WIKIPAD_TYPE_DBUS_BRIGDE))
-#define WIKIPAD_DBUS_SERVICE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_DBUS_SERVICE, MousepadDBusServiceClass))
+#define WIKIPAD_DBUS_SERVICE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), WIKIPAD_TYPE_DBUS_SERVICE, WikipadDBusServiceClass))
 
 GType     wikipad_dbus_service_get_type    (void) G_GNUC_CONST;
 

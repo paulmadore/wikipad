@@ -24,11 +24,11 @@
 
 static gboolean wikipad_statusbar_overwrite_clicked (GtkWidget         *widget,
                                                       GdkEventButton    *event,
-                                                      MousepadStatusbar *statusbar);
+                                                      WikipadStatusbar *statusbar);
 
 static gboolean wikipad_statusbar_filetype_clicked  (GtkWidget         *widget,
                                                       GdkEventButton    *event,
-                                                      MousepadStatusbar *statusbar);
+                                                      WikipadStatusbar *statusbar);
 
 
 
@@ -39,12 +39,12 @@ enum
   LAST_SIGNAL,
 };
 
-struct _MousepadStatusbarClass
+struct _WikipadStatusbarClass
 {
   GtkStatusbarClass __parent__;
 };
 
-struct _MousepadStatusbar
+struct _WikipadStatusbar
 {
   GtkStatusbar        __parent__;
 
@@ -63,7 +63,7 @@ static guint statusbar_signals[LAST_SIGNAL];
 
 
 
-G_DEFINE_TYPE (MousepadStatusbar, wikipad_statusbar, GTK_TYPE_STATUSBAR)
+G_DEFINE_TYPE (WikipadStatusbar, wikipad_statusbar, GTK_TYPE_STATUSBAR)
 
 
 
@@ -76,7 +76,7 @@ wikipad_statusbar_new (void)
 
 
 static void
-wikipad_statusbar_class_init (MousepadStatusbarClass *klass)
+wikipad_statusbar_class_init (WikipadStatusbarClass *klass)
 {
   GObjectClass *gobject_class;
 
@@ -102,7 +102,7 @@ wikipad_statusbar_class_init (MousepadStatusbarClass *klass)
 
 
 static void
-wikipad_statusbar_init (MousepadStatusbar *statusbar)
+wikipad_statusbar_init (WikipadStatusbar *statusbar)
 {
   GtkWidget    *ebox, *box, *separator, *label;
   GtkStatusbar *bar = GTK_STATUSBAR (statusbar);
@@ -180,7 +180,7 @@ wikipad_statusbar_init (MousepadStatusbar *statusbar)
 static gboolean
 wikipad_statusbar_overwrite_clicked (GtkWidget         *widget,
                                       GdkEventButton    *event,
-                                      MousepadStatusbar *statusbar)
+                                      WikipadStatusbar *statusbar)
 {
   g_return_val_if_fail (WIKIPAD_IS_STATUSBAR (statusbar), FALSE);
 
@@ -202,7 +202,7 @@ wikipad_statusbar_overwrite_clicked (GtkWidget         *widget,
 static gboolean
 wikipad_statusbar_filetype_clicked (GtkWidget         *widget,
                                      GdkEventButton    *event,
-                                     MousepadStatusbar *statusbar)
+                                     WikipadStatusbar *statusbar)
 {
   GtkMenu *menu = NULL;
   GList   *children;
@@ -244,7 +244,7 @@ wikipad_statusbar_filetype_clicked (GtkWidget         *widget,
 
 
 void
-wikipad_statusbar_set_language (MousepadStatusbar *statusbar,
+wikipad_statusbar_set_language (WikipadStatusbar *statusbar,
                                  GtkSourceLanguage *language)
 {
   gchar *label;
@@ -264,7 +264,7 @@ wikipad_statusbar_set_language (MousepadStatusbar *statusbar,
 
 
 void
-wikipad_statusbar_set_cursor_position (MousepadStatusbar *statusbar,
+wikipad_statusbar_set_cursor_position (WikipadStatusbar *statusbar,
                                         gint               line,
                                         gint               column,
                                         gint               selection)
@@ -286,7 +286,7 @@ wikipad_statusbar_set_cursor_position (MousepadStatusbar *statusbar,
 
 
 void
-wikipad_statusbar_set_overwrite (MousepadStatusbar *statusbar,
+wikipad_statusbar_set_overwrite (WikipadStatusbar *statusbar,
                                   gboolean           overwrite)
 {
   g_return_if_fail (WIKIPAD_IS_STATUSBAR (statusbar));
@@ -299,7 +299,7 @@ wikipad_statusbar_set_overwrite (MousepadStatusbar *statusbar,
 
 
 gboolean
-wikipad_statusbar_push_tooltip (MousepadStatusbar *statusbar,
+wikipad_statusbar_push_tooltip (WikipadStatusbar *statusbar,
                                  GtkWidget         *widget)
 {
   GtkAction   *action = NULL;
@@ -331,7 +331,7 @@ wikipad_statusbar_push_tooltip (MousepadStatusbar *statusbar,
 
 
 void
-wikipad_statusbar_pop_tooltip (MousepadStatusbar *statusbar,
+wikipad_statusbar_pop_tooltip (WikipadStatusbar *statusbar,
                                 GtkWidget         *widget)
 {
   gint id;

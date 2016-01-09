@@ -10,7 +10,7 @@ m4_define([wikipad_version_major], [0])
 m4_define([wikipad_version_minor], [75])
 m4_define([wikipad_version_micro], [0])
 m4_define([wikipad_version_nano], []) dnl leave this empty to have no nano version
-m4_define([wikipad_version_build], [1fabc6d])
+m4_define([wikipad_version_build], [528ca9c])
 m4_define([wikipad_version_tag], [])
 m4_define([wikipad_version], [wikipad_version_major().wikipad_version_minor().wikipad_version_micro()ifelse(wikipad_version_nano(), [], [], [.wikipad_version_nano()])ifelse(wikipad_version_tag(), [git], [wikipad_version_tag()-wikipad_version_build()], [wikipad_version_tag()])])
 
