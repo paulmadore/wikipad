@@ -32,8 +32,8 @@
 
 #include <glib/gstdio.h>
 #include <gtksourceview/gtksourcelanguage.h>
-#include <gtksourceview/gtksourcelanguagemanager.h>
 #include <gtksourceview/gtksourcebuffer.h>
+#include <gtksourceview/gtksource.h>
 
 #ifdef HAVE_SYS_TYPES_H
 #include <sys/types.h>
@@ -955,10 +955,6 @@ wikipad_window_create_statusbar (WikipadWindow *window)
   g_signal_connect_swapped (G_OBJECT (window->statusbar), "enable-overwrite",
                             G_CALLBACK (wikipad_window_action_statusbar_overwrite), window);
 
-  /* populate filetype popup menu signal */
-  g_signal_connect_swapped (G_OBJECT (window->statusbar), "provide-languages-menu",
-                            G_CALLBACK (wikipad_window_provide_languages_menu), window);
-
   /* update the statusbar items */
   if (WIKIPAD_IS_DOCUMENT (window->active))
     wikipad_document_send_signals (window->active);
@@ -983,18 +979,6 @@ wikipad_window_create_statusbar (WikipadWindow *window)
                                    G_CALLBACK (wikipad_window_update_main_widgets),
                                    window,
                                    G_CONNECT_SWAPPED);
-}
-
-
-
-static void
-wikipad_window_user_set_language (WikipadWindow      *window,
-                                   GtkSourceLanguage   *language,
-                                   WikipadActionGroup *group)
-{
-  /* mark the file as having its language chosen explicitly by the user
-   * so we don't clobber their choice by guessing ourselves */
-  wikipad_file_set_user_set_language (window->active->file, TRUE);
 }
 
 
@@ -1036,7 +1020,7 @@ wikipad_window_init (WikipadWindow *window)
   gtk_action_group_add_actions (window->action_group, action_entries, G_N_ELEMENTS (action_entries), GTK_WIDGET (window));
   gtk_action_group_add_toggle_actions (window->action_group, toggle_action_entries, G_N_ELEMENTS (toggle_action_entries), GTK_WIDGET (window));
   gtk_action_group_add_radio_actions (window->action_group, radio_action_entries, G_N_ELEMENTS (radio_action_entries), -1, G_CALLBACK (wikipad_window_action_line_ending), GTK_WIDGET (window));
-  g_signal_connect_object (window->action_group, "user-set-language", G_CALLBACK (wikipad_window_user_set_language), window, G_CONNECT_SWAPPED);
+ 
 
   /* create the ui manager and connect proxy signals for the statusbar */
   window->ui_manager = gtk_ui_manager_new ();

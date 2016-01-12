@@ -94,9 +94,6 @@
     </menu>
 
     <menu action="document-menu">
-      <menu action="language-menu">
-        <placeholder name="placeholder-language-section-items" />
-      </menu>
       <menuitem action="auto-indent" />
       <menu action="eol-menu">
         <menuitem action="unix" />

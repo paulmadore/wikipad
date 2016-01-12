@@ -135,7 +135,7 @@
       <description>Whether to display line mark pixbufs.</description>
     </key>
     <key name="show-line-numbers" type="b">
-      <default>false</default>
+      <default>true</default>
       <summary>Show line numbers</summary>
       <description>
         When true the line numbers gutter/margin will be visible, when false
