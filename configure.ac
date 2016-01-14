@@ -10,7 +10,7 @@ m4_define([wikipad_version_major], [0])
 m4_define([wikipad_version_minor], [75])
 m4_define([wikipad_version_micro], [0])
 m4_define([wikipad_version_nano], []) dnl leave this empty to have no nano version
-m4_define([wikipad_version_build], [528ca9c])
+m4_define([wikipad_version_build], [e3d78fb])
 m4_define([wikipad_version_tag], [])
 m4_define([wikipad_version], [wikipad_version_major().wikipad_version_minor().wikipad_version_micro()ifelse(wikipad_version_nano(), [], [], [.wikipad_version_nano()])ifelse(wikipad_version_tag(), [git], [wikipad_version_tag()-wikipad_version_build()], [wikipad_version_tag()])])
 
@@ -81,7 +81,7 @@ AC_CHECK_HEADERS([errno.h fcntl.h libintl.h memory.h math.h stdlib.h \
 dnl ******************************
 dnl *** Check for i18n support ***
 dnl ******************************
-XDT_I18N([ar ast bg ca cs da de el en_AU en_GB es eu fi fr gl he hr hu id is it ja kk ko lt ms nb nl nn oc pl pt_BR pt ro ru sk sr sv te th tr ug uk zh_CN zh_TW ])
+XDT_I18N([])
 
 dnl ***********************************
 dnl *** Check for required packages ***

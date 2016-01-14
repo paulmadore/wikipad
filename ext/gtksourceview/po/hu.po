@@ -1,0 +1,3848 @@
+# Hungarian translation of gtksourceview.
+# Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtksourceview package.
+#
+# Andras Timar <timar at gnome dot hu>, 2003.
+# Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2012, 2013, 2014, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtksourceview master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gtksourceview&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-22 14:33+0000\n"
+"PO-Revision-Date: 2015-02-22 20:49+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../data/glade/gtksourceview.xml.in.h:1
+msgid "GtkSourceView"
+msgstr "GtkSourceView"
+
+#. Translators: It is related to an option of a set of values
+#: ../data/glade/gtksourceview.xml.in.h:3
+msgid "Disabled"
+msgstr "Tiltva"
+
+#: ../data/glade/gtksourceview.xml.in.h:4
+msgid "Before"
+msgstr "Előtte"
+
+#: ../data/glade/gtksourceview.xml.in.h:5
+msgid "After"
+msgstr "Utána"
+
+#: ../data/glade/gtksourceview.xml.in.h:6
+msgid "Always"
+msgstr "Mindig"
+
+#: ../data/glade/gtksourceview.xml.in.h:7
+msgid "Space"
+msgstr "Szóköz"
+
+#: ../data/glade/gtksourceview.xml.in.h:8
+msgid "Tab"
+msgstr "Tab"
+
+#: ../data/glade/gtksourceview.xml.in.h:9
+msgid "Newline"
+msgstr "Soremelés"
+
+#: ../data/glade/gtksourceview.xml.in.h:10
+msgid "Non Breaking Whitespace"
+msgstr "Nem törő szóköz"
+
+#: ../data/glade/gtksourceview.xml.in.h:11
+msgid "Leading"
+msgstr "Kezdő"
+
+#: ../data/glade/gtksourceview.xml.in.h:12
+msgid "Text"
+msgstr "Szöveg"
+
+#: ../data/glade/gtksourceview.xml.in.h:13
+msgid "Trailing"
+msgstr "Záró"
+
+#. Translators: "All" is used as a label in the status bar of the
+#. popup, telling that all completion pages are shown.
+#: ../data/glade/gtksourceview.xml.in.h:14
+#: ../gtksourceview/gtksourcecompletion.c:830
+msgid "All"
+msgstr "Mind"
+
+#: ../data/language-specs/actionscript.lang.h:1
+#: ../data/language-specs/ada.lang.h:1
+#: ../data/language-specs/ansforth94.lang.h:1
+#: ../data/language-specs/asp.lang.h:1
+#: ../data/language-specs/automake.lang.h:1
+#: ../data/language-specs/bennugd.lang.h:1
+#: ../data/language-specs/bluespec.lang.h:1
+#: ../data/language-specs/boo.lang.h:1 ../data/language-specs/cg.lang.h:1
+#: ../data/language-specs/chdr.lang.h:1 ../data/language-specs/c.lang.h:1
+#: ../data/language-specs/cobol.lang.h:1 ../data/language-specs/cpp.lang.h:1
+#: ../data/language-specs/csharp.lang.h:1 ../data/language-specs/cuda.lang.h:1
+#: ../data/language-specs/d.lang.h:1 ../data/language-specs/eiffel.lang.h:1
+#: ../data/language-specs/erlang.lang.h:1
+#: ../data/language-specs/forth.lang.h:1
+#: ../data/language-specs/fortran.lang.h:1
+#: ../data/language-specs/fsharp.lang.h:1 ../data/language-specs/glsl.lang.h:1
+#: ../data/language-specs/go.lang.h:1 ../data/language-specs/haskell.lang.h:1
+#: ../data/language-specs/haskell-literate.lang.h:1
+#: ../data/language-specs/idl.lang.h:1 ../data/language-specs/java.lang.h:1
+#: ../data/language-specs/j.lang.h:1 ../data/language-specs/lex.lang.h:1
+#: ../data/language-specs/llvm.lang.h:1
+#: ../data/language-specs/makefile.lang.h:1
+#: ../data/language-specs/nemerle.lang.h:1
+#: ../data/language-specs/netrexx.lang.h:1
+#: ../data/language-specs/objc.lang.h:1 ../data/language-specs/objj.lang.h:1
+#: ../data/language-specs/ocaml.lang.h:1 ../data/language-specs/ooc.lang.h:1
+#: ../data/language-specs/opal.lang.h:1 ../data/language-specs/opencl.lang.h:1
+#: ../data/language-specs/pascal.lang.h:1 ../data/language-specs/pig.lang.h:1
+#: ../data/language-specs/prolog.lang.h:1
+#: ../data/language-specs/scala.lang.h:1
+#: ../data/language-specs/scheme.lang.h:1 ../data/language-specs/sml.lang.h:1
+#: ../data/language-specs/sparql.lang.h:1 ../data/language-specs/sql.lang.h:1
+#: ../data/language-specs/systemverilog.lang.h:1
+#: ../data/language-specs/vala.lang.h:1 ../data/language-specs/vbnet.lang.h:1
+#: ../data/language-specs/verilog.lang.h:1
+#: ../data/language-specs/vhdl.lang.h:1
+msgid "Source"
+msgstr "Forrás"
+
+#: ../data/language-specs/actionscript.lang.h:2
+msgid "ActionScript"
+msgstr "ActionScript"
+
+#. Any comment
+#: ../data/language-specs/actionscript.lang.h:3
+#: ../data/language-specs/ada.lang.h:3
+#: ../data/language-specs/ansforth94.lang.h:5
+#: ../data/language-specs/asp.lang.h:3 ../data/language-specs/bennugd.lang.h:3
+#: ../data/language-specs/boo.lang.h:3 ../data/language-specs/cg.lang.h:3
+#: ../data/language-specs/c.lang.h:3 ../data/language-specs/cobol.lang.h:3
+#: ../data/language-specs/csharp.lang.h:3 ../data/language-specs/def.lang.h:3
+#: ../data/language-specs/d.lang.h:3 ../data/language-specs/dosbatch.lang.h:3
+#: ../data/language-specs/dot.lang.h:3 ../data/language-specs/eiffel.lang.h:3
+#: ../data/language-specs/erlang.lang.h:3 ../data/language-specs/fcl.lang.h:3
+#: ../data/language-specs/forth.lang.h:3
+#: ../data/language-specs/fortran.lang.h:3
+#: ../data/language-specs/fsharp.lang.h:3 ../data/language-specs/gap.lang.h:3
+#: ../data/language-specs/genie.lang.h:3 ../data/language-specs/go.lang.h:3
+#: ../data/language-specs/gtkrc.lang.h:3
+#: ../data/language-specs/haskell.lang.h:4
+#: ../data/language-specs/html.lang.h:3
+#: ../data/language-specs/idl-exelis.lang.h:3
+#: ../data/language-specs/idl.lang.h:3 ../data/language-specs/ini.lang.h:3
+#: ../data/language-specs/java.lang.h:3 ../data/language-specs/j.lang.h:4
+#: ../data/language-specs/latex.lang.h:3 ../data/language-specs/llvm.lang.h:3
+#: ../data/language-specs/lua.lang.h:3 ../data/language-specs/matlab.lang.h:3
+#: ../data/language-specs/modelica.lang.h:3
+#: ../data/language-specs/nemerle.lang.h:3
+#: ../data/language-specs/netrexx.lang.h:6
+#: ../data/language-specs/nsis.lang.h:4 ../data/language-specs/ocaml.lang.h:3
+#: ../data/language-specs/ocl.lang.h:3 ../data/language-specs/octave.lang.h:3
+#: ../data/language-specs/ooc.lang.h:3 ../data/language-specs/opal.lang.h:4
+#: ../data/language-specs/pascal.lang.h:3 ../data/language-specs/perl.lang.h:3
+#: ../data/language-specs/php.lang.h:4 ../data/language-specs/pig.lang.h:8
+#: ../data/language-specs/po.lang.h:3 ../data/language-specs/prolog.lang.h:3
+#: ../data/language-specs/protobuf.lang.h:2
+#: ../data/language-specs/rst.lang.h:8 ../data/language-specs/ruby.lang.h:4
+#: ../data/language-specs/scala.lang.h:5
+#: ../data/language-specs/scheme.lang.h:3
+#: ../data/language-specs/scilab.lang.h:3 ../data/language-specs/sh.lang.h:3
+#: ../data/language-specs/sml.lang.h:3 ../data/language-specs/sql.lang.h:3
+#: ../data/language-specs/sweave.lang.h:3 ../data/language-specs/t2t.lang.h:3
+#: ../data/language-specs/texinfo.lang.h:3
+#: ../data/language-specs/thrift.lang.h:3 ../data/language-specs/vala.lang.h:3
+#: ../data/language-specs/vbnet.lang.h:3
+#: ../data/language-specs/verilog.lang.h:3
+#: ../data/language-specs/vhdl.lang.h:3 ../data/language-specs/xml.lang.h:3
+#: ../data/language-specs/yaml.lang.h:4
+msgid "Comment"
+msgstr "Megjegyzés"
+
+#. Any erroneous construct
+#: ../data/language-specs/actionscript.lang.h:4
+#: ../data/language-specs/cg.lang.h:4 ../data/language-specs/c.lang.h:22
+#: ../data/language-specs/cobol.lang.h:11
+#: ../data/language-specs/csharp.lang.h:4 ../data/language-specs/css.lang.h:3
+#: ../data/language-specs/def.lang.h:53 ../data/language-specs/d.lang.h:4
+#: ../data/language-specs/dot.lang.h:4 ../data/language-specs/go.lang.h:4
+#: ../data/language-specs/html.lang.h:8 ../data/language-specs/j.lang.h:7
+#: ../data/language-specs/json.lang.h:7
+#: ../data/language-specs/nemerle.lang.h:4
+#: ../data/language-specs/ocaml.lang.h:20 ../data/language-specs/ooc.lang.h:4
+#: ../data/language-specs/opal.lang.h:6 ../data/language-specs/perl.lang.h:17
+#: ../data/language-specs/php.lang.h:5 ../data/language-specs/prolog.lang.h:9
+#: ../data/language-specs/scala.lang.h:3 ../data/language-specs/vala.lang.h:4
+#: ../data/language-specs/verilog.lang.h:7
+#: ../data/language-specs/xml.lang.h:13
+msgid "Error"
+msgstr "Hiba"
+
+#. A string constant: "this is a string"
+#: ../data/language-specs/actionscript.lang.h:5
+#: ../data/language-specs/ada.lang.h:4
+#: ../data/language-specs/ansforth94.lang.h:9
+#: ../data/language-specs/asp.lang.h:4 ../data/language-specs/boo.lang.h:5
+#: ../data/language-specs/c.lang.h:4 ../data/language-specs/cobol.lang.h:8
+#: ../data/language-specs/csharp.lang.h:6 ../data/language-specs/css.lang.h:5
+#: ../data/language-specs/def.lang.h:17 ../data/language-specs/d.lang.h:5
+#: ../data/language-specs/dosbatch.lang.h:4
+#: ../data/language-specs/eiffel.lang.h:4
+#: ../data/language-specs/erlang.lang.h:7
+#: ../data/language-specs/forth.lang.h:4
+#: ../data/language-specs/fortran.lang.h:4
+#: ../data/language-specs/fsharp.lang.h:7
+#: ../data/language-specs/gdb-log.lang.h:8
+#: ../data/language-specs/genie.lang.h:5 ../data/language-specs/go.lang.h:5
+#: ../data/language-specs/gtkrc.lang.h:4
+#: ../data/language-specs/haskell.lang.h:9
+#: ../data/language-specs/idl-exelis.lang.h:7
+#: ../data/language-specs/idl.lang.h:7 ../data/language-specs/imagej.lang.h:10
+#: ../data/language-specs/ini.lang.h:5 ../data/language-specs/java.lang.h:5
+#: ../data/language-specs/javascript.lang.h:13
+#: ../data/language-specs/j.lang.h:17 ../data/language-specs/json.lang.h:4
+#: ../data/language-specs/julia.lang.h:3 ../data/language-specs/llvm.lang.h:4
+#: ../data/language-specs/lua.lang.h:4
+#: ../data/language-specs/modelica.lang.h:4
+#: ../data/language-specs/nemerle.lang.h:7
+#: ../data/language-specs/netrexx.lang.h:4
+#: ../data/language-specs/nsis.lang.h:5 ../data/language-specs/objc.lang.h:6
+#: ../data/language-specs/objj.lang.h:8 ../data/language-specs/ocaml.lang.h:8
+#: ../data/language-specs/ocl.lang.h:4 ../data/language-specs/octave.lang.h:4
+#: ../data/language-specs/ooc.lang.h:6 ../data/language-specs/opal.lang.h:7
+#: ../data/language-specs/pascal.lang.h:4 ../data/language-specs/perl.lang.h:6
+#: ../data/language-specs/php.lang.h:10 ../data/language-specs/po.lang.h:5
+#: ../data/language-specs/prolog.lang.h:6
+#: ../data/language-specs/protobuf.lang.h:7
+#: ../data/language-specs/python3.lang.h:6
+#: ../data/language-specs/python.lang.h:6
+#: ../data/language-specs/ruby.lang.h:14 ../data/language-specs/scala.lang.h:6
+#: ../data/language-specs/scheme.lang.h:5
+#: ../data/language-specs/scilab.lang.h:5 ../data/language-specs/sh.lang.h:5
+#: ../data/language-specs/sml.lang.h:7 ../data/language-specs/sql.lang.h:5
+#: ../data/language-specs/texinfo.lang.h:6
+#: ../data/language-specs/thrift.lang.h:6 ../data/language-specs/vala.lang.h:6
+#: ../data/language-specs/vbnet.lang.h:4
+#: ../data/language-specs/verilog.lang.h:4
+#: ../data/language-specs/vhdl.lang.h:4 ../data/language-specs/yaml.lang.h:5
+msgid "String"
+msgstr "Karakterlánc"
+
+#. Translators: refered to some specific keywords of the language that
+#. allow to get external functionalities
+#: ../data/language-specs/actionscript.lang.h:6
+#: ../data/language-specs/java.lang.h:9 ../data/language-specs/ooc.lang.h:7
+#: ../data/language-specs/scala.lang.h:4
+msgid "External"
+msgstr "Külső"
+
+#: ../data/language-specs/actionscript.lang.h:7
+#: ../data/language-specs/java.lang.h:10 ../data/language-specs/ooc.lang.h:8
+#: ../data/language-specs/scala.lang.h:8
+msgid "Declaration"
+msgstr "Deklaráció"
+
+#: ../data/language-specs/actionscript.lang.h:8
+#: ../data/language-specs/ada.lang.h:8 ../data/language-specs/cg.lang.h:10
+#: ../data/language-specs/c.lang.h:12 ../data/language-specs/java.lang.h:11
+#: ../data/language-specs/ooc.lang.h:9
+msgid "Storage Class"
+msgstr "Tárolóosztály"
+
+#: ../data/language-specs/actionscript.lang.h:9
+#: ../data/language-specs/java.lang.h:12 ../data/language-specs/ooc.lang.h:10
+msgid "Scope Declaration"
+msgstr "Hatókör-deklaráció"
+
+#. keywords: "if", "for", "while", etc.
+#: ../data/language-specs/actionscript.lang.h:10
+#: ../data/language-specs/ada.lang.h:5
+#: ../data/language-specs/ansforth94.lang.h:3
+#: ../data/language-specs/asp.lang.h:6 ../data/language-specs/awk.lang.h:3
+#: ../data/language-specs/bennugd.lang.h:7
+#: ../data/language-specs/bluespec.lang.h:7
+#: ../data/language-specs/boo.lang.h:10 ../data/language-specs/cg.lang.h:8
+#: ../data/language-specs/c.lang.h:9 ../data/language-specs/cobol.lang.h:6
+#: ../data/language-specs/cpp.lang.h:3 ../data/language-specs/csharp.lang.h:11
+#: ../data/language-specs/css.lang.h:14 ../data/language-specs/cuda.lang.h:3
+#: ../data/language-specs/def.lang.h:47 ../data/language-specs/d.lang.h:6
+#: ../data/language-specs/dosbatch.lang.h:5
+#: ../data/language-specs/dot.lang.h:5 ../data/language-specs/eiffel.lang.h:7
+#: ../data/language-specs/erlang.lang.h:4 ../data/language-specs/fcl.lang.h:5
+#: ../data/language-specs/forth.lang.h:6
+#: ../data/language-specs/fortran.lang.h:6
+#: ../data/language-specs/fsharp.lang.h:8 ../data/language-specs/gap.lang.h:5
+#: ../data/language-specs/genie.lang.h:10 ../data/language-specs/glsl.lang.h:5
+#: ../data/language-specs/go.lang.h:7 ../data/language-specs/gtkrc.lang.h:5
+#: ../data/language-specs/haskell.lang.h:7
+#: ../data/language-specs/idl-exelis.lang.h:6
+#: ../data/language-specs/idl.lang.h:6 ../data/language-specs/imagej.lang.h:8
+#: ../data/language-specs/ini.lang.h:6 ../data/language-specs/java.lang.h:13
+#: ../data/language-specs/javascript.lang.h:7
+#: ../data/language-specs/julia.lang.h:10 ../data/language-specs/lex.lang.h:4
+#: ../data/language-specs/llvm.lang.h:5 ../data/language-specs/lua.lang.h:5
+#: ../data/language-specs/matlab.lang.h:4
+#: ../data/language-specs/modelica.lang.h:13
+#: ../data/language-specs/nemerle.lang.h:8
+#: ../data/language-specs/objc.lang.h:3 ../data/language-specs/objj.lang.h:4
+#: ../data/language-specs/ocaml.lang.h:9 ../data/language-specs/ocl.lang.h:5
+#: ../data/language-specs/octave.lang.h:13
+#: ../data/language-specs/ooc.lang.h:11 ../data/language-specs/opal.lang.h:8
+#: ../data/language-specs/opencl.lang.h:3
+#: ../data/language-specs/pascal.lang.h:5 ../data/language-specs/perl.lang.h:7
+#: ../data/language-specs/php.lang.h:13 ../data/language-specs/po.lang.h:7
+#: ../data/language-specs/prolog.lang.h:5
+#: ../data/language-specs/protobuf.lang.h:5
+#: ../data/language-specs/python3.lang.h:4
+#: ../data/language-specs/python.lang.h:4 ../data/language-specs/R.lang.h:3
+#: ../data/language-specs/ruby.lang.h:7 ../data/language-specs/scala.lang.h:10
+#: ../data/language-specs/scheme.lang.h:6
+#: ../data/language-specs/scilab.lang.h:6 ../data/language-specs/sh.lang.h:6
+#: ../data/language-specs/sml.lang.h:4 ../data/language-specs/sparql.lang.h:7
+#: ../data/language-specs/sql.lang.h:6
+#: ../data/language-specs/systemverilog.lang.h:5
+#: ../data/language-specs/tcl.lang.h:4 ../data/language-specs/texinfo.lang.h:7
+#: ../data/language-specs/thrift.lang.h:5 ../data/language-specs/vala.lang.h:7
+#: ../data/language-specs/vbnet.lang.h:6
+#: ../data/language-specs/verilog.lang.h:11
+#: ../data/language-specs/vhdl.lang.h:6
+msgid "Keyword"
+msgstr "Kulcsszó"
+
+#: ../data/language-specs/actionscript.lang.h:11
+#: ../data/language-specs/boo.lang.h:12
+#: ../data/language-specs/csharp.lang.h:13 ../data/language-specs/d.lang.h:9
+#: ../data/language-specs/fsharp.lang.h:21
+#: ../data/language-specs/genie.lang.h:12
+#: ../data/language-specs/java.lang.h:14
+#: ../data/language-specs/javascript.lang.h:4
+#: ../data/language-specs/json.lang.h:5
+#: ../data/language-specs/nemerle.lang.h:10
+#: ../data/language-specs/objj.lang.h:9 ../data/language-specs/ooc.lang.h:12
+#: ../data/language-specs/php.lang.h:17 ../data/language-specs/vala.lang.h:9
+msgid "Null Value"
+msgstr "Null érték"
+
+#. A boolean constant: TRUE, false
+#: ../data/language-specs/actionscript.lang.h:12
+#: ../data/language-specs/ada.lang.h:7 ../data/language-specs/asp.lang.h:13
+#: ../data/language-specs/bennugd.lang.h:12
+#: ../data/language-specs/cg.lang.h:16 ../data/language-specs/c.lang.h:19
+#: ../data/language-specs/csharp.lang.h:14
+#: ../data/language-specs/def.lang.h:34
+#: ../data/language-specs/fsharp.lang.h:19 ../data/language-specs/go.lang.h:16
+#: ../data/language-specs/gtkrc.lang.h:10 ../data/language-specs/ini.lang.h:10
+#: ../data/language-specs/java.lang.h:15 ../data/language-specs/llvm.lang.h:11
+#: ../data/language-specs/lua.lang.h:11
+#: ../data/language-specs/nemerle.lang.h:11
+#: ../data/language-specs/ocaml.lang.h:19 ../data/language-specs/ooc.lang.h:13
+#: ../data/language-specs/opal.lang.h:9 ../data/language-specs/php.lang.h:18
+#: ../data/language-specs/protobuf.lang.h:6 ../data/language-specs/R.lang.h:8
+#: ../data/language-specs/ruby.lang.h:9 ../data/language-specs/sml.lang.h:11
+#: ../data/language-specs/vala.lang.h:8 ../data/language-specs/vbnet.lang.h:9
+#: ../data/language-specs/vhdl.lang.h:8
+msgid "Boolean value"
+msgstr "Logikai érték"
+
+#. A generic number constant
+#: ../data/language-specs/actionscript.lang.h:13
+#: ../data/language-specs/asp.lang.h:14 ../data/language-specs/boo.lang.h:14
+#: ../data/language-specs/cobol.lang.h:9 ../data/language-specs/def.lang.h:22
+#: ../data/language-specs/desktop.lang.h:8
+#: ../data/language-specs/forth.lang.h:8
+#: ../data/language-specs/genie.lang.h:14
+#: ../data/language-specs/java.lang.h:16 ../data/language-specs/j.lang.h:14
+#: ../data/language-specs/julia.lang.h:5 ../data/language-specs/llvm.lang.h:12
+#: ../data/language-specs/netrexx.lang.h:16
+#: ../data/language-specs/prolog.lang.h:7
+#: ../data/language-specs/scala.lang.h:12
+#: ../data/language-specs/vhdl.lang.h:11
+msgid "Number"
+msgstr "Szám"
+
+#: ../data/language-specs/actionscript.lang.h:14
+#: ../data/language-specs/java.lang.h:17
+#: ../data/language-specs/javascript.lang.h:12
+#: ../data/language-specs/ooc.lang.h:18
+msgid "Future Reserved Keywords"
+msgstr "Jövőbeli védett kulcsszavak"
+
+#: ../data/language-specs/actionscript.lang.h:15
+#: ../data/language-specs/ada.lang.h:9 ../data/language-specs/asp.lang.h:11
+#: ../data/language-specs/bennugd.lang.h:8 ../data/language-specs/boo.lang.h:8
+#: ../data/language-specs/cg.lang.h:9 ../data/language-specs/c.lang.h:11
+#: ../data/language-specs/cpp.lang.h:4 ../data/language-specs/csharp.lang.h:5
+#: ../data/language-specs/cuda.lang.h:4 ../data/language-specs/d.lang.h:7
+#: ../data/language-specs/eiffel.lang.h:8
+#: ../data/language-specs/forth.lang.h:7
+#: ../data/language-specs/fortran.lang.h:10
+#: ../data/language-specs/fsharp.lang.h:11
+#: ../data/language-specs/genie.lang.h:8 ../data/language-specs/glsl.lang.h:4
+#: ../data/language-specs/go.lang.h:8 ../data/language-specs/gtkrc.lang.h:7
+#: ../data/language-specs/haskell.lang.h:8
+#: ../data/language-specs/idl-exelis.lang.h:4
+#: ../data/language-specs/idl.lang.h:4 ../data/language-specs/ini.lang.h:9
+#: ../data/language-specs/java.lang.h:18
+#: ../data/language-specs/javascript.lang.h:8
+#: ../data/language-specs/llvm.lang.h:10
+#: ../data/language-specs/nemerle.lang.h:9
+#: ../data/language-specs/objc.lang.h:4 ../data/language-specs/objj.lang.h:5
+#: ../data/language-specs/ocaml.lang.h:12 ../data/language-specs/ocl.lang.h:7
+#: ../data/language-specs/ooc.lang.h:19 ../data/language-specs/opal.lang.h:11
+#: ../data/language-specs/opencl.lang.h:4
+#: ../data/language-specs/pascal.lang.h:7 ../data/language-specs/php.lang.h:16
+#: ../data/language-specs/pig.lang.h:3
+#: ../data/language-specs/protobuf.lang.h:4
+#: ../data/language-specs/scala.lang.h:14 ../data/language-specs/sml.lang.h:5
+#: ../data/language-specs/sparql.lang.h:4 ../data/language-specs/sql.lang.h:9
+#: ../data/language-specs/thrift.lang.h:4 ../data/language-specs/vala.lang.h:5
+#: ../data/language-specs/vbnet.lang.h:7
+msgid "Data Type"
+msgstr "Adattípus"
+
+#: ../data/language-specs/ada.lang.h:2
+msgid "Ada"
+msgstr "Ada"
+
+#. A decimal number: 1234
+#: ../data/language-specs/ada.lang.h:6
+#: ../data/language-specs/bennugd.lang.h:10
+#: ../data/language-specs/cg.lang.h:13 ../data/language-specs/c.lang.h:16
+#: ../data/language-specs/csharp.lang.h:15
+#: ../data/language-specs/def.lang.h:26 ../data/language-specs/d.lang.h:12
+#: ../data/language-specs/eiffel.lang.h:15
+#: ../data/language-specs/erlang.lang.h:10
+#: ../data/language-specs/fsharp.lang.h:6 ../data/language-specs/go.lang.h:13
+#: ../data/language-specs/idl-exelis.lang.h:9
+#: ../data/language-specs/nemerle.lang.h:13
+#: ../data/language-specs/ocaml.lang.h:7 ../data/language-specs/ooc.lang.h:15
+#: ../data/language-specs/opal.lang.h:10 ../data/language-specs/php.lang.h:20
+#: ../data/language-specs/python3.lang.h:12
+#: ../data/language-specs/python.lang.h:13
+#: ../data/language-specs/ruby.lang.h:11
+msgid "Decimal number"
+msgstr "Decimális szám"
+
+#: ../data/language-specs/ada.lang.h:10 ../data/language-specs/asp.lang.h:5
+#: ../data/language-specs/bennugd.lang.h:4 ../data/language-specs/cg.lang.h:5
+#: ../data/language-specs/c.lang.h:5 ../data/language-specs/csharp.lang.h:12
+#: ../data/language-specs/forth.lang.h:5
+#: ../data/language-specs/fortran.lang.h:11
+#: ../data/language-specs/fsharp.lang.h:20
+#: ../data/language-specs/glsl.lang.h:3
+#: ../data/language-specs/haskell.lang.h:3
+#: ../data/language-specs/idl-exelis.lang.h:5
+#: ../data/language-specs/idl.lang.h:5 ../data/language-specs/nemerle.lang.h:5
+#: ../data/language-specs/objj.lang.h:6 ../data/language-specs/pascal.lang.h:8
+#: ../data/language-specs/vbnet.lang.h:5
+msgid "Preprocessor"
+msgstr "Előfeldolgozó"
+
+#: ../data/language-specs/ada.lang.h:11
+msgid "Arbitrary base number"
+msgstr "Tetszőleges alapszám"
+
+#: ../data/language-specs/ada.lang.h:12
+#: ../data/language-specs/csharp.lang.h:17
+#: ../data/language-specs/verilog.lang.h:15
+#: ../data/language-specs/vhdl.lang.h:10
+msgid "Real number"
+msgstr "Valós szám"
+
+#. map to nothing
+#: ../data/language-specs/ada.lang.h:13 ../data/language-specs/cg.lang.h:11
+#: ../data/language-specs/c.lang.h:14 ../data/language-specs/csharp.lang.h:8
+#: ../data/language-specs/eiffel.lang.h:12
+#: ../data/language-specs/fortran.lang.h:14
+#: ../data/language-specs/fsharp.lang.h:18 ../data/language-specs/go.lang.h:10
+#: ../data/language-specs/haskell.lang.h:11
+#: ../data/language-specs/java.lang.h:4
+#: ../data/language-specs/javascript.lang.h:3
+#: ../data/language-specs/json.lang.h:3 ../data/language-specs/lua.lang.h:6
+#: ../data/language-specs/netrexx.lang.h:3
+#: ../data/language-specs/ocaml.lang.h:18 ../data/language-specs/ooc.lang.h:5
+#: ../data/language-specs/php.lang.h:9 ../data/language-specs/prolog.lang.h:10
+#: ../data/language-specs/python3.lang.h:7
+#: ../data/language-specs/python.lang.h:7 ../data/language-specs/ruby.lang.h:3
+#: ../data/language-specs/scala.lang.h:7 ../data/language-specs/sml.lang.h:8
+#: ../data/language-specs/texinfo.lang.h:4
+#: ../data/language-specs/verilog.lang.h:6
+msgid "Escaped Character"
+msgstr "Escape-elt karakter"
+
+#: ../data/language-specs/ansforth94.lang.h:2
+msgid "ANS-Forth94"
+msgstr "ANS-Forth94"
+
+#: ../data/language-specs/ansforth94.lang.h:4
+msgid "Obsolete Keyword"
+msgstr "Elavult kulcsszó"
+
+#: ../data/language-specs/ansforth94.lang.h:6
+msgid "Alert"
+msgstr "Figyelmeztetés"
+
+#. A character constant: 'c'
+#: ../data/language-specs/ansforth94.lang.h:7
+#: ../data/language-specs/c.lang.h:8 ../data/language-specs/csharp.lang.h:7
+#: ../data/language-specs/def.lang.h:15 ../data/language-specs/erlang.lang.h:8
+#: ../data/language-specs/gap.lang.h:4 ../data/language-specs/go.lang.h:6
+#: ../data/language-specs/haskell.lang.h:10
+#: ../data/language-specs/java.lang.h:6 ../data/language-specs/julia.lang.h:4
+#: ../data/language-specs/nemerle.lang.h:6
+#: ../data/language-specs/netrexx.lang.h:5 ../data/language-specs/sml.lang.h:6
+#: ../data/language-specs/vhdl.lang.h:5
+msgid "Character"
+msgstr "Karakter"
+
+#: ../data/language-specs/ansforth94.lang.h:8
+msgid "Word"
+msgstr "Szó"
+
+#. Any constant
+#: ../data/language-specs/ansforth94.lang.h:10
+#: ../data/language-specs/cmake.lang.h:5 ../data/language-specs/cobol.lang.h:7
+#: ../data/language-specs/def.lang.h:13
+#: ../data/language-specs/gtk-doc.lang.h:8
+#: ../data/language-specs/libtool.lang.h:3
+#: ../data/language-specs/ruby.lang.h:18
+msgid "Constant"
+msgstr "Állandó"
+
+#: ../data/language-specs/ansforth94.lang.h:11
+#: ../data/language-specs/awk.lang.h:5 ../data/language-specs/cmake.lang.h:8
+#: ../data/language-specs/cobol.lang.h:5
+#: ../data/language-specs/haskell.lang.h:5 ../data/language-specs/ini.lang.h:8
+#: ../data/language-specs/llvm.lang.h:8
+#: ../data/language-specs/makefile.lang.h:3
+#: ../data/language-specs/nsis.lang.h:6
+#: ../data/language-specs/octave.lang.h:14
+#: ../data/language-specs/perl.lang.h:13 ../data/language-specs/php.lang.h:6
+#: ../data/language-specs/pkgconfig.lang.h:3
+#: ../data/language-specs/prolog.lang.h:4
+#: ../data/language-specs/protobuf.lang.h:3
+#: ../data/language-specs/ruby.lang.h:22 ../data/language-specs/sh.lang.h:7
+#: ../data/language-specs/sparql.lang.h:14 ../data/language-specs/tcl.lang.h:3
+msgid "Variable"
+msgstr "Változó"
+
+#: ../data/language-specs/ansforth94.lang.h:12
+msgid "Local Variable"
+msgstr "Helyi változó"
+
+#: ../data/language-specs/ansforth94.lang.h:13
+msgid "Single Number"
+msgstr "Egyszeres szám"
+
+#: ../data/language-specs/ansforth94.lang.h:14
+msgid "Double Number"
+msgstr "Dupla szám"
+
+#: ../data/language-specs/ansforth94.lang.h:15
+#: ../data/language-specs/haskell.lang.h:12
+msgid "Float"
+msgstr "Lebegő"
+
+#: ../data/language-specs/asp.lang.h:2
+msgid "ASP"
+msgstr "ASP"
+
+#. A function name (also: methods for classes)
+#: ../data/language-specs/asp.lang.h:7 ../data/language-specs/cg.lang.h:18
+#: ../data/language-specs/changelog.lang.h:9
+#: ../data/language-specs/css.lang.h:8 ../data/language-specs/def.lang.h:38
+#: ../data/language-specs/gap.lang.h:6 ../data/language-specs/gdb-log.lang.h:7
+#: ../data/language-specs/gtk-doc.lang.h:10
+#: ../data/language-specs/idl-exelis.lang.h:10
+#: ../data/language-specs/javascript.lang.h:9
+#: ../data/language-specs/llvm.lang.h:6 ../data/language-specs/lua.lang.h:9
+#: ../data/language-specs/scheme.lang.h:7
+#: ../data/language-specs/scilab.lang.h:7 ../data/language-specs/sh.lang.h:4
+#: ../data/language-specs/sparql.lang.h:5 ../data/language-specs/sql.lang.h:7
+msgid "Function"
+msgstr "Függvény"
+
+#. Operators: "+", "*", etc.
+#: ../data/language-specs/asp.lang.h:8 ../data/language-specs/bennugd.lang.h:6
+#: ../data/language-specs/c.lang.h:10 ../data/language-specs/cmake.lang.h:6
+#: ../data/language-specs/cobol.lang.h:10 ../data/language-specs/def.lang.h:45
+#: ../data/language-specs/erlang.lang.h:5
+#: ../data/language-specs/imagej.lang.h:9
+#: ../data/language-specs/julia.lang.h:9
+#: ../data/language-specs/modelica.lang.h:5
+#: ../data/language-specs/nsis.lang.h:3 ../data/language-specs/octave.lang.h:5
+#: ../data/language-specs/perl.lang.h:12 ../data/language-specs/php.lang.h:15
+#: ../data/language-specs/prolog.lang.h:8
+#: ../data/language-specs/scala.lang.h:13
+#: ../data/language-specs/sparql.lang.h:15
+msgid "Operator"
+msgstr "Operátor"
+
+#: ../data/language-specs/asp.lang.h:9
+msgid "ASP Object"
+msgstr "ASP objektum"
+
+#: ../data/language-specs/asp.lang.h:10
+msgid "VBScript and ADO constants"
+msgstr "VBScript és ADO konstansok"
+
+#. A special constant like NULL in C or null in Java
+#: ../data/language-specs/asp.lang.h:12 ../data/language-specs/def.lang.h:32
+#: ../data/language-specs/vbnet.lang.h:8
+msgid "Special constant"
+msgstr "Speciális konstans"
+
+#: ../data/language-specs/automake.lang.h:2
+msgid "Automake"
+msgstr "Automake"
+
+#: ../data/language-specs/automake.lang.h:3
+msgid "Automake Variable"
+msgstr "Automake változó"
+
+#: ../data/language-specs/automake.lang.h:4
+msgid "Primary"
+msgstr "Elsődleges"
+
+#: ../data/language-specs/automake.lang.h:5
+msgid "Secondary"
+msgstr "Másodlagos"
+
+#: ../data/language-specs/automake.lang.h:6
+msgid "Prefix"
+msgstr "Előtag"
+
+#: ../data/language-specs/automake.lang.h:7
+msgid "Optional Target"
+msgstr "Elhagyható cél"
+
+#: ../data/language-specs/automake.lang.h:8
+msgid "Built-in Target"
+msgstr "Beépített cél"
+
+#: ../data/language-specs/automake.lang.h:9
+msgid "Other Keyword"
+msgstr "Egyéb kulcsszó"
+
+#: ../data/language-specs/automake.lang.h:10
+#: ../data/language-specs/rst.lang.h:10
+msgid "Substitution"
+msgstr "Helyettesítés"
+
+#: ../data/language-specs/awk.lang.h:1
+#: ../data/language-specs/dosbatch.lang.h:1
+#: ../data/language-specs/javascript.lang.h:1
+#: ../data/language-specs/lua.lang.h:1 ../data/language-specs/m4.lang.h:1
+#: ../data/language-specs/perl.lang.h:1 ../data/language-specs/php.lang.h:1
+#: ../data/language-specs/python3.lang.h:1
+#: ../data/language-specs/python.lang.h:1 ../data/language-specs/ruby.lang.h:1
+#: ../data/language-specs/sh.lang.h:1 ../data/language-specs/tcl.lang.h:1
+msgid "Script"
+msgstr "Parancsfájl"
+
+#: ../data/language-specs/awk.lang.h:2
+msgid "awk"
+msgstr "awk"
+
+#: ../data/language-specs/awk.lang.h:4 ../data/language-specs/lex.lang.h:5
+msgid "Pattern"
+msgstr "Minta"
+
+#: ../data/language-specs/awk.lang.h:6 ../data/language-specs/boo.lang.h:15
+#: ../data/language-specs/genie.lang.h:15 ../data/language-specs/glsl.lang.h:6
+#: ../data/language-specs/go.lang.h:18
+#: ../data/language-specs/netrexx.lang.h:15
+#: ../data/language-specs/perl.lang.h:8
+#: ../data/language-specs/python3.lang.h:17
+#: ../data/language-specs/python.lang.h:18
+msgid "Builtin Function"
+msgstr "Beépített függvény"
+
+#: ../data/language-specs/bennugd.lang.h:2
+msgid "BennuGD"
+msgstr "BennuGD"
+
+#. Any variable name
+#: ../data/language-specs/bennugd.lang.h:5
+#: ../data/language-specs/def.lang.h:36 ../data/language-specs/llvm.lang.h:9
+#: ../data/language-specs/php.lang.h:7
+msgid "Identifier"
+msgstr "Azonosító"
+
+#. A floating point constant: 2.3e10
+#: ../data/language-specs/bennugd.lang.h:9 ../data/language-specs/cg.lang.h:12
+#: ../data/language-specs/c.lang.h:15 ../data/language-specs/def.lang.h:24
+#: ../data/language-specs/d.lang.h:11 ../data/language-specs/erlang.lang.h:9
+#: ../data/language-specs/go.lang.h:11
+#: ../data/language-specs/idl-exelis.lang.h:8
+#: ../data/language-specs/json.lang.h:9
+#: ../data/language-specs/nemerle.lang.h:12
+#: ../data/language-specs/ooc.lang.h:14 ../data/language-specs/php.lang.h:19
+#: ../data/language-specs/python3.lang.h:11
+#: ../data/language-specs/python.lang.h:12 ../data/language-specs/R.lang.h:10
+#: ../data/language-specs/ruby.lang.h:10
+msgid "Floating point number"
+msgstr "Lebegőpontos szám"
+
+#: ../data/language-specs/bennugd.lang.h:11
+#: ../data/language-specs/cg.lang.h:15 ../data/language-specs/c.lang.h:18
+#: ../data/language-specs/csharp.lang.h:16 ../data/language-specs/d.lang.h:15
+#: ../data/language-specs/eiffel.lang.h:16 ../data/language-specs/go.lang.h:15
+#: ../data/language-specs/nemerle.lang.h:16
+#: ../data/language-specs/ooc.lang.h:17 ../data/language-specs/php.lang.h:22
+msgid "Hexadecimal number"
+msgstr "Hexadecimális szám"
+
+#: ../data/language-specs/bibtex.lang.h:1
+#: ../data/language-specs/docbook.lang.h:1 ../data/language-specs/dtd.lang.h:1
+#: ../data/language-specs/gtk-doc.lang.h:1
+#: ../data/language-specs/haddock.lang.h:1
+#: ../data/language-specs/html.lang.h:1 ../data/language-specs/latex.lang.h:1
+#: ../data/language-specs/mallard.lang.h:1
+#: ../data/language-specs/markdown.lang.h:1
+#: ../data/language-specs/mediawiki.lang.h:1
+#: ../data/language-specs/mxml.lang.h:1 ../data/language-specs/rst.lang.h:1
+#: ../data/language-specs/sweave.lang.h:1 ../data/language-specs/t2t.lang.h:1
+#: ../data/language-specs/texinfo.lang.h:1 ../data/language-specs/xml.lang.h:1
+#: ../data/language-specs/xslt.lang.h:1
+msgid "Markup"
+msgstr "Leírónyelv"
+
+#: ../data/language-specs/bibtex.lang.h:2
+msgid "BibTeX"
+msgstr "BibTeX"
+
+#: ../data/language-specs/bibtex.lang.h:3
+msgid "Entries"
+msgstr "Bejegyzések"
+
+#: ../data/language-specs/bibtex.lang.h:4
+msgid "Field"
+msgstr "Mező"
+
+#: ../data/language-specs/bluespec.lang.h:2
+msgid "Bluespec SystemVerilog"
+msgstr "Bluespec SystemVerilog"
+
+#: ../data/language-specs/bluespec.lang.h:3
+#: ../data/language-specs/systemverilog.lang.h:4
+msgid "System Task"
+msgstr "Rendszerfeladat"
+
+#: ../data/language-specs/bluespec.lang.h:4
+msgid "Annotation"
+msgstr "Feljegyzés"
+
+#: ../data/language-specs/bluespec.lang.h:5
+msgid "Attribute"
+msgstr "Attribútum"
+
+#: ../data/language-specs/bluespec.lang.h:6
+msgid "Import BVI"
+msgstr "BVI importálása"
+
+#: ../data/language-specs/bluespec.lang.h:8
+#: ../data/language-specs/gtk-doc.lang.h:9
+#: ../data/language-specs/julia.lang.h:15
+#: ../data/language-specs/systemverilog.lang.h:6
+#: ../data/language-specs/verilog.lang.h:13
+#: ../data/language-specs/vhdl.lang.h:7
+msgid "Type"
+msgstr "Típus"
+
+#: ../data/language-specs/boo.lang.h:2
+msgid "Boo"
+msgstr "Boo"
+
+#: ../data/language-specs/boo.lang.h:4 ../data/language-specs/genie.lang.h:4
+#: ../data/language-specs/python3.lang.h:5
+#: ../data/language-specs/python.lang.h:5
+msgid "Multiline string"
+msgstr "Többsoros karakterlánc"
+
+#: ../data/language-specs/boo.lang.h:6 ../data/language-specs/genie.lang.h:6
+#: ../data/language-specs/javascript.lang.h:14
+#: ../data/language-specs/perl.lang.h:16 ../data/language-specs/ruby.lang.h:25
+msgid "Regular Expression"
+msgstr "Reguláris kifejezés"
+
+#: ../data/language-specs/boo.lang.h:7 ../data/language-specs/genie.lang.h:7
+#: ../data/language-specs/sparql.lang.h:8 ../data/language-specs/xml.lang.h:12
+#: ../data/language-specs/xslt.lang.h:4
+msgid "Namespace"
+msgstr "Névtér"
+
+#: ../data/language-specs/boo.lang.h:9 ../data/language-specs/genie.lang.h:9
+msgid "Definition"
+msgstr "Definíció"
+
+#: ../data/language-specs/boo.lang.h:11 ../data/language-specs/genie.lang.h:11
+#: ../data/language-specs/python3.lang.h:9
+#: ../data/language-specs/python.lang.h:10
+#: ../data/language-specs/ruby.lang.h:20
+msgid "Special Variable"
+msgstr "Speciális változó"
+
+#: ../data/language-specs/boo.lang.h:13
+#: ../data/language-specs/desktop.lang.h:9 ../data/language-specs/d.lang.h:10
+#: ../data/language-specs/genie.lang.h:13
+#: ../data/language-specs/imagej.lang.h:4
+#: ../data/language-specs/julia.lang.h:6
+#: ../data/language-specs/libtool.lang.h:4
+#: ../data/language-specs/modelica.lang.h:9
+#: ../data/language-specs/objj.lang.h:3 ../data/language-specs/octave.lang.h:8
+#: ../data/language-specs/python3.lang.h:10
+#: ../data/language-specs/python.lang.h:11
+#: ../data/language-specs/scheme.lang.h:4
+#: ../data/language-specs/scilab.lang.h:8
+#: ../data/language-specs/sparql.lang.h:9
+#: ../data/language-specs/yaml.lang.h:12
+msgid "Boolean"
+msgstr "Logikai"
+
+#: ../data/language-specs/cg.lang.h:2
+msgid "CG Shader Language"
+msgstr "CG árnyékolónyelv"
+
+#: ../data/language-specs/cg.lang.h:6
+msgid "Bindings"
+msgstr "Kötések"
+
+#: ../data/language-specs/cg.lang.h:7 ../data/language-specs/c.lang.h:7
+#: ../data/language-specs/fortran.lang.h:13
+#: ../data/language-specs/objj.lang.h:7
+msgid "Included File"
+msgstr "Include-olt fájl"
+
+#: ../data/language-specs/cg.lang.h:14 ../data/language-specs/c.lang.h:17
+#: ../data/language-specs/d.lang.h:14 ../data/language-specs/go.lang.h:14
+#: ../data/language-specs/nemerle.lang.h:15
+#: ../data/language-specs/ooc.lang.h:16 ../data/language-specs/php.lang.h:21
+msgid "Octal number"
+msgstr "Oktális szám"
+
+#: ../data/language-specs/cg.lang.h:17
+msgid "Swizzle operator"
+msgstr "Feloldási operátor"
+
+#. Translators: functions that are provided in the language
+#: ../data/language-specs/cg.lang.h:19 ../data/language-specs/erlang.lang.h:12
+#: ../data/language-specs/imagej.lang.h:3
+#: ../data/language-specs/matlab.lang.h:5
+#: ../data/language-specs/modelica.lang.h:14
+#: ../data/language-specs/octave.lang.h:16
+#: ../data/language-specs/ruby.lang.h:17
+msgid "Builtin"
+msgstr "Beépített"
+
+#: ../data/language-specs/changelog.lang.h:1
+#: ../data/language-specs/cmake.lang.h:1 ../data/language-specs/css.lang.h:1
+#: ../data/language-specs/desktop.lang.h:1
+#: ../data/language-specs/diff.lang.h:1 ../data/language-specs/dot.lang.h:1
+#: ../data/language-specs/dpatch.lang.h:1
+#: ../data/language-specs/gdb-log.lang.h:1
+#: ../data/language-specs/gtkrc.lang.h:1 ../data/language-specs/ini.lang.h:1
+#: ../data/language-specs/json.lang.h:1
+#: ../data/language-specs/libtool.lang.h:1
+#: ../data/language-specs/nsis.lang.h:1 ../data/language-specs/ocl.lang.h:1
+#: ../data/language-specs/pkgconfig.lang.h:1
+#: ../data/language-specs/po.lang.h:1 ../data/language-specs/protobuf.lang.h:1
+#: ../data/language-specs/puppet.lang.h:1
+#: ../data/language-specs/rpmspec.lang.h:1
+#: ../data/language-specs/scala.lang.h:16 ../data/language-specs/yacc.lang.h:1
+#: ../data/language-specs/yaml.lang.h:1
+msgid "Other"
+msgstr "Egyéb"
+
+#: ../data/language-specs/changelog.lang.h:2
+msgid "ChangeLog"
+msgstr "ChangeLog"
+
+#: ../data/language-specs/changelog.lang.h:3
+#: ../data/language-specs/rpmspec.lang.h:14
+msgid "Date"
+msgstr "Dátum"
+
+#. Translators: the name of a person, not an object.
+#. names, e.g., name of package, name of environment, name of class
+#: ../data/language-specs/changelog.lang.h:5
+#: ../data/language-specs/latex.lang.h:19
+msgid "Name"
+msgstr "Név"
+
+#: ../data/language-specs/changelog.lang.h:6
+msgid "E-mail address"
+msgstr "E-mail cím"
+
+#: ../data/language-specs/changelog.lang.h:7
+msgid "File"
+msgstr "Fájl"
+
+#: ../data/language-specs/changelog.lang.h:8
+#: ../data/language-specs/rst.lang.h:6
+msgid "Bullet"
+msgstr "Felsorolásjel"
+
+#: ../data/language-specs/changelog.lang.h:10
+msgid "Release"
+msgstr "Kiadás"
+
+#: ../data/language-specs/chdr.lang.h:2
+msgid "C/C++/ObjC Header"
+msgstr "C/C++/ObjC fejléc"
+
+#: ../data/language-specs/c.lang.h:2
+msgid "C"
+msgstr "C"
+
+#: ../data/language-specs/c.lang.h:6 ../data/language-specs/cpp.lang.h:5
+#: ../data/language-specs/objc.lang.h:5 ../data/language-specs/opal.lang.h:5
+msgid "Common Defines"
+msgstr "Általános definíció"
+
+#: ../data/language-specs/c.lang.h:13 ../data/language-specs/genie.lang.h:16
+#: ../data/language-specs/go.lang.h:9 ../data/language-specs/verilog.lang.h:5
+msgid "printf Conversion"
+msgstr "printf átalakítás"
+
+#: ../data/language-specs/c.lang.h:20
+msgid "Standard stream"
+msgstr "Szabványos adatfolyam"
+
+#: ../data/language-specs/c.lang.h:21
+msgid "Signal name"
+msgstr "Szignálnév"
+
+#: ../data/language-specs/cmake.lang.h:2
+msgid "CMake"
+msgstr "CMake"
+
+#: ../data/language-specs/cmake.lang.h:3
+msgid "Builtin Command"
+msgstr "Beépített parancs"
+
+#: ../data/language-specs/cmake.lang.h:4 ../data/language-specs/glsl.lang.h:8
+msgid "Builtin Variable"
+msgstr "Beépített változó"
+
+#: ../data/language-specs/cmake.lang.h:7
+msgid "Control Keyword"
+msgstr "Vezérlő kulcsszó"
+
+#: ../data/language-specs/cobol.lang.h:2
+msgid "COBOL"
+msgstr "COBOL"
+
+#. Any statement
+#: ../data/language-specs/cobol.lang.h:4 ../data/language-specs/def.lang.h:43
+msgid "Statement"
+msgstr "Utasítás"
+
+#: ../data/language-specs/cpp.lang.h:2
+msgid "C++"
+msgstr "C++"
+
+#: ../data/language-specs/csharp.lang.h:2
+msgid "C#"
+msgstr "C#"
+
+#. Translators: this is a format that appears in the strings
+#: ../data/language-specs/csharp.lang.h:10 ../data/language-specs/po.lang.h:8
+msgid "String Format"
+msgstr "Karakterlánc formátuma"
+
+#: ../data/language-specs/css.lang.h:2
+msgid "CSS"
+msgstr "CSS"
+
+#: ../data/language-specs/css.lang.h:4
+msgid "Others 2"
+msgstr "Egyéb 2"
+
+#: ../data/language-specs/css.lang.h:6
+msgid "Color"
+msgstr "Szín"
+
+#: ../data/language-specs/css.lang.h:7
+msgid "Others 3"
+msgstr "Egyéb 3"
+
+#. Translator: it is a type of number
+#: ../data/language-specs/css.lang.h:10 ../data/language-specs/fcl.lang.h:7
+#: ../data/language-specs/fortran.lang.h:9 ../data/language-specs/gap.lang.h:7
+#: ../data/language-specs/gtkrc.lang.h:6
+#: ../data/language-specs/haskell.lang.h:13
+#: ../data/language-specs/ini.lang.h:7 ../data/language-specs/json.lang.h:8
+#: ../data/language-specs/modelica.lang.h:10
+#: ../data/language-specs/octave.lang.h:9
+#: ../data/language-specs/pascal.lang.h:6 ../data/language-specs/sml.lang.h:10
+#: ../data/language-specs/sql.lang.h:8
+msgid "Decimal"
+msgstr "Decimális"
+
+#: ../data/language-specs/css.lang.h:11
+msgid "Dimension"
+msgstr "Dimenzió"
+
+#: ../data/language-specs/css.lang.h:12
+msgid "Known Property Value"
+msgstr "Ismert tulajdonságérték"
+
+#: ../data/language-specs/css.lang.h:13
+msgid "at-rules"
+msgstr "at-szabályok"
+
+#: ../data/language-specs/css.lang.h:15
+msgid "ID Selector"
+msgstr "Azonosítóválasztó"
+
+#: ../data/language-specs/css.lang.h:16
+msgid "Class Selector"
+msgstr "Osztályválasztó"
+
+#: ../data/language-specs/css.lang.h:17
+msgid "Tag Name Selector"
+msgstr "Címkenévválasztó"
+
+#: ../data/language-specs/cuda.lang.h:2
+msgid "CUDA"
+msgstr "CUDA"
+
+#: ../data/language-specs/cuda.lang.h:5
+msgid "Global Functions"
+msgstr "Globális függvények"
+
+#: ../data/language-specs/cuda.lang.h:6
+msgid "Device Functions"
+msgstr "Eszközfüggvények"
+
+#: ../data/language-specs/cuda.lang.h:7
+msgid "Global Variables"
+msgstr "Globális változók"
+
+#: ../data/language-specs/def.lang.h:1
+msgid "Defaults"
+msgstr "Alapértékek"
+
+#. A shebang: #!/bin/sh
+#: ../data/language-specs/def.lang.h:5
+msgid "Shebang"
+msgstr "Shebang"
+
+#. A special comment containing documentation like in javadoc or
+#. gtk-doc
+#: ../data/language-specs/def.lang.h:8
+msgid "Documentation comment"
+msgstr "Dokumentációs megjegyzés"
+
+#. This style doesn't map to anything since it must be used as an additional
+#. style for text which is already styled as a "doc-comment"
+#: ../data/language-specs/def.lang.h:11
+msgid "Documentation comment element"
+msgstr "Dokumentációs megjegyzés eleme"
+
+#. This style doesn't map to anything since it must be used as an additional
+#. style for text which is already styled as a "string"
+#: ../data/language-specs/def.lang.h:20
+msgid "Special character (inside a string)"
+msgstr "Speciális karakter (karakterláncon belül)"
+
+#. A base-N number: 0xFFFF
+#: ../data/language-specs/def.lang.h:28
+#: ../data/language-specs/python3.lang.h:13
+#: ../data/language-specs/python.lang.h:14
+#: ../data/language-specs/ruby.lang.h:12
+msgid "Base-N number"
+msgstr "N-alapú szám"
+
+#. A complex number
+#: ../data/language-specs/def.lang.h:30
+#: ../data/language-specs/python3.lang.h:14
+#: ../data/language-specs/python.lang.h:15
+msgid "Complex number"
+msgstr "Komplex szám"
+
+#. A builtin name: like __import__, abs in Python
+#. (see http://docs.python.org/lib/built-in-funcs.html)
+#: ../data/language-specs/def.lang.h:41
+msgid "Built-in identifier"
+msgstr "Beépített azonosító"
+
+#. A primitive data type: int, long, char, etc.
+#: ../data/language-specs/def.lang.h:49
+#: ../data/language-specs/modelica.lang.h:7
+#: ../data/language-specs/octave.lang.h:6
+msgid "Data type"
+msgstr "Adattípus"
+
+#. This one is for '#include <foo.h>' and "#pragma blah", or 'use foobar', etc..
+#: ../data/language-specs/def.lang.h:51
+msgid "Preprocessor directive"
+msgstr "Előfeldolgozó-direktíva"
+
+#. to mark possibily errors or unrecommended syntax
+#: ../data/language-specs/def.lang.h:55
+msgid "Warning"
+msgstr "Figyelmeztetés"
+
+#. Reserved keywords: like "const" and "goto" in Java
+#: ../data/language-specs/def.lang.h:57
+msgid "Reserved keyword"
+msgstr "Védett kulcsszó"
+
+#. Anything that needs extra attention; mostly the keywords TODO, FIXME and XXX
+#: ../data/language-specs/def.lang.h:59
+msgid "Note (FIXME, TODO, XXX, etc.)"
+msgstr "Megjegyzés (FIXME, TODO, XXX, stb.)"
+
+#. Text that stands out, HTML links, e-mail addresses, etc.
+#: ../data/language-specs/def.lang.h:61
+msgid "Underlined"
+msgstr "Aláhúzott"
+
+#. Text that acts as some kind of heading, such as h1, h2, ... in html.
+#: ../data/language-specs/def.lang.h:63
+msgid "Heading 0"
+msgstr "Címsor 0"
+
+#: ../data/language-specs/def.lang.h:64
+msgid "Heading 1"
+msgstr "Címsor 1"
+
+#: ../data/language-specs/def.lang.h:65
+msgid "Heading 2"
+msgstr "Címsor 2"
+
+#: ../data/language-specs/def.lang.h:66
+msgid "Heading 3"
+msgstr "Címsor 3"
+
+#: ../data/language-specs/def.lang.h:67
+msgid "Heading 4"
+msgstr "Címsor 4"
+
+#: ../data/language-specs/def.lang.h:68
+msgid "Heading 5"
+msgstr "Címsor 5"
+
+#: ../data/language-specs/def.lang.h:69
+msgid "Heading 6"
+msgstr "Címsor 6"
+
+#: ../data/language-specs/desktop.lang.h:2
+msgid ".desktop"
+msgstr ".desktop"
+
+#: ../data/language-specs/desktop.lang.h:3
+msgid "Group"
+msgstr "Csoport"
+
+#. Translators: "Key" here means key value, that is the left hand
+#. side in a myoption=something line in a .desktop file
+#: ../data/language-specs/desktop.lang.h:6
+#: ../data/language-specs/json.lang.h:2
+msgid "Key"
+msgstr "Kulcs"
+
+#: ../data/language-specs/desktop.lang.h:7
+msgid "Translation"
+msgstr "Fordítás"
+
+#: ../data/language-specs/desktop.lang.h:10
+msgid "Exec parameter"
+msgstr "Exec paramétere"
+
+#: ../data/language-specs/desktop.lang.h:11
+msgid "Encoding"
+msgstr "Kódolás"
+
+#: ../data/language-specs/desktop.lang.h:12
+msgid "Main Category"
+msgstr "Főkategória"
+
+#: ../data/language-specs/desktop.lang.h:13
+msgid "Additional Category"
+msgstr "További kategória"
+
+#: ../data/language-specs/desktop.lang.h:14
+msgid "Reserved Category"
+msgstr "Védett kategória"
+
+#: ../data/language-specs/diff.lang.h:2
+msgid "Diff"
+msgstr "Diff"
+
+#: ../data/language-specs/diff.lang.h:3
+msgid "Added line"
+msgstr "Hozzáadott sor"
+
+#. Others 2
+#: ../data/language-specs/diff.lang.h:5
+msgid "Removed line"
+msgstr "Eltávolított sor"
+
+#. Others 3
+#: ../data/language-specs/diff.lang.h:7
+msgid "Changed line"
+msgstr "Megváltozott sor"
+
+#. Preprocessor
+#: ../data/language-specs/diff.lang.h:9
+msgid "Special case"
+msgstr "Speciális eset"
+
+#. String
+#: ../data/language-specs/diff.lang.h:11 ../data/language-specs/po.lang.h:4
+msgid "Location"
+msgstr "Hely"
+
+#. Keyword
+#: ../data/language-specs/diff.lang.h:13
+msgid "Ignore"
+msgstr "Mellőzés"
+
+#: ../data/language-specs/d.lang.h:2
+msgid "D"
+msgstr "D"
+
+#: ../data/language-specs/d.lang.h:8
+msgid "Special Token"
+msgstr "Speciális jelsor"
+
+#: ../data/language-specs/d.lang.h:13 ../data/language-specs/nemerle.lang.h:14
+msgid "Binary number"
+msgstr "Bináris szám"
+
+#: ../data/language-specs/docbook.lang.h:2
+msgid "DocBook"
+msgstr "DocBook"
+
+#: ../data/language-specs/docbook.lang.h:3
+msgid "Header Elements"
+msgstr "Fejlécelemek"
+
+#: ../data/language-specs/docbook.lang.h:4
+msgid "Formatting Elements"
+msgstr "Formázóelemek"
+
+#: ../data/language-specs/docbook.lang.h:5
+msgid "GUI Elements"
+msgstr "GUI elemek"
+
+#: ../data/language-specs/docbook.lang.h:6
+msgid "Structural Elements"
+msgstr "Szerkezeti elemek"
+
+#: ../data/language-specs/dosbatch.lang.h:2
+msgid "DOS Batch"
+msgstr "DOS Batch"
+
+#: ../data/language-specs/dosbatch.lang.h:6
+#: ../data/language-specs/latex.lang.h:8
+#: ../data/language-specs/sweave.lang.h:4
+msgid "Command"
+msgstr "Parancs"
+
+#: ../data/language-specs/dot.lang.h:2
+msgid "Graphviz Dot"
+msgstr "Graphviz Dot"
+
+#: ../data/language-specs/dot.lang.h:6 ../data/language-specs/xml.lang.h:8
+msgid "Attribute name"
+msgstr "Attribútumnév"
+
+#: ../data/language-specs/dpatch.lang.h:2
+msgid "DPatch"
+msgstr "DPatch"
+
+#: ../data/language-specs/dpatch.lang.h:3
+msgid "Patch Start"
+msgstr "Folt kezdete"
+
+#: ../data/language-specs/dtd.lang.h:2 ../data/language-specs/html.lang.h:7
+msgid "DTD"
+msgstr "DTD"
+
+#: ../data/language-specs/dtd.lang.h:3
+msgid "entity"
+msgstr "entitás"
+
+#: ../data/language-specs/dtd.lang.h:4
+msgid "decl"
+msgstr "deklaráció"
+
+#: ../data/language-specs/dtd.lang.h:5
+msgid "error"
+msgstr "hiba"
+
+#: ../data/language-specs/dtd.lang.h:6
+msgid "Quoted Value"
+msgstr "Idézett érték"
+
+#: ../data/language-specs/eiffel.lang.h:2
+msgid "Eiffel"
+msgstr "Eiffel"
+
+#: ../data/language-specs/eiffel.lang.h:5
+msgid "Debug"
+msgstr "Hibakeresés"
+
+#: ../data/language-specs/eiffel.lang.h:6
+msgid "Assertion"
+msgstr "Kijelentés"
+
+#: ../data/language-specs/eiffel.lang.h:9
+msgid "Design by Contract"
+msgstr "Szerződéses tervezés"
+
+#: ../data/language-specs/eiffel.lang.h:10
+msgid "Exception Handling"
+msgstr "Kivételkezelés"
+
+#: ../data/language-specs/eiffel.lang.h:11
+#: ../data/language-specs/ruby.lang.h:21
+msgid "Predefined Variable"
+msgstr "Előre meghatározott változó"
+
+#: ../data/language-specs/eiffel.lang.h:13
+msgid "Void Value"
+msgstr "Null érték"
+
+#: ../data/language-specs/eiffel.lang.h:14
+#: ../data/language-specs/javascript.lang.h:6
+#: ../data/language-specs/json.lang.h:6
+msgid "Boolean Value"
+msgstr "Logikai érték"
+
+#: ../data/language-specs/erlang.lang.h:2
+msgid "Erlang"
+msgstr "Erlang"
+
+#: ../data/language-specs/erlang.lang.h:6
+msgid "Atom"
+msgstr "Atom"
+
+#: ../data/language-specs/erlang.lang.h:11
+#: ../data/language-specs/fsharp.lang.h:4
+#: ../data/language-specs/modelica.lang.h:12
+#: ../data/language-specs/ocaml.lang.h:5
+#: ../data/language-specs/octave.lang.h:11 ../data/language-specs/sml.lang.h:9
+#: ../data/language-specs/verilog.lang.h:14
+#: ../data/language-specs/vhdl.lang.h:9
+msgid "Base-N Integer"
+msgstr "N-alapú egész"
+
+#: ../data/language-specs/erlang.lang.h:13
+#: ../data/language-specs/forth.lang.h:11
+#: ../data/language-specs/systemverilog.lang.h:3
+#: ../data/language-specs/verilog.lang.h:8
+msgid "Compiler Directive"
+msgstr "Fordítódirektíva"
+
+#: ../data/language-specs/fcl.lang.h:1 ../data/language-specs/gap.lang.h:1
+#: ../data/language-specs/idl-exelis.lang.h:1
+#: ../data/language-specs/imagej.lang.h:1
+#: ../data/language-specs/julia.lang.h:1
+#: ../data/language-specs/matlab.lang.h:1
+#: ../data/language-specs/modelica.lang.h:1
+#: ../data/language-specs/octave.lang.h:1 ../data/language-specs/R.lang.h:1
+#: ../data/language-specs/scilab.lang.h:1
+msgid "Scientific"
+msgstr "Tudományos"
+
+#: ../data/language-specs/fcl.lang.h:2
+msgid "FCL"
+msgstr "FCL"
+
+#: ../data/language-specs/fcl.lang.h:4 ../data/language-specs/fortran.lang.h:5
+#: ../data/language-specs/ini.lang.h:4
+#: ../data/language-specs/modelica.lang.h:11
+#: ../data/language-specs/octave.lang.h:10
+#: ../data/language-specs/scilab.lang.h:4 ../data/language-specs/sql.lang.h:4
+msgid "Floating Point"
+msgstr "Lebegőpontos"
+
+#: ../data/language-specs/fcl.lang.h:6
+msgid "Block"
+msgstr "Blokk"
+
+#: ../data/language-specs/fcl.lang.h:8 ../data/language-specs/octave.lang.h:15
+#: ../data/language-specs/scilab.lang.h:9
+msgid "Reserved Constant"
+msgstr "Védett állandó"
+
+#: ../data/language-specs/forth.lang.h:2
+msgid "Forth"
+msgstr "Forth"
+
+#: ../data/language-specs/forth.lang.h:9
+msgid "Debug Code"
+msgstr "Hibakeresési kód"
+
+#: ../data/language-specs/forth.lang.h:10
+msgid "Error Text"
+msgstr "Hibaszöveg"
+
+#: ../data/language-specs/fortran.lang.h:2
+msgid "Fortran 95"
+msgstr "Fortran 95"
+
+#: ../data/language-specs/fortran.lang.h:7
+msgid "Intrinsic function"
+msgstr "Belső függvény"
+
+#: ../data/language-specs/fortran.lang.h:8
+msgid "BOZ Literal"
+msgstr "BOZ literál"
+
+#: ../data/language-specs/fortran.lang.h:12
+msgid "OpenMP directives"
+msgstr "OpenMP direktívák"
+
+#: ../data/language-specs/fsharp.lang.h:2
+msgid "F#"
+msgstr "F#"
+
+#: ../data/language-specs/fsharp.lang.h:5
+#: ../data/language-specs/ocaml.lang.h:6 ../data/language-specs/sml.lang.h:12
+msgid "Floating Point number"
+msgstr "Lebegőpontos szám"
+
+#: ../data/language-specs/fsharp.lang.h:9
+#: ../data/language-specs/ocaml.lang.h:10
+msgid "Type, module or object keyword"
+msgstr "Típus, modul vagy objektum kulcsszó"
+
+#: ../data/language-specs/fsharp.lang.h:10
+#: ../data/language-specs/ocaml.lang.h:11
+msgid "Builtin-function keyword"
+msgstr "Beépített függvény kulcsszó"
+
+#: ../data/language-specs/fsharp.lang.h:12
+#: ../data/language-specs/ocaml.lang.h:13
+msgid "Labeled argument"
+msgstr "Címkézett argumentum"
+
+#: ../data/language-specs/fsharp.lang.h:13
+#: ../data/language-specs/ocaml.lang.h:14
+msgid "Polymorphic Variant"
+msgstr "Polimorf változó"
+
+#: ../data/language-specs/fsharp.lang.h:14
+#: ../data/language-specs/ocaml.lang.h:15
+msgid "Variant Constructor"
+msgstr "Változó konstruktor"
+
+#. Translators: this is a specific variable called Type
+#: ../data/language-specs/fsharp.lang.h:16
+#: ../data/language-specs/ocaml.lang.h:16
+msgid "Type Variable"
+msgstr "Típusváltozó"
+
+#: ../data/language-specs/fsharp.lang.h:17
+#: ../data/language-specs/ocaml.lang.h:17
+msgid "Module Path"
+msgstr "Modulútvonal"
+
+#: ../data/language-specs/gap.lang.h:2
+msgid "GAP"
+msgstr "GAP"
+
+#: ../data/language-specs/gdb-log.lang.h:2
+msgid "GDB Log"
+msgstr "GDB napló"
+
+#: ../data/language-specs/gdb-log.lang.h:3
+msgid "Thread Action"
+msgstr "Szálművelet"
+
+#: ../data/language-specs/gdb-log.lang.h:4
+msgid "Thread Header"
+msgstr "Szálfejléc"
+
+#: ../data/language-specs/gdb-log.lang.h:5
+msgid "Frame Number"
+msgstr "Keretszám"
+
+#: ../data/language-specs/gdb-log.lang.h:6
+msgid "Address"
+msgstr "Cím"
+
+#: ../data/language-specs/gdb-log.lang.h:9
+msgid "Filename"
+msgstr "Fájlnév"
+
+#: ../data/language-specs/gdb-log.lang.h:10
+msgid "Optimized Out"
+msgstr "Kioptimalizálva"
+
+#: ../data/language-specs/gdb-log.lang.h:11
+msgid "Incomplete Sequence"
+msgstr "Befejezetlen sorozat"
+
+#: ../data/language-specs/gdb-log.lang.h:12
+msgid "Prompt"
+msgstr "Parancssor"
+
+#: ../data/language-specs/genie.lang.h:1
+#: ../data/language-specs/thrift.lang.h:1
+msgid "Sources"
+msgstr "Források"
+
+#: ../data/language-specs/genie.lang.h:2
+msgid "Genie"
+msgstr "Genie"
+
+#: ../data/language-specs/glsl.lang.h:2
+msgid "OpenGL Shading Language"
+msgstr "OpenGL árnyékolónyelv"
+
+#: ../data/language-specs/glsl.lang.h:7 ../data/language-specs/go.lang.h:17
+#: ../data/language-specs/python3.lang.h:15
+#: ../data/language-specs/python.lang.h:16
+msgid "Builtin Constant"
+msgstr "Beépített állandó"
+
+#: ../data/language-specs/glsl.lang.h:9
+msgid "Reserved Keywords"
+msgstr "Védett kulcsszavak"
+
+#: ../data/language-specs/go.lang.h:2
+msgid "Go"
+msgstr "Go"
+
+#: ../data/language-specs/go.lang.h:12
+msgid "Imaginary number"
+msgstr "Képzetes szám"
+
+#: ../data/language-specs/gtk-doc.lang.h:2
+msgid "gtk-doc"
+msgstr "gtk-doc"
+
+#: ../data/language-specs/gtk-doc.lang.h:3
+msgid "Inline Documentation Section"
+msgstr "Beágyazott dokumentációrész"
+
+#: ../data/language-specs/gtk-doc.lang.h:4
+#: ../data/language-specs/python.lang.h:19
+msgid "Function Name"
+msgstr "Függvénynév"
+
+#: ../data/language-specs/gtk-doc.lang.h:5
+msgid "Signal Name"
+msgstr "Szignálnév"
+
+#: ../data/language-specs/gtk-doc.lang.h:6
+msgid "Property Name"
+msgstr "Tulajdonságnév"
+
+#: ../data/language-specs/gtk-doc.lang.h:7
+msgid "Parameter"
+msgstr "Paraméter"
+
+#: ../data/language-specs/gtk-doc.lang.h:11
+msgid "Return"
+msgstr "Enter"
+
+#: ../data/language-specs/gtk-doc.lang.h:12
+msgid "Since"
+msgstr "Kezdet"
+
+#: ../data/language-specs/gtk-doc.lang.h:13
+msgid "Deprecated"
+msgstr "Elavult"
+
+#: ../data/language-specs/gtkrc.lang.h:2
+msgid "GtkRC"
+msgstr "GtkRC"
+
+#: ../data/language-specs/gtkrc.lang.h:8
+msgid "Widget State"
+msgstr "Felületi elem állapota"
+
+#: ../data/language-specs/gtkrc.lang.h:9
+msgid "Include directive"
+msgstr "Include direktíva"
+
+#: ../data/language-specs/haddock.lang.h:2
+msgid "Haddock"
+msgstr "Haddock"
+
+#: ../data/language-specs/haddock.lang.h:3
+msgid "Inline Haddock Section"
+msgstr "Beágyazott haddock szakasz"
+
+#: ../data/language-specs/haddock.lang.h:4
+msgid "Haddock Directive"
+msgstr "Haddock direktíva"
+
+#: ../data/language-specs/haddock.lang.h:5
+msgid "Hyperlinked Identifier"
+msgstr "Hiperhivatkozott azonosító"
+
+#: ../data/language-specs/haddock.lang.h:6
+msgid "Hyperlinked Module Name"
+msgstr "Hiperhivatkozott modulnév"
+
+#: ../data/language-specs/haddock.lang.h:7
+msgid "Escape"
+msgstr "Escape"
+
+#: ../data/language-specs/haddock.lang.h:8
+#: ../data/language-specs/markdown.lang.h:13
+#: ../data/language-specs/rst.lang.h:4
+msgid "Emphasis"
+msgstr "Kiemelés"
+
+#: ../data/language-specs/haddock.lang.h:9
+msgid "Monospace"
+msgstr "Rögzített szélességű"
+
+#: ../data/language-specs/haddock.lang.h:10
+msgid "Code Block"
+msgstr "Kódblokk"
+
+#: ../data/language-specs/haddock.lang.h:11
+msgid "Header Property"
+msgstr "Fejléctulajdonság"
+
+#: ../data/language-specs/haddock.lang.h:12
+msgid "Itemized list"
+msgstr "Felsorolásos lista"
+
+#: ../data/language-specs/haddock.lang.h:13
+msgid "Enumerated list"
+msgstr "Felsorolásos lista"
+
+#: ../data/language-specs/haddock.lang.h:14
+msgid "Definition list"
+msgstr "Definíciólista"
+
+#: ../data/language-specs/haddock.lang.h:15
+#: ../data/language-specs/markdown.lang.h:8
+#: ../data/language-specs/mediawiki.lang.h:6
+msgid "URL"
+msgstr "URL"
+
+#: ../data/language-specs/haddock.lang.h:16
+#: ../data/language-specs/t2t.lang.h:13 ../data/language-specs/yaml.lang.h:6
+msgid "Anchor"
+msgstr "Horgony"
+
+#: ../data/language-specs/haskell.lang.h:2
+msgid "Haskell"
+msgstr "Haskell"
+
+#: ../data/language-specs/haskell.lang.h:6
+#: ../data/language-specs/ruby.lang.h:19
+msgid "Symbol"
+msgstr "Szimbólum"
+
+#: ../data/language-specs/haskell.lang.h:14
+msgid "Octal"
+msgstr "Oktális"
+
+#: ../data/language-specs/haskell.lang.h:15
+msgid "Hex"
+msgstr "Hexadecimális"
+
+#: ../data/language-specs/haskell-literate.lang.h:2
+msgid "Literate Haskell"
+msgstr "Irodalmi Haskell"
+
+#: ../data/language-specs/html.lang.h:2
+msgid "HTML"
+msgstr "HTML"
+
+#: ../data/language-specs/html.lang.h:4 ../data/language-specs/xml.lang.h:11
+#: ../data/language-specs/yaml.lang.h:7
+msgid "Tag"
+msgstr "Tag"
+
+#: ../data/language-specs/html.lang.h:5
+msgid "Attribute Name"
+msgstr "Attribútumnév"
+
+#: ../data/language-specs/html.lang.h:6
+#: ../data/language-specs/markdown.lang.h:11
+msgid "Attribute Value"
+msgstr "Attribútumérték"
+
+#: ../data/language-specs/html.lang.h:9
+msgid "Page title"
+msgstr "Oldalcím"
+
+#: ../data/language-specs/html.lang.h:10
+msgid "Heading level 1"
+msgstr "1. szintű címsor"
+
+#: ../data/language-specs/html.lang.h:11
+msgid "Heading level 2"
+msgstr "2. szintű címsor"
+
+#: ../data/language-specs/html.lang.h:12
+msgid "Heading level 3"
+msgstr "3. szintű címsor"
+
+#: ../data/language-specs/html.lang.h:13
+msgid "Heading level 4"
+msgstr "4. szintű címsor"
+
+#: ../data/language-specs/html.lang.h:14
+msgid "Heading level 5"
+msgstr "5. szintű címsor"
+
+#: ../data/language-specs/idl-exelis.lang.h:2
+msgid "IDL-Exelis"
+msgstr "IDL-Exelis"
+
+#: ../data/language-specs/idl.lang.h:2
+msgid "IDL"
+msgstr "IDL"
+
+#: ../data/language-specs/imagej.lang.h:2
+msgid "ImageJ"
+msgstr "ImageJ"
+
+#: ../data/language-specs/imagej.lang.h:5
+msgid "Commands"
+msgstr "Parancsok"
+
+#: ../data/language-specs/imagej.lang.h:6
+#: ../data/language-specs/octave.lang.h:7
+msgid "Storage Type"
+msgstr "Tárolótípus"
+
+#: ../data/language-specs/imagej.lang.h:7
+msgid "Escaped Characters"
+msgstr "Escape-elt karakterek"
+
+#: ../data/language-specs/ini.lang.h:2
+msgid ".ini"
+msgstr ".ini"
+
+#: ../data/language-specs/java.lang.h:2
+msgid "Java"
+msgstr "Java"
+
+#: ../data/language-specs/javascript.lang.h:2
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: ../data/language-specs/javascript.lang.h:5
+msgid "Undefined Value"
+msgstr "Definiálatlan érték"
+
+#: ../data/language-specs/javascript.lang.h:10
+msgid "Properties"
+msgstr "Tulajdonságok"
+
+#: ../data/language-specs/javascript.lang.h:11
+msgid "Constructors"
+msgstr "Konstruktorok"
+
+#: ../data/language-specs/j.lang.h:2
+msgid "J"
+msgstr "J"
+
+#: ../data/language-specs/j.lang.h:3
+msgid "Adverb"
+msgstr "Határozószó"
+
+#: ../data/language-specs/j.lang.h:5
+msgid "Conjunction"
+msgstr "Kötőszó"
+
+#: ../data/language-specs/j.lang.h:6 ../data/language-specs/perl.lang.h:15
+msgid "Control"
+msgstr "Control"
+
+#: ../data/language-specs/j.lang.h:8
+msgid "Explicit Argument"
+msgstr "Explicit argumentum"
+
+#: ../data/language-specs/j.lang.h:9
+msgid "Global"
+msgstr "Globális"
+
+#: ../data/language-specs/j.lang.h:10
+msgid "Lab Text"
+msgstr "Laborszöveg"
+
+#: ../data/language-specs/j.lang.h:11
+msgid "Local"
+msgstr "Helyi"
+
+#: ../data/language-specs/j.lang.h:12
+msgid "Noun"
+msgstr "Főnév"
+
+#: ../data/language-specs/j.lang.h:13
+msgid "Explicit Noun Definition"
+msgstr "Explicit főnév-definíció"
+
+#: ../data/language-specs/j.lang.h:15
+msgid "Parens"
+msgstr "Zárójelek"
+
+#: ../data/language-specs/j.lang.h:16
+msgid "Primitive"
+msgstr "Primitív"
+
+#: ../data/language-specs/j.lang.h:18
+msgid "Verb"
+msgstr "Ige"
+
+#: ../data/language-specs/julia.lang.h:2
+msgid "Julia"
+msgstr "Julia"
+
+#: ../data/language-specs/julia.lang.h:7
+msgid "Math Constant"
+msgstr "Matematikai állandó"
+
+#: ../data/language-specs/julia.lang.h:8 ../data/language-specs/R.lang.h:7
+#: ../data/language-specs/scala.lang.h:11
+msgid "Special Constant"
+msgstr "Speciális állandó"
+
+#: ../data/language-specs/julia.lang.h:11
+msgid "Macro"
+msgstr "Makró"
+
+#: ../data/language-specs/julia.lang.h:12
+msgid "External Command"
+msgstr "Külső parancs"
+
+#: ../data/language-specs/julia.lang.h:13
+msgid "Built-in Function"
+msgstr "Beépített függvény"
+
+#: ../data/language-specs/julia.lang.h:14
+msgid "Module"
+msgstr "Modul"
+
+#: ../data/language-specs/latex.lang.h:2
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: ../data/language-specs/latex.lang.h:4
+msgid "Math Mode"
+msgstr "Matematikai mód"
+
+#: ../data/language-specs/latex.lang.h:5
+msgid "Inline Math Mode"
+msgstr "Beágyazott matematikai mód"
+
+#: ../data/language-specs/latex.lang.h:6
+msgid "Math Boundary"
+msgstr "Matematikai határ"
+
+#: ../data/language-specs/latex.lang.h:7
+#: ../data/language-specs/texinfo.lang.h:11
+msgid "Include"
+msgstr "Beleértve"
+
+#: ../data/language-specs/latex.lang.h:9
+#: ../data/language-specs/sweave.lang.h:5 ../data/language-specs/t2t.lang.h:16
+msgid "Verbatim"
+msgstr "Változatlan"
+
+#: ../data/language-specs/latex.lang.h:10
+msgid "Special Character"
+msgstr "Különleges karakter"
+
+#: ../data/language-specs/latex.lang.h:11
+msgid "Part Heading"
+msgstr "Rész címsora"
+
+#: ../data/language-specs/latex.lang.h:12
+msgid "Chapter Heading"
+msgstr "Fejezet címsora"
+
+#: ../data/language-specs/latex.lang.h:13
+msgid "Section Heading"
+msgstr "Szakasz címsora"
+
+#: ../data/language-specs/latex.lang.h:14
+msgid "SubSection Heading"
+msgstr "Alszakasz címsora"
+
+#: ../data/language-specs/latex.lang.h:15
+msgid "SubSubSection Heading"
+msgstr "Al-alszakasz címsora"
+
+#: ../data/language-specs/latex.lang.h:16
+msgid "Paragraph Heading"
+msgstr "Bekezdés címsora"
+
+#: ../data/language-specs/latex.lang.h:17
+msgid "SubParagraph Heading"
+msgstr "Albekezdés címsora"
+
+#: ../data/language-specs/lex.lang.h:2
+msgid "Lex"
+msgstr "Lex"
+
+#: ../data/language-specs/lex.lang.h:3
+msgid "Token"
+msgstr "Jelsor"
+
+#: ../data/language-specs/lex.lang.h:6
+msgid "Expression"
+msgstr "Kifejezés"
+
+#: ../data/language-specs/libtool.lang.h:2
+msgid "libtool"
+msgstr "libtool"
+
+#: ../data/language-specs/llvm.lang.h:2
+msgid "LLVM IR"
+msgstr "LLVM IR"
+
+#: ../data/language-specs/llvm.lang.h:7
+msgid "Constants"
+msgstr "Állandók"
+
+#: ../data/language-specs/lua.lang.h:2
+msgid "Lua"
+msgstr "Lua"
+
+#: ../data/language-specs/lua.lang.h:7
+msgid "Reserved Identifier"
+msgstr "Védett azonosító"
+
+#: ../data/language-specs/lua.lang.h:8
+#: ../data/language-specs/markdown.lang.h:10
+msgid "Label"
+msgstr "Címke"
+
+#: ../data/language-specs/lua.lang.h:10 ../data/language-specs/ruby.lang.h:8
+msgid "Nil Constant"
+msgstr "Nil állandó"
+
+#: ../data/language-specs/m4.lang.h:2
+msgid "m4"
+msgstr "m4"
+
+#: ../data/language-specs/m4.lang.h:3
+msgid "m4 Comment"
+msgstr "m4 megjegyzés"
+
+#: ../data/language-specs/m4.lang.h:4
+msgid "m4 Macro"
+msgstr "m4 makró"
+
+#: ../data/language-specs/m4.lang.h:5
+msgid "Autoconf Macro"
+msgstr "Autoconf makró"
+
+#: ../data/language-specs/m4.lang.h:6
+msgid "Obsolete Autoconf Macro"
+msgstr "Elavult Autoconf makró"
+
+#: ../data/language-specs/makefile.lang.h:2
+msgid "Makefile"
+msgstr "Makefile"
+
+#: ../data/language-specs/makefile.lang.h:4
+msgid "Assignment Right Hand Side"
+msgstr "Értékadás jobb oldala"
+
+#: ../data/language-specs/makefile.lang.h:5
+msgid "Assignment Left Hand Side"
+msgstr "Értékadás bal oldala"
+
+#: ../data/language-specs/makefile.lang.h:6
+msgid "targets"
+msgstr "Célok"
+
+#: ../data/language-specs/makefile.lang.h:7
+msgid "prereq"
+msgstr "Előfeltétel"
+
+#: ../data/language-specs/makefile.lang.h:8
+msgid "command"
+msgstr "Parancs"
+
+#. Translators: Trailing Tabs refers to tabulation characters present at
+#. the end of the line
+#: ../data/language-specs/makefile.lang.h:11
+msgid "Trailing Tab"
+msgstr "Záró tab"
+
+#: ../data/language-specs/makefile.lang.h:12
+msgid "function"
+msgstr "Függvény"
+
+#. FIXME make it better names, and make them translatable
+#: ../data/language-specs/makefile.lang.h:13
+#: ../data/language-specs/yacc.lang.h:4
+msgid "keyword"
+msgstr "Kulcsszó"
+
+#: ../data/language-specs/mallard.lang.h:2
+msgid "Mallard"
+msgstr "Mallard"
+
+#: ../data/language-specs/mallard.lang.h:3
+msgid "Page Elements"
+msgstr "Oldalelemek"
+
+#: ../data/language-specs/mallard.lang.h:4
+msgid "Section Elements"
+msgstr "Szakaszelemek"
+
+#: ../data/language-specs/mallard.lang.h:5
+msgid "Block Elements"
+msgstr "Blokkelemek"
+
+#: ../data/language-specs/mallard.lang.h:6
+msgid "Inline Elements"
+msgstr "Beágyazott elemek"
+
+#: ../data/language-specs/markdown.lang.h:2
+msgid "Markdown"
+msgstr "Markdown"
+
+#: ../data/language-specs/markdown.lang.h:3
+#: ../data/language-specs/rpmspec.lang.h:4 ../data/language-specs/rst.lang.h:3
+#: ../data/language-specs/t2t.lang.h:6
+msgid "Header"
+msgstr "Fejléc"
+
+#: ../data/language-specs/markdown.lang.h:4
+msgid "Horizontal Rule"
+msgstr "vízszintes elválasztó"
+
+#: ../data/language-specs/markdown.lang.h:5
+msgid "List Marker"
+msgstr "Listajelölő"
+
+#: ../data/language-specs/markdown.lang.h:6
+#: ../data/language-specs/rst.lang.h:11
+msgid "Code"
+msgstr "Kód"
+
+#: ../data/language-specs/markdown.lang.h:7
+msgid "Blockquote Marker"
+msgstr "Idézetblokk-jelölő"
+
+#: ../data/language-specs/markdown.lang.h:9
+msgid "Link Text"
+msgstr "Hivatkozásszöveg"
+
+#: ../data/language-specs/markdown.lang.h:12
+msgid "Image Marker"
+msgstr "Képjelölő"
+
+#: ../data/language-specs/markdown.lang.h:14
+#: ../data/language-specs/mediawiki.lang.h:3
+#: ../data/language-specs/rst.lang.h:5
+msgid "Strong Emphasis"
+msgstr "Strong kiemelés"
+
+#: ../data/language-specs/markdown.lang.h:15
+msgid "Backslash Escape"
+msgstr "Backslash escape"
+
+#: ../data/language-specs/markdown.lang.h:16
+msgid "Line Break"
+msgstr "Sortörés"
+
+#: ../data/language-specs/matlab.lang.h:2
+msgid "Matlab"
+msgstr "Matlab"
+
+#: ../data/language-specs/mediawiki.lang.h:2
+msgid "MediaWiki"
+msgstr "MediaWiki"
+
+#: ../data/language-specs/mediawiki.lang.h:4
+msgid "Light Emphasis"
+msgstr "Enyhe kiemelés"
+
+#: ../data/language-specs/mediawiki.lang.h:5
+msgid "Signature"
+msgstr "Aláírás"
+
+#: ../data/language-specs/mediawiki.lang.h:7
+#: ../data/language-specs/rst.lang.h:9
+msgid "Link"
+msgstr "Hivatkozás"
+
+#: ../data/language-specs/mediawiki.lang.h:8
+msgid "Symbol on a Link"
+msgstr "Szimbólum hivatkozáson"
+
+#: ../data/language-specs/mediawiki.lang.h:9
+msgid "Line"
+msgstr "Vonal"
+
+#: ../data/language-specs/mediawiki.lang.h:10
+msgid "List"
+msgstr "Lista"
+
+#: ../data/language-specs/mediawiki.lang.h:11
+msgid "Magic Word"
+msgstr "Bűvös szó"
+
+#: ../data/language-specs/mediawiki.lang.h:12
+msgid "Symbol of a Table"
+msgstr "Táblázat szimbóluma"
+
+#: ../data/language-specs/mediawiki.lang.h:13
+msgid "Preformatted"
+msgstr "Előreformázott"
+
+#: ../data/language-specs/mediawiki.lang.h:14
+msgid "Redirect"
+msgstr "Átirányítás"
+
+#: ../data/language-specs/mediawiki.lang.h:15
+msgid "Title"
+msgstr "Cím"
+
+#: ../data/language-specs/mediawiki.lang.h:16
+msgid "Template"
+msgstr "Sablon"
+
+#: ../data/language-specs/modelica.lang.h:2
+msgid "Modelica"
+msgstr "Modelica"
+
+#: ../data/language-specs/modelica.lang.h:6
+msgid "Class type"
+msgstr "Osztály típus"
+
+#: ../data/language-specs/modelica.lang.h:8
+msgid "Default Attribute"
+msgstr "Alapértelmezett attribútum"
+
+#: ../data/language-specs/mxml.lang.h:2
+msgid "MXML"
+msgstr "MXML"
+
+#: ../data/language-specs/mxml.lang.h:3 ../data/language-specs/xml.lang.h:7
+msgid "Element name"
+msgstr "Elemnév"
+
+#: ../data/language-specs/mxml.lang.h:4 ../data/language-specs/xml.lang.h:5
+msgid "CDATA delimiter"
+msgstr "CDATA elválasztó"
+
+#: ../data/language-specs/nemerle.lang.h:2
+msgid "Nemerle"
+msgstr "Nemerle"
+
+#: ../data/language-specs/netrexx.lang.h:2
+msgid "NetRexx"
+msgstr "NetRexx"
+
+#: ../data/language-specs/netrexx.lang.h:7
+msgid "Externals"
+msgstr "Külsők"
+
+#: ../data/language-specs/netrexx.lang.h:8
+msgid "Options"
+msgstr "Beállítások"
+
+#: ../data/language-specs/netrexx.lang.h:9
+msgid "Data Types"
+msgstr "Adattípusok"
+
+#: ../data/language-specs/netrexx.lang.h:10
+msgid "Special"
+msgstr "Speciális"
+
+#: ../data/language-specs/netrexx.lang.h:11
+msgid "Visibility"
+msgstr "Láthatóság"
+
+#: ../data/language-specs/netrexx.lang.h:12
+msgid "Modifiers"
+msgstr "Módosítók"
+
+#: ../data/language-specs/netrexx.lang.h:13
+msgid "Keywords"
+msgstr "Kulcsszavak"
+
+#: ../data/language-specs/netrexx.lang.h:14
+msgid "Sub Keywords"
+msgstr "Alkulcsszavak"
+
+#: ../data/language-specs/nsis.lang.h:2
+msgid "NSIS"
+msgstr "NSIS"
+
+#: ../data/language-specs/objc.lang.h:2
+msgid "Objective-C"
+msgstr "Objective C"
+
+#: ../data/language-specs/objj.lang.h:2
+msgid "Objective-J"
+msgstr "Objective-J"
+
+#: ../data/language-specs/ocaml.lang.h:2
+msgid "OCaml"
+msgstr "OCaml"
+
+#: ../data/language-specs/ocaml.lang.h:4
+msgid "Ocamldoc Comments"
+msgstr "Ocamldoc megjegyzések"
+
+#: ../data/language-specs/ocaml.lang.h:21
+msgid "Standard Modules"
+msgstr "Szabványos modulok"
+
+#: ../data/language-specs/ocl.lang.h:2
+msgid "OCL"
+msgstr "OCL"
+
+#: ../data/language-specs/ocl.lang.h:6
+msgid "Type Operators"
+msgstr "Típusoperátorok"
+
+#: ../data/language-specs/ocl.lang.h:8
+msgid "Operation operator"
+msgstr "Műveletoperátor"
+
+#: ../data/language-specs/octave.lang.h:2
+msgid "Octave"
+msgstr "Octave"
+
+#: ../data/language-specs/octave.lang.h:12
+msgid "Package Manager"
+msgstr "Csomagkezelő"
+
+#: ../data/language-specs/ooc.lang.h:2
+msgid "OOC"
+msgstr "OOC"
+
+#: ../data/language-specs/opal.lang.h:2
+msgid "Opal"
+msgstr "Opal"
+
+#: ../data/language-specs/opal.lang.h:3
+#: ../data/language-specs/python3.lang.h:3
+#: ../data/language-specs/python.lang.h:3
+msgid "Module Handler"
+msgstr "Modulkezelő"
+
+#: ../data/language-specs/opal.lang.h:12
+msgid "Keysymbol"
+msgstr "Kulcsszimbólum"
+
+#: ../data/language-specs/opencl.lang.h:2
+msgid "OpenCL"
+msgstr "OpenCL"
+
+#: ../data/language-specs/opencl.lang.h:5
+msgid "Global Function"
+msgstr "Globális függvény"
+
+#: ../data/language-specs/opencl.lang.h:6
+msgid "Device Function"
+msgstr "Eszközfüggvény"
+
+#: ../data/language-specs/opencl.lang.h:7
+msgid "Device Cast"
+msgstr "Eszközkényszerítés"
+
+#: ../data/language-specs/opencl.lang.h:8
+msgid "OpenCL Constant"
+msgstr "OpenCL állandó"
+
+#: ../data/language-specs/opencl.lang.h:9
+msgid "Global Variable"
+msgstr "Globális változó"
+
+#: ../data/language-specs/pascal.lang.h:2
+msgid "Pascal"
+msgstr "Pascal"
+
+#: ../data/language-specs/perl.lang.h:2
+msgid "Perl"
+msgstr "Perl"
+
+#: ../data/language-specs/perl.lang.h:4
+msgid "Line Directive"
+msgstr "Sordirektíva"
+
+#: ../data/language-specs/perl.lang.h:5
+msgid "Include Statement"
+msgstr "Include utasítás"
+
+#: ../data/language-specs/perl.lang.h:9 ../data/language-specs/php.lang.h:11
+#: ../data/language-specs/ruby.lang.h:23
+msgid "Heredoc"
+msgstr "Heredoc"
+
+#: ../data/language-specs/perl.lang.h:10 ../data/language-specs/php.lang.h:12
+#: ../data/language-specs/ruby.lang.h:24 ../data/language-specs/sh.lang.h:12
+msgid "Heredoc Bound"
+msgstr "Heredoc határ"
+
+#: ../data/language-specs/perl.lang.h:11
+msgid "System Command"
+msgstr "Rendszerparancs"
+
+#: ../data/language-specs/perl.lang.h:14
+msgid "File Descriptor"
+msgstr "Fájlleíró"
+
+#: ../data/language-specs/perl.lang.h:18
+msgid "POD"
+msgstr "POD"
+
+#: ../data/language-specs/perl.lang.h:19
+msgid "POD Escape"
+msgstr "POD escape"
+
+#: ../data/language-specs/perl.lang.h:20
+msgid "POD keyword"
+msgstr "POD kulcsszó"
+
+#: ../data/language-specs/perl.lang.h:21
+msgid "POD heading"
+msgstr "POD fejléc"
+
+#: ../data/language-specs/php.lang.h:2
+msgid "PHP"
+msgstr "PHP"
+
+#: ../data/language-specs/php.lang.h:3
+msgid "Preprocessor tags"
+msgstr "Előfeldolgozó címkék"
+
+#: ../data/language-specs/php.lang.h:14
+msgid "Common Function"
+msgstr "Általános függvény"
+
+#: ../data/language-specs/pig.lang.h:2
+msgid "Pig"
+msgstr "Pig"
+
+#: ../data/language-specs/pig.lang.h:4
+msgid "Reserved Words"
+msgstr "Fenntartott szavak"
+
+#: ../data/language-specs/pig.lang.h:5
+msgid "Built In Functions"
+msgstr "Beépített függvények"
+
+#: ../data/language-specs/pig.lang.h:6
+msgid "Boolean values"
+msgstr "Logikai értékek"
+
+#: ../data/language-specs/pig.lang.h:7 ../data/language-specs/yaml.lang.h:11
+msgid "Null"
+msgstr "Null"
+
+#: ../data/language-specs/pkgconfig.lang.h:2
+msgid "pkg-config"
+msgstr "pkg-config"
+
+#: ../data/language-specs/pkgconfig.lang.h:4
+msgid "Package Info"
+msgstr "Csomaginformációk"
+
+#: ../data/language-specs/po.lang.h:2
+msgid "gettext translation"
+msgstr "gettext fordítás"
+
+#: ../data/language-specs/po.lang.h:6
+msgid "Fuzzy"
+msgstr "Ellenőrzendő"
+
+#: ../data/language-specs/prolog.lang.h:2
+msgid "Prolog"
+msgstr "Prolog"
+
+#: ../data/language-specs/puppet.lang.h:2
+msgid "Puppet"
+msgstr "Puppet"
+
+#: ../data/language-specs/puppet.lang.h:3
+msgid "Resources"
+msgstr "Erőforrások"
+
+#: ../data/language-specs/puppet.lang.h:4
+msgid "Parameters"
+msgstr "Paraméterek"
+
+#: ../data/language-specs/puppet.lang.h:5
+msgid "Metaparameters"
+msgstr "Metaparaméterek"
+
+#: ../data/language-specs/puppet.lang.h:6 ../data/language-specs/R.lang.h:11
+msgid "Functions"
+msgstr "Függvények"
+
+#: ../data/language-specs/puppet.lang.h:7
+msgid "Values"
+msgstr "Értékek"
+
+#: ../data/language-specs/puppet.lang.h:8
+msgid "Variables"
+msgstr "Változók"
+
+#: ../data/language-specs/puppet.lang.h:9
+msgid "Class names"
+msgstr "Osztálynevek"
+
+#: ../data/language-specs/python3.lang.h:2
+msgid "Python 3"
+msgstr "Python 3"
+
+#: ../data/language-specs/python3.lang.h:8
+#: ../data/language-specs/python.lang.h:8
+msgid "Format"
+msgstr "Formátum"
+
+#: ../data/language-specs/python3.lang.h:16
+#: ../data/language-specs/python.lang.h:17
+msgid "Builtin Object"
+msgstr "Beépített objektum"
+
+#: ../data/language-specs/python.lang.h:2
+msgid "Python"
+msgstr "Python"
+
+#: ../data/language-specs/python.lang.h:9
+msgid "String Conversion"
+msgstr "Karakterlánc-átalakítás"
+
+#: ../data/language-specs/python.lang.h:20
+msgid "Class Name"
+msgstr "Osztály neve"
+
+#: ../data/language-specs/python.lang.h:21
+msgid "Decorator"
+msgstr "Dekorátor"
+
+#: ../data/language-specs/R.lang.h:2
+msgid "R"
+msgstr "R"
+
+#: ../data/language-specs/R.lang.h:4
+msgid "Reserved Class"
+msgstr "Védett osztály"
+
+#: ../data/language-specs/R.lang.h:5
+msgid "Assignment Operator"
+msgstr "Hozzárendelő operátorok"
+
+#: ../data/language-specs/R.lang.h:6
+msgid "Delimiter"
+msgstr "Elválasztó"
+
+#: ../data/language-specs/R.lang.h:9 ../data/language-specs/verilog.lang.h:16
+msgid "Integer Number"
+msgstr "Egész szám"
+
+#: ../data/language-specs/rpmspec.lang.h:2
+msgid "RPM spec"
+msgstr "RPM spec"
+
+#: ../data/language-specs/rpmspec.lang.h:3
+msgid "Define"
+msgstr "Definíció"
+
+#: ../data/language-specs/rpmspec.lang.h:5 ../data/language-specs/t2t.lang.h:7
+msgid "Section"
+msgstr "Fejezet"
+
+#: ../data/language-specs/rpmspec.lang.h:6
+msgid "Spec Macro"
+msgstr "Spec makró"
+
+#: ../data/language-specs/rpmspec.lang.h:7
+msgid "Directory Macro"
+msgstr "Könyvtármakró"
+
+#: ../data/language-specs/rpmspec.lang.h:8
+msgid "Command Macro"
+msgstr "Parancsmakró"
+
+#: ../data/language-specs/rpmspec.lang.h:9
+msgid "Conditional Macro"
+msgstr "Feltételes makró"
+
+#: ../data/language-specs/rpmspec.lang.h:10
+msgid "Other Macro"
+msgstr "Egyéb makró"
+
+#: ../data/language-specs/rpmspec.lang.h:11
+msgid "Flow Conditional"
+msgstr "Feltételes irányítás"
+
+#: ../data/language-specs/rpmspec.lang.h:12
+msgid "RPM Variable"
+msgstr "RPM változó"
+
+#: ../data/language-specs/rpmspec.lang.h:13
+msgid "Switch"
+msgstr "Kapcsoló"
+
+#: ../data/language-specs/rpmspec.lang.h:15
+msgid "Email"
+msgstr "E-mail"
+
+#: ../data/language-specs/rst.lang.h:2
+msgid "reStructuredText"
+msgstr "reStructuredText"
+
+#: ../data/language-specs/rst.lang.h:7 ../data/language-specs/yaml.lang.h:10
+msgid "Directive"
+msgstr "Direktíva"
+
+#: ../data/language-specs/ruby.lang.h:2
+msgid "Ruby"
+msgstr "Ruby"
+
+#: ../data/language-specs/ruby.lang.h:5
+msgid "Attribute Definition"
+msgstr "Attribútumdefiníció"
+
+#: ../data/language-specs/ruby.lang.h:6
+msgid "Module handler"
+msgstr "Modulkezelő"
+
+#: ../data/language-specs/ruby.lang.h:13
+msgid "Numeric literal"
+msgstr "Numerikus literál"
+
+#: ../data/language-specs/ruby.lang.h:15
+#: ../data/language-specs/sparql.lang.h:10
+msgid "Literal"
+msgstr "Literál"
+
+#: ../data/language-specs/scala.lang.h:2
+msgid "Scala"
+msgstr "Scala"
+
+#: ../data/language-specs/scala.lang.h:9
+msgid "Modifier"
+msgstr "Módosító"
+
+#: ../data/language-specs/scala.lang.h:15
+msgid "Built In"
+msgstr "Beépített"
+
+#: ../data/language-specs/scala.lang.h:17
+msgid "XML Tag"
+msgstr "XML címke"
+
+#: ../data/language-specs/scheme.lang.h:2
+msgid "Scheme"
+msgstr "Scheme"
+
+#: ../data/language-specs/scilab.lang.h:2
+msgid "Scilab"
+msgstr "Scilab"
+
+#: ../data/language-specs/sh.lang.h:2
+msgid "sh"
+msgstr "sh"
+
+#. FIXME: need to sort out proper styles for variables
+#: ../data/language-specs/sh.lang.h:9
+msgid "Variable Definition"
+msgstr "Változódefiníció"
+
+#. *
+#. * SECTION:language
+#. * @Short_description: Represents a syntax highlighted language
+#. * @Title: GtkSourceLanguage
+#. * @See_also: #GtkSourceLanguageManager
+#. *
+#. * #GtkSourceLanguage encapsulates syntax and highlighting styles for a
+#. * particular language. Use #GtkSourceLanguageManager to obtain a
+#. * #GtkSourceLanguage instance, and gtk_source_buffer_set_language() to apply it
+#. * to a #GtkSourceBuffer.
+#.
+#: ../data/language-specs/sh.lang.h:10 ../data/language-specs/texinfo.lang.h:5
+#: ../gtksourceview/gtksourcelanguage.c:54
+msgid "Others"
+msgstr "Egyéb"
+
+#: ../data/language-specs/sh.lang.h:11
+msgid "Common Commands"
+msgstr "Gyakori parancsok"
+
+#: ../data/language-specs/sh.lang.h:13
+msgid "Subshell"
+msgstr "Alparancsértelmező"
+
+#: ../data/language-specs/sml.lang.h:2
+msgid "Standard ML"
+msgstr "Szabványos ML"
+
+#: ../data/language-specs/sml.lang.h:13
+msgid "Module name, Variant, etc"
+msgstr "Modulnév, változat stb."
+
+#: ../data/language-specs/sparql.lang.h:2
+msgid "SPARQL"
+msgstr "SPARQL"
+
+#: ../data/language-specs/sparql.lang.h:3
+msgid "Class"
+msgstr "Osztály"
+
+#: ../data/language-specs/sparql.lang.h:6
+msgid "Individual"
+msgstr "Önálló"
+
+#: ../data/language-specs/sparql.lang.h:11
+msgid "Predicate"
+msgstr "Predikátum"
+
+#: ../data/language-specs/sparql.lang.h:12
+msgid "QName"
+msgstr "QName"
+
+#: ../data/language-specs/sparql.lang.h:13
+msgid "IRI"
+msgstr "IRI"
+
+#: ../data/language-specs/sql.lang.h:2
+msgid "SQL"
+msgstr "SQL"
+
+#: ../data/language-specs/sql.lang.h:10
+msgid "No idea what it is"
+msgstr "Nem tudom mi ez"
+
+#: ../data/language-specs/sweave.lang.h:2
+msgid "Sweave"
+msgstr "Sweave"
+
+#: ../data/language-specs/systemverilog.lang.h:2
+msgid "SystemVerilog"
+msgstr "SystemVerilog"
+
+#: ../data/language-specs/t2t.lang.h:2
+msgid "txt2tags"
+msgstr "txt2tags"
+
+#: ../data/language-specs/t2t.lang.h:4
+msgid "Option"
+msgstr "Kapcsoló"
+
+#: ../data/language-specs/t2t.lang.h:5
+msgid "Option Name"
+msgstr "Kapcsolónév"
+
+#: ../data/language-specs/t2t.lang.h:8
+msgid "Section 1"
+msgstr "1. szakasz"
+
+#: ../data/language-specs/t2t.lang.h:9
+msgid "Section 2"
+msgstr "2. szakasz"
+
+#: ../data/language-specs/t2t.lang.h:10
+msgid "Section 3"
+msgstr "3. szakasz"
+
+#: ../data/language-specs/t2t.lang.h:11
+msgid "Section 4"
+msgstr "4. szakasz"
+
+#: ../data/language-specs/t2t.lang.h:12
+msgid "Section 5"
+msgstr "5. szakasz"
+
+#: ../data/language-specs/t2t.lang.h:14
+msgid "Italic"
+msgstr "Dőlt"
+
+#: ../data/language-specs/t2t.lang.h:15
+msgid "Bold"
+msgstr "Félkövér"
+
+#: ../data/language-specs/t2t.lang.h:17
+msgid "Verbatim Block"
+msgstr "Változatlan blokk"
+
+#: ../data/language-specs/tcl.lang.h:2
+msgid "Tcl"
+msgstr "Tcl"
+
+#: ../data/language-specs/texinfo.lang.h:2
+msgid "Texinfo"
+msgstr "Texinfo"
+
+#: ../data/language-specs/texinfo.lang.h:8
+msgid "Macros"
+msgstr "Makrók"
+
+#: ../data/language-specs/texinfo.lang.h:9
+msgid "File Attributes"
+msgstr "Fájlattribútumok"
+
+#: ../data/language-specs/texinfo.lang.h:10
+msgid "Generated Content"
+msgstr "Védett tartalom"
+
+#: ../data/language-specs/thrift.lang.h:2
+msgid "Thrift"
+msgstr "Thrift"
+
+#: ../data/language-specs/vala.lang.h:2
+msgid "Vala"
+msgstr "Vala"
+
+#: ../data/language-specs/vbnet.lang.h:2
+msgid "VB.NET"
+msgstr "VB.NET"
+
+#: ../data/language-specs/verilog.lang.h:2
+msgid "Verilog"
+msgstr "Verilog"
+
+#: ../data/language-specs/verilog.lang.h:9
+msgid "IEEE System Task"
+msgstr "IEEE rendszerfeladat"
+
+#: ../data/language-specs/verilog.lang.h:10
+msgid "LRM Additional System Task"
+msgstr "LRM további rendszerfeladat"
+
+#: ../data/language-specs/verilog.lang.h:12
+msgid "Gate"
+msgstr "Kapu"
+
+#: ../data/language-specs/vhdl.lang.h:2
+msgid "VHDL"
+msgstr "VHDL"
+
+#: ../data/language-specs/xml.lang.h:2
+msgid "XML"
+msgstr "XML"
+
+#: ../data/language-specs/xml.lang.h:4
+msgid "DOCTYPE"
+msgstr "DOCTYPE"
+
+#: ../data/language-specs/xml.lang.h:6
+msgid "Processing instruction"
+msgstr "Feldolgozóutasítás"
+
+#: ../data/language-specs/xml.lang.h:9
+msgid "Attribute value"
+msgstr "Attribútumérték"
+
+#: ../data/language-specs/xml.lang.h:10
+msgid "Entity"
+msgstr "Entitás"
+
+#: ../data/language-specs/xslt.lang.h:2
+msgid "XSLT"
+msgstr "XSLT"
+
+#: ../data/language-specs/xslt.lang.h:3
+msgid "Element"
+msgstr "Elem"
+
+#: ../data/language-specs/yacc.lang.h:2
+msgid "Yacc"
+msgstr "Yacc"
+
+#: ../data/language-specs/yacc.lang.h:5
+msgid "token type"
+msgstr "jelsortípus"
+
+#: ../data/language-specs/yacc.lang.h:6
+msgid "rule"
+msgstr "Szabály"
+
+#: ../data/language-specs/yaml.lang.h:2
+msgid "YAML"
+msgstr "YAML"
+
+#: ../data/language-specs/yaml.lang.h:3
+msgid "Block literal"
+msgstr "Blokkliterál"
+
+#: ../data/language-specs/yaml.lang.h:8
+msgid "Alias"
+msgstr "Álnév"
+
+#: ../data/language-specs/yaml.lang.h:9
+msgid "Map key"
+msgstr "Leképezéskulcs"
+
+#: ../data/language-specs/yaml.lang.h:13
+msgid "Integer"
+msgstr "Egész szám"
+
+#: ../data/language-specs/yaml.lang.h:14
+msgid "Floating point"
+msgstr "Lebegőpontos"
+
+#: ../data/styles/classic.xml.h:1
+msgid "Classic"
+msgstr "Klasszikus"
+
+#: ../data/styles/classic.xml.h:2
+msgid "Classic color scheme"
+msgstr "Klasszikus színséma"
+
+#: ../data/styles/cobalt.xml.h:1
+msgid "Cobalt"
+msgstr "Kobalt"
+
+#: ../data/styles/cobalt.xml.h:2
+msgid "Blue based color scheme"
+msgstr "Kék alapú színséma"
+
+#: ../data/styles/kate.xml.h:1
+msgid "Kate"
+msgstr "Kate"
+
+#: ../data/styles/kate.xml.h:2
+msgid "Color scheme used in the Kate text editor"
+msgstr "A Kate szövegszerkesztőben használt színséma"
+
+#: ../data/styles/oblivion.xml.h:1
+msgid "Oblivion"
+msgstr "Oblivion"
+
+#: ../data/styles/oblivion.xml.h:2
+msgid "Dark color scheme using the Tango color palette"
+msgstr "A Tango színpalettát használó sötét színséma"
+
+#: ../data/styles/solarized-dark.xml.h:1
+msgid "Solarized Dark"
+msgstr "Solarized Dark"
+
+#: ../data/styles/solarized-dark.xml.h:2
+msgid "Color scheme using Solarized dark color palette"
+msgstr "A Solarized Dark színpalettát használó színséma"
+
+#: ../data/styles/solarized-light.xml.h:1
+msgid "Solarized Light"
+msgstr "Solarized Light"
+
+#: ../data/styles/solarized-light.xml.h:2
+msgid "Color scheme using Solarized light color palette"
+msgstr "A Solarized Light színpalettát használó színséma"
+
+#: ../data/styles/tango.xml.h:1
+msgid "Tango"
+msgstr "Tango"
+
+#: ../data/styles/tango.xml.h:2
+msgid "Color scheme using Tango color palette"
+msgstr "A Tango színpalettát használó színséma"
+
+#: ../gtksourceview/completion-providers/words/gtksourcecompletionwords.c:328
+msgid "Document Words"
+msgstr "Dokumentum szavai"
+
+#: ../gtksourceview/gtksourcebufferoutputstream.c:838
+msgid "Invalid byte sequence in conversion input"
+msgstr "Érvénytelen bájtsorrend az átalakítás bemenetében"
+
+#: ../gtksourceview/gtksourcebufferoutputstream.c:844
+#, c-format
+msgid "Error during conversion: %s"
+msgstr "Hiba az átalakítás során: %s"
+
+#: ../gtksourceview/gtksourcebufferoutputstream.c:925
+#, c-format
+msgid "Conversion from character set '%s' to 'UTF-8' is not supported"
+msgstr ""
+"A(z) „%s” és az „UTF-8” karakterkészletek közötti átalakítás nem támogatott"
+
+#: ../gtksourceview/gtksourcebufferoutputstream.c:931
+#, c-format
+msgid "Could not open converter from '%s' to 'UTF-8'"
+msgstr ""
+"Nem sikerült a(z) „%s” és az „UTF-8” karakterkészletek közötti átalakító "
+"megnyitása"
+
+#: ../gtksourceview/gtksourcebufferoutputstream.c:986
+msgid "Invalid object, not initialized"
+msgstr "Érvénytelen objektum, nincs előkészítve"
+
+#: ../gtksourceview/gtksourcebufferoutputstream.c:1178
+#, c-format
+msgid "Incomplete UTF-8 sequence in input"
+msgstr "Befejezetlen UTF-8 sorozat a bemenetben"
+
+#. Tooltip style
+#: ../gtksourceview/gtksourcecompletioninfo.c:264
+msgid "Completion Info"
+msgstr "Kiegészítési információk"
+
+#: ../gtksourceview/gtksourcecompletionmodel.c:491
+msgid "Provider"
+msgstr "Szolgáltató"
+
+#: ../gtksourceview/gtksourcecompletion.ui.h:1
+msgid "Show detailed proposal information"
+msgstr "Részletes javaslatinformációk megjelenítése"
+
+#: ../gtksourceview/gtksourcecompletion.ui.h:2
+msgid "_Details..."
+msgstr "_Részletek…"
+
+#. regex_new could fail, for instance if there are different
+#. * named sub-patterns with the same name or if resulting regex is
+#. * too long. In this case fixing lang file helps (e.g. renaming
+#. * subpatterns, making huge keywords use bigger prefixes, etc.)
+#: ../gtksourceview/gtksourcecontextengine.c:3167
+#, c-format
+msgid ""
+"Cannot create a regex for all the transitions, the syntax highlighting "
+"process will be slower than usual.\n"
+"The error was: %s"
+msgstr ""
+"Nem hozható létre reguláris kifejezés minden átmenethez, a "
+"szintaxiskiemelési folyamat lassabb lesz a megszokottnál.\n"
+"A hiba: %s"
+
+#: ../gtksourceview/gtksourcecontextengine.c:4490
+msgid ""
+"Highlighting a single line took too much time, syntax highlighting will be "
+"disabled"
+msgstr ""
+"Egyetlen sor kiemelése túl sokáig tartott, a szintaxiskiemelés letiltásra "
+"kerül"
+
+#: ../gtksourceview/gtksourcecontextengine.c:5734
+#, c-format
+msgid "context '%s' cannot contain a \\%%{...@start} command"
+msgstr "A(z) „%s” kontextus nem  tartalmazhat \\%%{...@start} parancsot"
+
+#: ../gtksourceview/gtksourcecontextengine.c:5895
+#: ../gtksourceview/gtksourcecontextengine.c:5984
+#, c-format
+msgid "duplicated context id '%s'"
+msgstr "többszörös kontextusazonosító: „%s”"
+
+#: ../gtksourceview/gtksourcecontextengine.c:6098
+#: ../gtksourceview/gtksourcecontextengine.c:6158
+#, c-format
+msgid ""
+"style override used with wildcard context reference in language '%s' in ref "
+"'%s'"
+msgstr ""
+"a helyettesítő karakteres kontextushivatkozáshoz stílus-felülbírálás került "
+"felhasználásra a(z) „%s” nyelv „%s” hivatkozásában."
+
+#: ../gtksourceview/gtksourcecontextengine.c:6172
+#, c-format
+msgid "invalid context reference '%s'"
+msgstr "érvénytelen kontextushivatkozás („%s”)"
+
+#: ../gtksourceview/gtksourcecontextengine.c:6191
+#: ../gtksourceview/gtksourcecontextengine.c:6201
+#, c-format
+msgid "unknown context '%s'"
+msgstr "ismeretlen kontextus: „%s”"
+
+#: ../gtksourceview/gtksourcecontextengine.c:6300
+#, c-format
+msgid "Missing main language definition (id = \"%s\".)"
+msgstr "Az elsődleges nyelvmeghatározás hiányzik (azonosító: „%s”.)"
+
+#: ../gtksourceview/gtksourceencoding.c:137
+#: ../gtksourceview/gtksourceencoding.c:180
+#: ../gtksourceview/gtksourceencoding.c:182
+#: ../gtksourceview/gtksourceencoding.c:184
+#: ../gtksourceview/gtksourceencoding.c:186
+#: ../gtksourceview/gtksourceencoding.c:188
+#: ../gtksourceview/gtksourceencoding.c:190
+#: ../gtksourceview/gtksourceencoding.c:192
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../gtksourceview/gtksourceencoding.c:151
+#: ../gtksourceview/gtksourceencoding.c:175
+#: ../gtksourceview/gtksourceencoding.c:225
+#: ../gtksourceview/gtksourceencoding.c:268
+msgid "Western"
+msgstr "Nyugati"
+
+#: ../gtksourceview/gtksourceencoding.c:153
+#: ../gtksourceview/gtksourceencoding.c:227
+#: ../gtksourceview/gtksourceencoding.c:264
+msgid "Central European"
+msgstr "Közép-európai"
+
+#: ../gtksourceview/gtksourceencoding.c:155
+msgid "South European"
+msgstr "Dél-európai"
+
+#: ../gtksourceview/gtksourceencoding.c:157
+#: ../gtksourceview/gtksourceencoding.c:171
+#: ../gtksourceview/gtksourceencoding.c:278
+msgid "Baltic"
+msgstr "Balti"
+
+#: ../gtksourceview/gtksourceencoding.c:159
+#: ../gtksourceview/gtksourceencoding.c:229
+#: ../gtksourceview/gtksourceencoding.c:242
+#: ../gtksourceview/gtksourceencoding.c:246
+#: ../gtksourceview/gtksourceencoding.c:248
+#: ../gtksourceview/gtksourceencoding.c:266
+msgid "Cyrillic"
+msgstr "Cirill"
+
+#: ../gtksourceview/gtksourceencoding.c:161
+#: ../gtksourceview/gtksourceencoding.c:235
+#: ../gtksourceview/gtksourceencoding.c:276
+msgid "Arabic"
+msgstr "Arab"
+
+#: ../gtksourceview/gtksourceencoding.c:163
+#: ../gtksourceview/gtksourceencoding.c:270
+msgid "Greek"
+msgstr "Görög"
+
+#: ../gtksourceview/gtksourceencoding.c:165
+msgid "Hebrew Visual"
+msgstr "Héber (vizuális)"
+
+#: ../gtksourceview/gtksourceencoding.c:167
+#: ../gtksourceview/gtksourceencoding.c:231
+#: ../gtksourceview/gtksourceencoding.c:272
+msgid "Turkish"
+msgstr "Török"
+
+#: ../gtksourceview/gtksourceencoding.c:169
+msgid "Nordic"
+msgstr "Északi"
+
+#: ../gtksourceview/gtksourceencoding.c:173
+msgid "Celtic"
+msgstr "Kelta"
+
+#: ../gtksourceview/gtksourceencoding.c:177
+msgid "Romanian"
+msgstr "Román"
+
+#: ../gtksourceview/gtksourceencoding.c:195
+msgid "Armenian"
+msgstr "Örmény"
+
+#: ../gtksourceview/gtksourceencoding.c:197
+#: ../gtksourceview/gtksourceencoding.c:199
+#: ../gtksourceview/gtksourceencoding.c:213
+msgid "Chinese Traditional"
+msgstr "Hagyományos kínai"
+
+#: ../gtksourceview/gtksourceencoding.c:201
+msgid "Cyrillic/Russian"
+msgstr "Cirill/orosz"
+
+#: ../gtksourceview/gtksourceencoding.c:204
+#: ../gtksourceview/gtksourceencoding.c:206
+#: ../gtksourceview/gtksourceencoding.c:208
+#: ../gtksourceview/gtksourceencoding.c:238
+#: ../gtksourceview/gtksourceencoding.c:253
+msgid "Japanese"
+msgstr "Japán"
+
+#: ../gtksourceview/gtksourceencoding.c:211
+#: ../gtksourceview/gtksourceencoding.c:240
+#: ../gtksourceview/gtksourceencoding.c:244
+#: ../gtksourceview/gtksourceencoding.c:259
+msgid "Korean"
+msgstr "Koreai"
+
+#: ../gtksourceview/gtksourceencoding.c:216
+#: ../gtksourceview/gtksourceencoding.c:218
+#: ../gtksourceview/gtksourceencoding.c:220
+msgid "Chinese Simplified"
+msgstr "Egyszerűsített kínai"
+
+#: ../gtksourceview/gtksourceencoding.c:222
+msgid "Georgian"
+msgstr "Grúz"
+
+#: ../gtksourceview/gtksourceencoding.c:233
+#: ../gtksourceview/gtksourceencoding.c:274
+msgid "Hebrew"
+msgstr "Héber"
+
+#: ../gtksourceview/gtksourceencoding.c:250
+msgid "Cyrillic/Ukrainian"
+msgstr "Cirill/ukrán"
+
+#: ../gtksourceview/gtksourceencoding.c:255
+#: ../gtksourceview/gtksourceencoding.c:261
+#: ../gtksourceview/gtksourceencoding.c:280
+msgid "Vietnamese"
+msgstr "Vietnami"
+
+#: ../gtksourceview/gtksourceencoding.c:257
+msgid "Thai"
+msgstr "Thai"
+
+#: ../gtksourceview/gtksourceencoding.c:491
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#. Translators: This is the sorted list of encodings used by
+#. * GtkSourceView for automatic detection of the file encoding. You may
+#. * want to customize it adding encodings that are common in your
+#. * country, for instance the GB18030 encoding for the Chinese
+#. * translation. You may also want to remove the ISO-8859-15 encoding
+#. * (covering English and most Western European languages) if you think
+#. * people in your country will rarely use it.  "CURRENT" is a magic
+#. * value used by GtkSourceView and it represents the encoding for the
+#. * current locale, so please don't translate the "CURRENT" term.  Only
+#. * recognized encodings are used. See
+#. * https://git.gnome.org/browse/gtksourceview/tree/gtksourceview/gtksourceencoding.c#n147
+#. * for a list of supported encodings.
+#. * Keep the same format: square brackets, single quotes, commas.
+#.
+#: ../gtksourceview/gtksourceencoding.c:650
+msgid "['UTF-8', 'CURRENT', 'ISO-8859-15', 'UTF-16']"
+msgstr "['UTF-8', 'CURRENT', 'ISO-8859-2', 'WINDOWS-1250', 'IBM852', 'UTF-16']"
+
+#: ../gtksourceview/gtksourcelanguage-parser-2.c:950
+#, c-format
+msgid "Unknown id '%s' in regex '%s'"
+msgstr "Ismeretlen azonosító (%s) a(z) „%s” reguláris kifejezésben"
+
+#: ../gtksourceview/gtksourcelanguage-parser-2.c:1178
+#, c-format
+msgid "in regex '%s': backreferences are not supported"
+msgstr "„%s” reguláris kifejezés: a visszahivatkozások nem támogatottak"
+
+#: ../gtksourceview/gtksourceregex.c:125
+msgid "using \\C is not supported in language definitions"
+msgstr "A \\C használata nem támogatott a nyelvmeghatározásokban"
+
+#. TODO: have a ChooserDialog?
+#: ../gtksourceview/gtksourcestyleschemechooserbutton.c:182
+msgid "Select a Style"
+msgstr "Stílus kiválasztása"
+
+#: ../gtksourceview/gtksourcestyleschemechooserbutton.c:186
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: ../gtksourceview/gtksourcestyleschemechooserbutton.c:187
+msgid "_Select"
+msgstr "_Kiválasztás"
+
+#. create redo menu_item.
+#: ../gtksourceview/gtksourceview.c:1448
+msgid "_Redo"
+msgstr "Új_ra"
+
+#. create undo menu_item.
+#: ../gtksourceview/gtksourceview.c:1459
+msgid "_Undo"
+msgstr "_Visszavonás"
+
+#: ../gtksourceview/gtksourceview.c:1477
+msgid "All _Upper Case"
+msgstr "Mind _nagybetűs"
+
+#: ../gtksourceview/gtksourceview.c:1487
+msgid "All _Lower Case"
+msgstr "Mind _kisbetűs"
+
+#: ../gtksourceview/gtksourceview.c:1497
+msgid "_Invert Case"
+msgstr "Kis- és nagybetű _invertálása"
+
+#: ../gtksourceview/gtksourceview.c:1507
+msgid "_Title Case"
+msgstr "Szó_kezdő"
+
+#: ../gtksourceview/gtksourceview.c:1517
+msgid "C_hange Case"
+msgstr "Kis- és nagybetű mó_dosítása"
+
+#: ../gtksourceview/gtksourceview-i18n.c:116
+msgid "translator-credits"
+msgstr ""
+"Dvornik László <dvornik at gnome dot hu>\n"
+"Kelemen Gábor <kelemeng at gnome dot hu>\n"
+"Tímár András <timar at gnome dot hu>"
+
+#~ msgid "GtkSourceStyleSchemeChooserWidget"
+#~ msgstr "GtkSourceStyleSchemeChooserWidget"
+
+#~ msgid "GtkSourceStyleSchemeChooserButton"
+#~ msgstr "GtkSourceStyleSchemeChooserButton"
+
+#~ msgctxt "Object"
+#~ msgid "Name"
+#~ msgstr "Név"
+
+#~ msgid "The provider name"
+#~ msgstr "A szolgáltató neve"
+
+#~ msgid "Icon"
+#~ msgstr "Ikon"
+
+#~ msgid "The provider icon"
+#~ msgstr "A szolgáltató ikonja"
+
+#~ msgid "Proposals Batch Size"
+#~ msgstr "Javaslatok kötegmérete"
+
+#~ msgid "Number of proposals added in one batch"
+#~ msgstr "Egy köteghez adandó javaslatok száma"
+
+#~ msgid "Scan Batch Size"
+#~ msgstr "Vizsgált köteg mérete"
+
+#~ msgid "Number of lines scanned in one batch"
+#~ msgstr "Egy kötegben vizsgált sorok száma"
+
+#~ msgid "Minimum Word Size"
+#~ msgstr "Minimális szóhossz"
+
+#~ msgid "The minimum word size to complete"
+#~ msgstr "A kiegészítendő minimális szóhossz"
+
+#~ msgid "Interactive Delay"
+#~ msgstr "Interaktív késleltetés"
+
+#~ msgid "The delay before initiating interactive completion"
+#~ msgstr "Az interaktív kiegészítés kezdeményezése előtti késleltetés"
+
+#~ msgid "Priority"
+#~ msgstr "Prioritás"
+
+#~ msgid "Provider priority"
+#~ msgstr "Szolgáltató prioritása"
+
+#~ msgid "Activation"
+#~ msgstr "Bekapcsolás"
+
+#~ msgid "The type of activation"
+#~ msgstr "A bekapcsolás típusa"
+
+#~ msgid "Highlight Syntax"
+#~ msgstr "Szintaxiskiemelés"
+
+#~ msgid "Whether to highlight syntax in the buffer"
+#~ msgstr "Kiemelje-e a nyelvtani elemeket a szerkesztőablakban"
+
+#~ msgid "Highlight Matching Brackets"
+#~ msgstr "Zárójelpárok kiemelése"
+
+#~ msgid "Whether to highlight matching brackets"
+#~ msgstr "Kiemelje-e a zárójelpárokat"
+
+#~ msgid "Maximum Undo Levels"
+#~ msgstr "Visszavonások maximális száma"
+
+#~ msgid "Number of undo levels for the buffer"
+#~ msgstr "Visszavonások száma a pufferhez"
+
+#~ msgid "Language"
+#~ msgstr "Nyelv"
+
+#~ msgid "Language object to get highlighting patterns from"
+#~ msgstr "Nyelvobjektum, ahonnan a kiemelési minták beszerezhetőek"
+
+#~ msgid "Can undo"
+#~ msgstr "A visszavonás lehetséges"
+
+#~ msgid "Whether Undo operation is possible"
+#~ msgstr "A Visszavonás művelet lehetséges-e"
+
+#~ msgid "Can redo"
+#~ msgstr "A mégis lehetséges"
+
+#~ msgid "Whether Redo operation is possible"
+#~ msgstr "A mégis művelet lehetséges-e"
+
+#~ msgid "Style scheme"
+#~ msgstr "Stílusséma"
+
+#~ msgid "Undo manager"
+#~ msgstr "Visszavonás-kezelő"
+
+#~ msgid "The buffer undo manager"
+#~ msgstr "A puffer visszavonás-kezelője"
+
+#~ msgid "Implicit trailing newline"
+#~ msgstr "Implicit befejező soremelés"
+
+#~ msgid "View"
+#~ msgstr "Nézet"
+
+#~ msgid "The GtkSourceView bound to the completion"
+#~ msgstr "A kiegészítéshez tartozó GtkSourceView"
+
+#~ msgid "Remember Info Visibility"
+#~ msgstr "Információk láthatóságának megjegyzése"
+
+#~ msgid "Remember the last info window visibility state"
+#~ msgstr "Az információk utolsó láthatósági állapotának megjegyzése"
+
+#~ msgid "Select first proposal when completion is shown"
+#~ msgstr "Első javaslat kiválasztása a kijelölés megjelenítésekor"
+
+#~ msgid "Show Headers"
+#~ msgstr "Fejlécek megjelenítése"
+
+#~ msgid ""
+#~ "Show provider headers when proposals from multiple providers are available"
+#~ msgstr ""
+#~ "Szolgáltatófejlécek megjelenítése, ha több szolgáltató javaslatai is "
+#~ "elérhetők"
+
+#~ msgid "Show Icons"
+#~ msgstr "Ikonok megjelenítése"
+
+#~ msgid "Show provider and proposal icons in the completion popup"
+#~ msgstr "Szolgáltató- és javaslatikonok megjelenítése a kiegészítési menüben"
+
+#~ msgid "Accelerators"
+#~ msgstr "Hívóbetűk"
+
+#~ msgid "Number of proposal accelerators to show"
+#~ msgstr "Megjelenítendő javaslat-hívóbetűk száma"
+
+#~ msgid "Auto Complete Delay"
+#~ msgstr "Automatikus kiegészítés késleltetése"
+
+#~ msgid "Completion popup delay for interactive completion"
+#~ msgstr "Kiegészítési menü késleltetése interaktív kiegészítés esetén"
+
+#~ msgid "Provider Page Size"
+#~ msgstr "Szolgáltató oldalmérete"
+
+#~ msgid "Provider scrolling page size"
+#~ msgstr "Szolgáltató gördülő oldalának mérete"
+
+#~ msgid "Proposal Page Size"
+#~ msgstr "Javaslat oldalmérete"
+
+#~ msgid "Proposal scrolling page size"
+#~ msgstr "Javaslat gördülő oldalának mérete"
+
+#~ msgid "Completion"
+#~ msgstr "Kiegészítés"
+
+#~ msgid "The completion object to which the context belongs"
+#~ msgstr "A kiegészítési objektum, amelyhez a kontextus tartozik"
+
+#~ msgid "Iterator"
+#~ msgstr "Iterátor"
+
+#~ msgid "The GtkTextIter at which the completion was invoked"
+#~ msgstr "A GtkTextIter, amelyre a kiegészítést meghívták"
+
+#~ msgid "Label to be shown for this item"
+#~ msgstr "Az elemhez megjelenítendő címke"
+
+#~ msgid "Markup to be shown for this item"
+#~ msgstr "Az elemhez megjelenítendő jelölés"
+
+#~ msgid "Item text"
+#~ msgstr "Elem szövege"
+
+#~ msgid "Icon to be shown for this item"
+#~ msgstr "Az elemhez megjelenítendő ikon"
+
+#~ msgid "Info"
+#~ msgstr "Információk"
+
+#~ msgid "Info to be shown for this item"
+#~ msgstr "Az elemhez megjelenítendő információk"
+
+#~ msgid "Newline type"
+#~ msgstr "Soremelés típusa"
+
+#~ msgid "Compression type"
+#~ msgstr "Tömörítés típusa"
+
+#~ msgid "Input stream"
+#~ msgstr "Bemeneti adatfolyam"
+
+#~ msgid "Flags"
+#~ msgstr "Jelzők"
+
+#~ msgid "The gutters' GtkSourceView"
+#~ msgstr "A kötésmargó GtkSourceView-ja"
+
+#~ msgid "Window Type"
+#~ msgstr "Ablak típusa"
+
+#~ msgid "The gutters' text window type"
+#~ msgstr "A kötésmargó szövegének ablaktípusa"
+
+#~ msgid "X Padding"
+#~ msgstr "X kitöltés"
+
+#~ msgid "The x-padding"
+#~ msgstr "Az x-kitöltés"
+
+#~ msgid "Y Padding"
+#~ msgstr "Y kitöltés"
+
+#~ msgid "The y-padding"
+#~ msgstr "Az y-kitöltés"
+
+#~ msgid "Visible"
+#~ msgstr "Látható"
+
+#~ msgid "X Alignment"
+#~ msgstr "X igazítás"
+
+#~ msgid "The x-alignment"
+#~ msgstr "Az x-igazítás"
+
+#~ msgid "Y Alignment"
+#~ msgstr "Y igazítás"
+
+#~ msgid "The y-alignment"
+#~ msgstr "Az y-igazítás"
+
+#~ msgid "The View"
+#~ msgstr "A nézet"
+
+#~ msgid "The view"
+#~ msgstr "A nézet"
+
+#~ msgid "Alignment Mode"
+#~ msgstr "Igazítási mód"
+
+#~ msgid "The alignment mode"
+#~ msgstr "Az igazítási mód"
+
+#~ msgid "The window type"
+#~ msgstr "Az ablak típusa"
+
+#~ msgid "Size"
+#~ msgstr "Méret"
+
+#~ msgid "The size"
+#~ msgstr "A méret"
+
+#~ msgid "Pixbuf"
+#~ msgstr "Kép"
+
+#~ msgid "The pixbuf"
+#~ msgstr "A kép"
+
+#~ msgid "Stock Id"
+#~ msgstr "Gyári azonosító"
+
+#~ msgid "The stock id"
+#~ msgstr "A gyári azonosító"
+
+#~ msgid "Icon Name"
+#~ msgstr "Ikonnév"
+
+#~ msgid "The icon name"
+#~ msgstr "Az ikon neve"
+
+#~ msgid "GIcon"
+#~ msgstr "GIcon"
+
+#~ msgid "The gicon"
+#~ msgstr "A gicon"
+
+#~ msgid "The markup"
+#~ msgstr "A leírónyelv"
+
+#~ msgid "The text"
+#~ msgstr "A szöveg"
+
+#~ msgid "Language id"
+#~ msgstr "Nyelvazonosító"
+
+#~ msgid "Language name"
+#~ msgstr "Nyelvnév"
+
+#~ msgid "Language section"
+#~ msgstr "Nyelvszakasz"
+
+#~ msgid "Hidden"
+#~ msgstr "Rejtett"
+
+#~ msgid "Whether the language should be hidden from the user"
+#~ msgstr "A nyelv elrejtésre kerüljön-e a felhasználó elől"
+
+#~ msgid "Language specification directories"
+#~ msgstr "Nyelvmeghatározási könyvtárak"
+
+#~ msgid ""
+#~ "List of directories where the language specification files (.lang) are "
+#~ "located"
+#~ msgstr "A nyelvspecifikációs fájlokat (.lang) tartalmazó könyvtárak listája"
+
+#~ msgid "Language ids"
+#~ msgstr "Nyelvazonosítók"
+
+#~ msgid "List of the ids of the available languages"
+#~ msgstr "Az elérhető nyelvek azonosítóinak listája"
+
+#~ msgid "Background"
+#~ msgstr "Háttér"
+
+#~ msgid "The background"
+#~ msgstr "A háttér"
+
+#~ msgid "The GIcon"
+#~ msgstr "A GIcon"
+
+#~ msgid "category"
+#~ msgstr "kategória"
+
+#~ msgid "The mark category"
+#~ msgstr "A jelölés kategóriája"
+
+#~ msgid "Source Buffer"
+#~ msgstr "Forráspuffer"
+
+#~ msgid "The GtkSourceBuffer object to print"
+#~ msgstr "A nyomtatandó GtkSourceBuffer objektum"
+
+#~ msgid "Tab Width"
+#~ msgstr "Tabulátorok szélessége"
+
+#~ msgid "Width of a tab character expressed in spaces"
+#~ msgstr "Tab karakter szélessége szóközökben kifejezve"
+
+#~ msgid "Wrap Mode"
+#~ msgstr "Sortörés módja"
+
+#~ msgid ""
+#~ "Whether to wrap lines never, at word boundaries, or at character "
+#~ "boundaries."
+#~ msgstr "A sortörés módja: soha, szóhatáron vagy karakterhatáron."
+
+#~ msgid "Whether to print the document with highlighted syntax"
+#~ msgstr "Nyelvtani elemek kiemelésével nyomtassa-e a dokumentumot"
+
+#~ msgid "Print Line Numbers"
+#~ msgstr "Sorok számának kiírása"
+
+#~ msgid "Interval of printed line numbers (0 means no numbers)"
+#~ msgstr ""
+#~ "Nyomtatott sorszámok közti táv (0 azt jelenti, hogy nincsenek számok)"
+
+#~ msgid "Print Header"
+#~ msgstr "Fejléc nyomtatása"
+
+#~ msgid "Whether to print a header in each page"
+#~ msgstr "Nyomtasson-e fejlécet minden egyes oldalon"
+
+#~ msgid "Print Footer"
+#~ msgstr "Lábléc nyomtatása"
+
+#~ msgid "Whether to print a footer in each page"
+#~ msgstr "Nyomtasson-e láblécet minden egyes oldalon"
+
+#~ msgid "Body Font Name"
+#~ msgstr "Törzs betűkészletének neve"
+
+#~ msgid "Name of the font to use for the text body (e.g. \"Monospace 10\")"
+#~ msgstr ""
+#~ "A szövegtörzsben használandó betűkészlet neve (például „Monospace 10”)"
+
+#~ msgid "Line Numbers Font Name"
+#~ msgstr "Sorszámok betűkészlete"
+
+#~ msgid "Name of the font to use for the line numbers (e.g. \"Monospace 10\")"
+#~ msgstr ""
+#~ "A sorszámokhoz használandó betűkészlet neve (például „Monospace 10”)"
+
+#~ msgid "Header Font Name"
+#~ msgstr "Fejléc betűkészlete"
+
+#~ msgid "Name of the font to use for the page header (e.g. \"Monospace 10\")"
+#~ msgstr ""
+#~ "Az oldalfejléchez használandó betűkészlet neve (például „Monospace 10”)"
+
+#~ msgid "Footer Font Name"
+#~ msgstr "Lábléc betűkészlete"
+
+#~ msgid "Name of the font to use for the page footer (e.g. \"Monospace 10\")"
+#~ msgstr "A lábléchez használandó betűkészlet neve (például „Monospace 10”)"
+
+#~ msgid "Number of pages"
+#~ msgstr "Oldalak száma"
+
+#~ msgid ""
+#~ "The number of pages in the document (-1 means the document has not been "
+#~ "completely paginated)."
+#~ msgstr ""
+#~ "A dokumentum oldalainak száma (a -1 azt jelenti, hogy a dokumentum nincs "
+#~ "teljesen oldalakra bontva)."
+
+#~ msgid "Buffer"
+#~ msgstr "Puffer"
+
+#~ msgid "The associated GtkSourceBuffer"
+#~ msgstr "A társított GtkSourceBuffer"
+
+#~ msgid "Settings"
+#~ msgstr "Beállítások"
+
+#~ msgid "The associated GtkSourceSearchSettings"
+#~ msgstr "A társított GtkSourceSearchSettings"
+
+#~ msgid "Highlight"
+#~ msgstr "Kiemelés"
+
+#~ msgid "Highlight search occurrences"
+#~ msgstr "A találatok kiemelése"
+
+#~ msgid "Match style"
+#~ msgstr "Egyezés stílus"
+
+#~| msgid "The text to search"
+#~ msgid "The text style for matches"
+#~ msgstr "Az egyezések szövegstílusa"
+
+#~ msgid "Occurrences count"
+#~ msgstr "Találatok száma"
+
+#~ msgid "Total number of search occurrences"
+#~ msgstr "A találatok teljes száma"
+
+#~ msgid "Regex error"
+#~ msgstr "Regex hiba"
+
+#~ msgid "Regular expression error"
+#~ msgstr "Hibás reguláris kifejezés"
+
+#~ msgid "Search text"
+#~ msgstr "Szöveg keresése"
+
+#~ msgid "The text to search"
+#~ msgstr "A keresendő szöveg"
+
+#~ msgid "Case sensitive"
+#~ msgstr "Kis- és nagybetűk megkülönböztetése"
+
+#~ msgid "At word boundaries"
+#~ msgstr "Szóhatárokon"
+
+#~ msgid "Search at word boundaries"
+#~ msgstr "Keresés szóhatárokon"
+
+#~ msgid "Wrap around"
+#~ msgstr "Körbe"
+
+#~ msgid "Regex enabled"
+#~ msgstr "Regex engedélyezve"
+
+#~ msgid "Whether to search by regular expression"
+#~ msgstr "Keresés reguláris kifejezésekkel"
+
+#~ msgid "Line background"
+#~ msgstr "Sorháttér"
+
+#~ msgid "Line background color"
+#~ msgstr "Sorháttér színe"
+
+#~ msgid "Background color"
+#~ msgstr "Háttérszín"
+
+#~ msgid "Foreground"
+#~ msgstr "Előtér"
+
+#~ msgid "Foreground color"
+#~ msgstr "Előtérszín"
+
+#~ msgid "Underline"
+#~ msgstr "Aláhúzott"
+
+#~ msgid "Strikethrough"
+#~ msgstr "Áthúzott"
+
+#~ msgid "Scale"
+#~ msgstr "Méretezés"
+
+#~ msgid "Text scale factor"
+#~ msgstr "Szöveg méretezési tényezője"
+
+#~ msgid "Line background set"
+#~ msgstr "Sorháttér beállítva"
+
+#~ msgid "Whether line background color is set"
+#~ msgstr "A sorháttérszín be van-e állítva"
+
+#~ msgid "Foreground set"
+#~ msgstr "Előtér beállítva"
+
+#~ msgid "Whether foreground color is set"
+#~ msgstr "Az előtérszín be van-e állítva"
+
+#~ msgid "Background set"
+#~ msgstr "Háttér beállítva"
+
+#~ msgid "Whether background color is set"
+#~ msgstr "A háttérszín be van-e állítva"
+
+#~ msgid "Bold set"
+#~ msgstr "Félkövér beállítva"
+
+#~ msgid "Whether bold attribute is set"
+#~ msgstr "A félkövér attribútum be van-e állítva"
+
+#~ msgid "Italic set"
+#~ msgstr "Dőlt beállítva"
+
+#~ msgid "Whether italic attribute is set"
+#~ msgstr "A dőlt attribútum be van-e állítva"
+
+#~ msgid "Underline set"
+#~ msgstr "Aláhúzott beállítva"
+
+#~ msgid "Whether underline attribute is set"
+#~ msgstr "Az aláhúzott attribútum be van-e állítva"
+
+#~ msgid "Strikethrough set"
+#~ msgstr "Áthúzott beállítva"
+
+#~ msgid "Whether strikethrough attribute is set"
+#~ msgstr "Az áthúzott attribútum be van-e állítva"
+
+#~ msgid "Scale set"
+#~ msgstr "Méretezés beállítva"
+
+#~ msgid "Whether scale attribute is set"
+#~ msgstr "A méretezés attribútum be van-e állítva"
+
+#~ msgid "Style scheme id"
+#~ msgstr "Stílusséma azonosítója"
+
+#~ msgid "Style scheme name"
+#~ msgstr "Stílusséma neve"
+
+#~ msgid "Style scheme description"
+#~ msgstr "Stílusséma leírása"
+
+#~ msgid "Style scheme filename"
+#~ msgstr "Stílusséma fájlneve"
+
+#~ msgid "Style scheme search path"
+#~ msgstr "Stílusséma keresési útvonala"
+
+#~ msgid "List of directories and files where the style schemes are located"
+#~ msgstr "A stílussémákat tartalmazó könyvtárak és fájlok listája"
+
+#~ msgid "Scheme ids"
+#~ msgstr "Sémaazonosítók"
+
+#~ msgid "List of the ids of the available style schemes"
+#~ msgstr "Az elérhető stílussémák azonosítóinak listája"
+
+#~ msgid "The completion object associated with the view"
+#~ msgstr "A nézethez társított kiegészítési objektum"
+
+#~ msgid "Show Line Numbers"
+#~ msgstr "Sorszámozás megjelenítése"
+
+#~ msgid "Whether to display line numbers"
+#~ msgstr "Megjelenítse-e a sorok számát"
+
+#~ msgid "Show Line Marks"
+#~ msgstr "Oldaljelek megjelenítése"
+
+#~ msgid "Whether to display line mark pixbufs"
+#~ msgstr "Megjelenítse-e a sorokat jelző képeket"
+
+#~ msgid "Indent Width"
+#~ msgstr "Behúzás szélessége"
+
+#~ msgid "Number of spaces to use for each step of indent"
+#~ msgstr "Az egyes behúzási lépésekhez használandó szóközök száma"
+
+#~ msgid "Auto Indentation"
+#~ msgstr "Automatikus behúzás"
+
+#~ msgid "Whether to enable auto indentation"
+#~ msgstr "Engedélyezve legyen-e az automatikus behúzás"
+
+#~ msgid "Insert Spaces Instead of Tabs"
+#~ msgstr "Szóközök beillesztése tabulátorok helyett"
+
+#~ msgid "Whether to insert spaces instead of tabs"
+#~ msgstr "Tabulátorok helyett szóközöket illesszen-e be"
+
+#~ msgid "Show Right Margin"
+#~ msgstr "Jobb oldali margó megjelenítése"
+
+#~ msgid "Whether to display the right margin"
+#~ msgstr "Megjelenítse-e a jobb oldali margót"
+
+#~ msgid "Right Margin Position"
+#~ msgstr "Jobb margó pozíciója"
+
+#~ msgid "Position of the right margin"
+#~ msgstr "Jobb oldali margó pozíciója"
+
+#~ msgid "Smart Home/End"
+#~ msgstr "Okos home/end"
+
+#~ msgid ""
+#~ "HOME and END keys move to first/last non whitespace characters on line "
+#~ "before going to the start/end of the line"
+#~ msgstr ""
+#~ "A HOME és END billentyűk a sor első/utolsó nem üres hely karakterére "
+#~ "ugranak, mielőtt a sor elejére/végére állnának"
+
+#~ msgid "Highlight current line"
+#~ msgstr "A jelenlegi sor kiemelése"
+
+#~ msgid "Whether to highlight the current line"
+#~ msgstr "Kiemelje-e a jelenlegi sort?"
+
+#~ msgid "Indent on tab"
+#~ msgstr "Behúzás tabnál"
+
+#~ msgid "Whether to indent the selected text when the tab key is pressed"
+#~ msgstr "Behúzza-e a kijelölt szöveget a tab billentyű lenyomásakor"
+
+#~ msgid "Draw Spaces"
+#~ msgstr "Szóközök rajzolása"
+
+#~ msgid "Set if and how the spaces should be visualized"
+#~ msgstr "A szóközök megjelenítésének és annak módjának beállítása"
+
+#~ msgid "The text buffer to add undo support on"
+#~ msgstr "Visszavonás-támogatás adása ezen szövegpufferhez"
+
+#~ msgid "Cobol"
+#~ msgstr "Cobol"
+
+#~ msgid "math-bound"
+#~ msgstr "matematikai"
+
+#~ msgid "m4-comment"
+#~ msgstr "m4 megjegyzés"
+
+#~ msgid "string-conversion"
+#~ msgstr "karakterlánc-átalakítás"
+
+#~ msgid "No extra information available"
+#~ msgstr "Nem érhetők el további információk"
+
+#~ msgid "Objective Caml"
+#~ msgstr "Objective Caml"
+
+#~ msgid "Object"
+#~ msgstr "Objektum"

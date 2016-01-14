@@ -908,20 +908,15 @@ S["PKG_CONFIG"]="/usr/bin/pkg-config"
 S["XGETTEXT_ARGS"]="--keyword=Q_ --from-code=UTF-8"
 S["MKINSTALLDIRS"]="./mkinstalldirs"
 S["POSUB"]="po"
-S["POFILES"]=" ar.po ast.po bg.po ca.po cs.po da.po de.po el.po en_AU.po en_GB.po es.po eu.po fi.po fr.po gl.po he.po hr.po hu.po id.po is.po it.po ja.po kk.po ko"\
-".po lt.po ms.po nb.po nl.po nn.po oc.po pl.po pt_BR.po pt.po ro.po ru.po sk.po sr.po sv.po te.po th.po tr.po ug.po uk.po zh_CN.po zh_TW.po"
+S["POFILES"]=""
 S["PO_IN_DATADIR_FALSE"]=""
 S["PO_IN_DATADIR_TRUE"]=""
 S["INTLLIBS"]=""
 S["INSTOBJEXT"]=".mo"
-S["GMOFILES"]=" ar.gmo ast.gmo bg.gmo ca.gmo cs.gmo da.gmo de.gmo el.gmo en_AU.gmo en_GB.gmo es.gmo eu.gmo fi.gmo fr.gmo gl.gmo he.gmo hr.gmo hu.gmo id.gmo is.gmo "\
-"it.gmo ja.gmo kk.gmo ko.gmo lt.gmo ms.gmo nb.gmo nl.gmo nn.gmo oc.gmo pl.gmo pt_BR.gmo pt.gmo ro.gmo ru.gmo sk.gmo sr.gmo sv.gmo te.gmo th.gmo tr.gm"\
-"o ug.gmo uk.gmo zh_CN.gmo zh_TW.gmo"
+S["GMOFILES"]=""
 S["DATADIRNAME"]="share"
 S["CATOBJEXT"]=".gmo"
-S["CATALOGS"]=" ar.gmo ast.gmo bg.gmo ca.gmo cs.gmo da.gmo de.gmo el.gmo en_AU.gmo en_GB.gmo es.gmo eu.gmo fi.gmo fr.gmo gl.gmo he.gmo hr.gmo hu.gmo id.gmo is.gmo "\
-"it.gmo ja.gmo kk.gmo ko.gmo lt.gmo ms.gmo nb.gmo nl.gmo nn.gmo oc.gmo pl.gmo pt_BR.gmo pt.gmo ro.gmo ru.gmo sk.gmo sr.gmo sv.gmo te.gmo th.gmo tr.gm"\
-"o ug.gmo uk.gmo zh_CN.gmo zh_TW.gmo"
+S["CATALOGS"]=""
 S["MSGFMT_OPTS"]="-c"
 S["GETTEXT_PACKAGE"]="wikipad"
 S["WIKIPAD_VERSION_NANO"]=""
@@ -945,8 +940,7 @@ S["ac_ct_DUMPBIN"]=""
 S["DUMPBIN"]=""
 S["LIBTOOL"]="$(SHELL) $(top_builddir)/libtool"
 S["PERL"]="perl"
-S["ALL_LINGUAS"]="ar ast bg ca cs da de el en_AU en_GB es eu fi fr gl he hr hu id is it ja kk ko lt ms nb nl nn oc pl pt_BR pt ro ru sk sr sv te th tr ug uk zh_CN zh_"\
-"TW "
+S["ALL_LINGUAS"]=""
 S["INTLTOOL_PERL"]="/usr/bin/perl"
 S["GMSGFMT"]="/usr/bin/msgfmt"
 S["MSGFMT"]="/usr/bin/msgfmt"
