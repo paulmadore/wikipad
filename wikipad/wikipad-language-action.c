@@ -149,7 +149,7 @@ wikipad_language_action_get_property (GObject    *object,
 static void
 wikipad_language_action_init (WikipadLanguageAction *self)
 {
-  self->language = NULL;
+  self->language = "MediaWiki";
 }
 
 
