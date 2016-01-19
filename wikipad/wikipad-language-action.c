@@ -63,31 +63,6 @@ G_DEFINE_TYPE (WikipadLanguageAction, wikipad_language_action, GTK_TYPE_RADIO_AC
 
 
 static void
-wikipad_language_action_class_init (WikipadLanguageActionClass *klass)
-{
-  GObjectClass *g_object_class;
-
-  g_object_class = G_OBJECT_CLASS (klass);
-
-  g_object_class->finalize = wikipad_language_action_finalize;
-  g_object_class->set_property = wikipad_language_action_set_property;
-  g_object_class->get_property = wikipad_language_action_get_property;
-
-  g_object_class_install_property (
-    g_object_class,
-    PROP_LANGUAGE,
-    g_param_spec_object (
-      "language",
-      "Language",
-      "The GtkSourceLanguage associated with the action",
-      GTK_SOURCE_TYPE_LANGUAGE,
-      G_PARAM_CONSTRUCT_ONLY | G_PARAM_READWRITE));
-
-}
-
-
-
-static void
 wikipad_language_action_finalize (GObject *object)
 {
   WikipadLanguageAction *self;
@@ -101,50 +76,6 @@ wikipad_language_action_finalize (GObject *object)
 
   G_OBJECT_CLASS (wikipad_language_action_parent_class)->finalize (object);
 }
-
-
-
-static void
-wikipad_language_action_set_property (GObject      *object,
-                                       guint         prop_id,
-                                       const GValue *value,
-                                       GParamSpec   *pspec)
-{
-  WikipadLanguageAction *self = WIKIPAD_LANGUAGE_ACTION (object);
-  
-  switch (prop_id)
-    {
-    case PROP_LANGUAGE:
-      wikipad_language_action_set_language (self, g_value_get_object (value));
-      break;
-    default:
-      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
-      break;
-    }
-}
-
-
-
-static void
-wikipad_language_action_get_property (GObject    *object,
-                                       guint       prop_id,
-                                       GValue     *value,
-                                       GParamSpec *pspec)
-{
-  WikipadLanguageAction *self = WIKIPAD_LANGUAGE_ACTION (object);
-  
-  switch (prop_id)
-    {
-    case PROP_LANGUAGE:
-      g_value_set_object (value, wikipad_language_action_get_language (self));
-      break;
-    default:
-      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
-      break;
-    }
-}
-
-
 
 static void
 wikipad_language_action_init (WikipadLanguageAction *self)
